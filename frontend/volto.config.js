@@ -1,4 +1,4 @@
-const addons = ['@portal-br/intranet'];
+const addons = ['@portalbrasil/intranet'];
 const theme = '@kitconcept/volto-light-theme';
 
 module.exports = {

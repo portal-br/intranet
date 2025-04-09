@@ -1,5 +1,5 @@
 {
-  "name": "@portal-br/intranet",
+  "name": "@portalbrasil/intranet",
   "version": "1.0.0-alpha.4",
   "description": "Solução de Intranet construída com PortalBrasil & Plone",
   "main": "src/index.js",
@@ -46,7 +46,7 @@
   "dependencies": {
     "@plone/components": "workspace:*",
     "@plone-collective/volto-bookmarks": "3.0.2",
-    "@portalbrasil/core": "1.0.0-alpha.3"
+    "@portalbrasil/core": "1.0.0-alpha.4"
   },
   "peerDependencies": {
     "react": "18.2.0",
