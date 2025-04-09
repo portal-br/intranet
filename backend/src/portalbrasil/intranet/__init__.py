@@ -5,7 +5,7 @@ from zope.i18nmessageid import MessageFactory
 import logging
 
 
-__version__ = "1.0.0a4"
+__version__ = "1.0.0b2"
 
 PACKAGE_NAME = "portalbrasil.intranet"
 

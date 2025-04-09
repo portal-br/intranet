@@ -9,6 +9,24 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0b2 (2025-04-09)
+
+
+### Breaking
+
+- Renomeia pacote para portalbrasil.intranet @ericof 
+
+
+### Funcionalidade
+
+- Adiciona dependência do portabrasil.core @ericof 
+
+
+### Interno
+
+- Atualiza versão do Plone para 6.1.1 [@ericof] [#22](https://github.com/portal-br/intranet/issues/22)
+- Utiliza versão 1.0.0a4 do portabrasil.core @ericof 
+
 ## 1.0.0a4 (2024-10-14)
 
 

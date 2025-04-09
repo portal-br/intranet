@@ -1,6 +1,58 @@
 # Alterações
 
 <!-- towncrier release notes start -->
+## 1.0.0b2 (2025-04-09)
+
+### Backend
+
+
+#### Breaking
+
+- Renomeia pacote para portalbrasil.intranet @ericof 
+
+
+#### Funcionalidade
+
+- Adiciona dependência do portabrasil.core @ericof 
+
+
+#### Interno
+
+- Atualiza versão do Plone para 6.1.1 [@ericof] [#22](https://github.com/portal-br/intranet/issues/22)
+- Utiliza versão 1.0.0a4 do portabrasil.core @ericof 
+
+
+
+### Frontend
+
+#### Breaking
+
+- Renomeia pacote para @portalbrasil/intranet @ericof 
+
+#### Funcionalidade
+
+- Dependência do @portalbrasil/core @ericof 
+
+#### Interno
+
+- Atualiza configuração do .release-it.json [@ericof] [#14](https://github.com/portal-br/intranet/issue/14)
+- Atualiza versão do volto para 18.1.1 [@samoel-silva] [#16](https://github.com/portal-br/intranet/issue/16)
+- Atualiza versão do volto para 18.11.0 [@ericof] [#23](https://github.com/portal-br/intranet/issue/23)
+
+
+
+### Projeto
+
+
+#### Interno
+
+- GHA: Adiciona novos templates para issues @ericof 
+- GHA: Adiciona validação de fragmentos de changelog em cada Pull Request @ericof 
+- Move o repositório de github.com/plonegovbr/portalbrasil-intranet para github.com/portal-br/intranet @ericof 
+- Reorganiza o repositório seguindo as melhores práticas da comunidade Plone @ericof 
+
+
+
 
 ## 1.0.0a4 (2024-10-14)
 

@@ -8,6 +8,22 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-beta.2 (2025-04-09)
+
+### Breaking
+
+- Renomeia pacote para @portalbrasil/intranet @ericof 
+
+### Funcionalidade
+
+- Dependência do @portalbrasil/core @ericof 
+
+### Interno
+
+- Atualiza configuração do .release-it.json [@ericof] [#14](https://github.com/portal-br/intranet/issue/14)
+- Atualiza versão do volto para 18.1.1 [@samoel-silva] [#16](https://github.com/portal-br/intranet/issue/16)
+- Atualiza versão do volto para 18.11.0 [@ericof] [#23](https://github.com/portal-br/intranet/issue/23)
+
 ## 1.0.0-alpha.4 (2024-10-14)
 
 ### Documentação
