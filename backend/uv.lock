@@ -3669,6 +3669,7 @@ dependencies = [
     { name = "collective-taxonomy" },
     { name = "collective-volto-formsupport" },
     { name = "collective-volto-otp" },
+    { name = "plone-app-discussion" },
     { name = "portalbrasil-core" },
 ]
 
@@ -3713,6 +3714,7 @@ requires-dist = [
     { name = "collective-volto-otp" },
     { name = "horse-with-no-namespace", marker = "extra == 'test'", specifier = ">=20250408.0" },
     { name = "mypy", marker = "extra == 'test'", specifier = ">=1.15.0" },
+    { name = "plone-app-discussion" },
     { name = "plone-app-testing", marker = "extra == 'test'" },
     { name = "plone-restapi", extras = ["test"], marker = "extra == 'test'" },
     { name = "portalbrasil-core", specifier = "==1.0.0a4" },

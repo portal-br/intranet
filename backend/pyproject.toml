@@ -31,6 +31,7 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
 ]
 dependencies = [
+    "plone.app.discussion",
     "collective.volto.formsupport",
     "collective.volto.otp",
     "collective.honeypot",
