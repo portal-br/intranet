@@ -50,6 +50,8 @@ LABEL maintainer="PloneGov-BR <gov@plone.org.br>" \
       org.label-schema.description="PortalBrasil: Intranet (Backend)." \
       org.label-schema.vendor="PloneGov-BR"
 
+ENV CHAMELEON_CACHE=/data/var/cache
+
 # Copy the pre-built `/app` directory to the runtime container
 # and change the ownership to user app and group app in one step.
 COPY --from=builder --chown=500:500 /app /app
