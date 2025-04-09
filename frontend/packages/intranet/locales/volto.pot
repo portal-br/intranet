@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-07-10T21:28:22.781Z\n"
+"POT-Creation-Date: 2025-04-09T19:32:01.711Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -13,11 +13,6 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
 
-#. Default: "Close menu"
-#: components/Navigation/Navigation
-msgid "Close menu"
-msgstr ""
-
 #. Default: "Colaboradores"
 #: components/Blocks/Colaboradores/schema
 msgid "Colaboradores"
@@ -28,19 +23,9 @@ msgstr ""
 msgid "Gestor"
 msgstr ""
 
-#. Default: "Open menu"
-#: components/Navigation/Navigation
-msgid "Open menu"
-msgstr ""
-
 #. Default: "Portal Brasil: Intranet"
 #: components/ToolLogo/ToolLogo
 msgid "Portal Brasil: Intranet"
-msgstr ""
-
-#. Default: "Powered by Portal Brasil: Intranet, Plone & Python"
-#: components/Footer/Footer
-msgid "Powered by Portal Brasil: Intranet, Plone & Python"
 msgstr ""
 
 #. Default: "Título"
@@ -63,11 +48,6 @@ msgstr ""
 #. Default: "log in"
 #: components/Unauthorized/Unauthorized
 msgid "log in"
-msgstr ""
-
-#. Default: ""
-#: components/Header/Header
-msgid "siteLabel"
 msgstr ""
 
 #. Default: "Áreas"

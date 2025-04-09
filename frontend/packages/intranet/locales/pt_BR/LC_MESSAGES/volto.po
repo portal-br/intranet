@@ -11,11 +11,6 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. Default: "Close menu"
-#: components/Navigation/Navigation
-msgid "Close menu"
-msgstr ""
-
 #. Default: "Colaboradores"
 #: components/Blocks/Colaboradores/schema
 msgid "Colaboradores"
@@ -26,19 +21,9 @@ msgstr ""
 msgid "Gestor"
 msgstr ""
 
-#. Default: "Open menu"
-#: components/Navigation/Navigation
-msgid "Open menu"
-msgstr ""
-
 #. Default: "Portal Brasil: Intranet"
 #: components/ToolLogo/ToolLogo
 msgid "Portal Brasil: Intranet"
-msgstr ""
-
-#. Default: "Powered by Portal Brasil: Intranet, Plone & Python"
-#: components/Footer/Footer
-msgid "Powered by Portal Brasil: Intranet, Plone & Python"
 msgstr ""
 
 #. Default: "Título"
@@ -51,22 +36,17 @@ msgstr ""
 #. Default: "Unauthorized"
 #: components/Unauthorized/Unauthorized
 msgid "Unauthorized"
-msgstr ""
+msgstr "Não autorizado"
 
 #. Default: "You are trying to access a protected resource, please {login} first."
 #: components/Unauthorized/Unauthorized
 msgid "You are trying to access a protected resource, please {login} first."
-msgstr ""
+msgstr "Você está tentando acessar um conteúdo restrito, por favor, {login} primeiro"
 
 #. Default: "log in"
 #: components/Unauthorized/Unauthorized
 msgid "log in"
-msgstr ""
-
-#. Default: ""
-#: components/Header/Header
-msgid "siteLabel"
-msgstr ""
+msgstr "acessar"
 
 #. Default: "Áreas"
 #: components/Blocks/Areas/schema

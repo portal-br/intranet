@@ -1,5 +1,7 @@
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
+from plonegovbr.brfields.fields import CEP
+from plonegovbr.brfields.fields import Estados
 from portalbrasil.intranet import _
 from zope import schema
 from zope.interface import provider
@@ -33,11 +35,11 @@ class IEndereco(model.Schema):
         required=False,
         default="",
     )
-    estado = schema.TextLine(
+    estado = Estados(
         title=_("Estado"),
         required=False,
     )
-    cep = schema.TextLine(
+    cep = CEP(
         title=_("CEP"),
         required=False,
         default="",
