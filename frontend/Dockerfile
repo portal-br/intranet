@@ -2,7 +2,7 @@
 ARG VOLTO_VERSION
 FROM plone/frontend-builder:${VOLTO_VERSION} AS builder
 
-COPY --chown=node packages/portalbrasil-intranet /app/packages/portalbrasil-intranet
+COPY --chown=node packages/intranet /app/packages/intranet
 COPY --chown=node volto.config.js /app/
 COPY --chown=node package.json /app/package.json.temp
 COPY --chown=node mrs.developer.json /app/
@@ -21,7 +21,7 @@ EOT
 FROM plone/frontend-prod-config:${VOLTO_VERSION}
 
 LABEL maintainer="PloneGov-BR <gov@plone.org.br>" \
-      org.label-schema.name="portalbrasil-intranet-frontend" \
+      org.label-schema.name="ghcr.io/portal-br/intranet-frontend" \
       org.label-schema.description="PortalBrasil: Intranet frontend image." \
       org.label-schema.vendor="PloneGov-BR"
 
