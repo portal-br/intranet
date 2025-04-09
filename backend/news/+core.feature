@@ -1,1 +1,1 @@
-Adiciona dependência do portabrasl.core @ericof
+Adiciona dependência do portabrasil.core @ericof
