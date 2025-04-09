@@ -42,11 +42,7 @@ class TestRegistration:
     @pytest.mark.parametrize(
         "profile",
         [
-            "plone.app.contenttypes:default",
-            "plonetheme.barceloneta:default",
-            "plone.restapi:default",
-            "plone.volto:default",
-            "plonegovbr.intranet:default",
+            "portalbrasil.intranet:default",
         ],
     )
     def test_distribution_profiles(self, profile):

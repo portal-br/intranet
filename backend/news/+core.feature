@@ -1,0 +1,1 @@
+Adiciona dependência do portabrasl.core @ericof

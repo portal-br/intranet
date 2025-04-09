@@ -1,49 +1,82 @@
-name: 'PortalBrasil: Intranet'
+name: "PortalBrasil: Intranet - CI"
 
 on:
   push:
     paths:
       - "backend/**"
+      - "docs/**"
       - "frontend/**"
       - ".github/workflows/backend.yml"
+      - ".github/workflows/docs.yml"
       - ".github/workflows/frontend.yml"
       - ".github/workflows/main.yml"
       - "devops/**"
   workflow_dispatch:
 
+env:
+  image-name-prefix: ghcr.io/portal-br/intranet
+  node-version: "22.x"
+  python-version: "3.12"
+
 jobs:
   config:
-    runs-on: ubuntu-latest
-    outputs:
-      backend: ${{ steps.filter.outputs.backend }}
-      frontend: ${{ steps.filter.outputs.frontend }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - uses: dorny/paths-filter@v3
-        id: filter
-        with:
-          filters: |
-            backend:
-              - 'backend/**'
-              - '.github/workflows/backend.yml'
-            frontend:
-              - 'frontend/**'
-              - '.github/workflows/frontend.yml'
+    name: "Config: Compute values used in workflow"
+    uses: ./.github/workflows/config.yml
 
   backend:
     uses: ./.github/workflows/backend.yml
-    needs: config
+    needs:
+        - config
+    with:
+        base-tag: ${{ needs.config.outputs.base-tag }}
+        image-name-prefix: ${{ needs.config.outputs.image-name-prefix }}
+        image-name-suffix: backend
+        python-version: ${{ needs.config.outputs.python-version }}
+        pb-version: ${{ needs.config.outputs.pb-version }}
     if: ${{ needs.config.outputs.backend == 'true' }}
     permissions:
       contents: read
       packages: write
 
+  docs:
+    uses: ./.github/workflows/docs.yml
+    needs:
+        - config
+    with:
+      python-version: ${{ needs.config.outputs.python-version }}
+    if: ${{ needs.config.outputs.docs == 'true' }}
+
   frontend:
     uses: ./.github/workflows/frontend.yml
-    needs: config
+    needs:
+        - config
+    with:
+        base-tag: ${{ needs.config.outputs.base-tag }}
+        image-name-prefix: ${{ needs.config.outputs.image-name-prefix }}
+        image-name-suffix: frontend
+        node-version: ${{ needs.config.outputs.node-version }}
+        volto-version: ${{ needs.config.outputs.volto-version }}
     if: ${{ needs.config.outputs.frontend == 'true' }}
     permissions:
       contents: read
       packages: write
+
+  report:
+    name: "Relatório"
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    needs:
+      - config
+      - backend
+      - docs
+      - frontend
+    steps:
+      - name: Write report
+        run: |
+          echo '# Workflow Report' >> $GITHUB_STEP_SUMMARY
+          echo '| Job ID | Conclusion |' >> $GITHUB_STEP_SUMMARY
+          echo '| --- | --- |' >> $GITHUB_STEP_SUMMARY
+          echo '| config | ${{ needs.config.result }} |' >> $GITHUB_STEP_SUMMARY
+          echo '| docs | ${{ needs.docs.result }} |' >> $GITHUB_STEP_SUMMARY
+          echo '| backend | ${{ needs.backend.result }} |' >> $GITHUB_STEP_SUMMARY
+          echo '| frontend | ${{ needs.frontend.result }} |' >> $GITHUB_STEP_SUMMARY

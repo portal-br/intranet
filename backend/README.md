@@ -1,6 +1,6 @@
-# plonegovbr.intranet
+# portalbrasil.intranet
 
-Solução de Intranet construída com Plone
+Solução de Intranet construída com PortalBrasil & Plone
 
 ## Features
 
@@ -8,10 +8,10 @@ TODO: List our awesome features
 
 ## Installation
 
-Install plonegovbr.intranet with `pip`:
+Install portalbrasil.intranet with `pip`:
 
 ```shell
-pip install plonegovbr.intranet
+pip install portalbrasil.intranet
 ```
 And to create the Plone site:
 
@@ -21,8 +21,8 @@ make create_site
 
 ## Contribute
 
-- [Issue Tracker](https://github.com/plonegovbr/plonegovbr.intranet/issues)
-- [Source Code](https://github.com/plonegovbr/plonegovbr.intranet/)
+- [Issue Tracker](https://github.com/portal-br/intranet/issues)
+- [Source Code](https://github.com/portal-br/intranet/)
 
 ## License
 

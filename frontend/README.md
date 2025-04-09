@@ -1,10 +1,10 @@
 # PortalBrasil: Intranet (portalbrasil-intranet)
 
-Solução de Intranet construída com Plone
+Solução de Intranet construída com PortalBrasil & Plone
 
-[![npm](https://img.shields.io/npm/v/@plonegovbr/portalbrasil-intranet)](`https://www.npmjs.com/package/@plonegovbr/portalbrasil-intranet`)
+[![npm](https://img.shields.io/npm/v/@portal-br/intranet)](`https://www.npmjs.com/package/@portal-br/intranet`)
 [![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://plonegovbr.github.io/portalbrasil-intranet/)
-[![Unit tests](https://github.com/plonegovbr/portalbrasil-intranet/actions/workflows/frontend.yml/badge.svg)](https://github.com/plonegovbr/portalbrasil-intranet/actions/workflows/frontend.yml)
+[![Unit tests](https://github.com/portal-br/intranet/actions/workflows/frontend.yml/badge.svg)](https://github.com/portal-br/intranet/actions/workflows/frontend.yml)
 
 ## Features
 

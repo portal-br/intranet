@@ -32,7 +32,7 @@
 
 ### Features
 
-- Serializar data de aniversário completa apenas para quem pode editar o conteúdo [@ericof] [#3](https://github.com/plonegovbr/portalbrasil-intranet/issues/3)
+- Serializar data de aniversário completa apenas para quem pode editar o conteúdo [@ericof] [#3](https://github.com/portal-br/intranet/issues/3)
 
 
 ## 1.0.0a1 (2024-07-10)

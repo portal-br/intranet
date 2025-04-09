@@ -1,5 +1,5 @@
-from plonegovbr.intranet.testing import FUNCTIONAL_TESTING
-from plonegovbr.intranet.testing import INTEGRATION_TESTING
+from portalbrasil.intranet.testing import FUNCTIONAL_TESTING
+from portalbrasil.intranet.testing import INTEGRATION_TESTING
 from pytest_plone import fixtures_factory
 
 import pytest

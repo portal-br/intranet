@@ -46,10 +46,7 @@ module.exports = {
           ['@plone/volto', `${coreLocation}/packages/volto/src`],
           ['@plone/volto-slate', `${coreLocation}/packages/volto-slate/src`],
           ['@plone/registry', `${coreLocation}/packages/registry/src`],
-          [
-            '@plonegovbr/portalbrasil-intranet',
-            './packages/portalbrasil-intranet/src',
-          ],
+          ['@portal-br/intranet', './packages/portalbrasil-intranet/src'],
           ...addonAliases,
         ],
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],

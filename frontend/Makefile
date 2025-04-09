@@ -23,8 +23,8 @@ PLONE_VERSION=6
 DOCKER_IMAGE=plone/server-dev:${PLONE_VERSION}
 DOCKER_IMAGE_ACCEPTANCE=plone/server-acceptance:${PLONE_VERSION}
 
-ADDON_NAME='@plonegovbr/portalbrasil-intranet'
-IMAGE_NAME=ghcr.io/plonegovbr/portalbrasil-intranet-frontend
+ADDON_NAME='intranet'
+IMAGE_NAME=ghcr.io/portal-br/intranet-frontend
 IMAGE_TAG=latest
 VOLTO_VERSION = $(shell cat ./mrs.developer.json | python -c "import sys, json; print(json.load(sys.stdin)['core']['tag'])")
 
@@ -33,6 +33,10 @@ help: ## Show this help
 	@echo -e "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\x1b[36m\1\\x1b[m:\2/' | column -c2 -t -s :)"
 
 # Dev Helpers
+.PHONY: clean
+clean: ## Clean environment
+	@echo "$(RED)==> Cleaning Volto core and node_modules$(RESET)"
+	rm -rf core node_modules
 
 .PHONY: install
 install: ## Installs the add-on in a development environment

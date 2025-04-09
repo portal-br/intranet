@@ -1,11 +1,11 @@
 # syntax=docker/dockerfile:1
 ARG IMAGE_TAG
 ARG SEED=1000
-FROM ghcr.io/plonegovbr/portalbrasil-intranet-backend:${IMAGE_TAG:-latest}
+FROM ghcr.io/portal-br/intranet-backend:${IMAGE_TAG:-latest}
 
 LABEL maintainer="PloneGov-BR <gov@plone.org.br>" \
-      org.label-schema.name="portalbrasil-intranet-demo" \
-      org.label-schema.description="PortalBrasil: Intranet backend image." \
+      org.label-schema.name="ghcr.io/portal-br/intranet-demo" \
+      org.label-schema.description="Demo do PortalBrasil: Intranet." \
       org.label-schema.vendor="PloneGov-BR"
 
 # Disable MO Compilation

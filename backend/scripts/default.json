@@ -5,5 +5,6 @@
     "default_language": "pt-br",
     "portal_timezone": "America/Sao_Paulo",
     "setup_content": true,
-    "demo_content": true
+    "demo_content": true,
+    "distribution": "portalbrasil-intranet"
 }

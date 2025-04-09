@@ -1,10 +1,8 @@
 # PortalBrasil: Intranet 🚀
 
-[![Built with Cookieplone](https://img.shields.io/badge/built%20with-Cookieplone-0083be.svg?logo=cookiecutter)](https://github.com/plone/cookiecutter-plone/)
-[![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
-[![Tests](https://github.com/plonegovbr/portalbrasil-intranet/actions/workflows/main.yml/badge.svg)](https://github.com/plonegovbr/portalbrasil-intranet/actions/workflows/main.yml)
+[![Testes](https://github.com/portal-br/intranet/actions/workflows/main.yml/badge.svg)](https://github.com/portal-br/intranet/actions/workflows/main.yml)
 
-Solução de Intranet construída com Plone
+Solução de Intranet construída com PortalBrasil & Plone
 
 ## Início Rápido 🏁
 
@@ -12,8 +10,8 @@ Solução de Intranet construída com Plone
 
 Certifique-se de ter os seguintes itens instalados:
 
-- Python 3.11 🐍
-- Node 20 🟩
+- UV 🐍
+- Node 22 🟩
 - pnpm 🧶
 - Docker 🐳
 
@@ -22,8 +20,8 @@ Certifique-se de ter os seguintes itens instalados:
 1. Clone o repositório:
 
 ```shell
-git clone git@github.com:plonegovbr/portalbrasil-intranet.git
-cd portalbrasil-intranet
+git clone git@github.com:portal-br/intranet.git
+cd intranet
 ```
 
 2. Instale tanto o Backend quanto o Frontend:
@@ -85,7 +83,7 @@ Em caso de `RequiredDependencyException`, instalar o pacote `libjpeg-dev`
 
 Este monorepo consiste em três seções distintas: `backend`, `frontend` e `devops`.
 
-- **backend**: Abriga a API e a instalação do Plone, utilizando pip em vez de buildout, e inclui um pacote de políticas chamado plonegovbr.intranet.
+- **backend**: Abriga a API e a instalação do Plone, utilizando pip em vez de buildout, e inclui um pacote de políticas chamado portalbrasil.intranet.
 - **frontend**: Contém o pacote React (Volto).
 - **devops**: Abrange a Stack Docker, playbooks Ansible e configurações de Cache.
 

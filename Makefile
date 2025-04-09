@@ -12,11 +12,11 @@ CURRENT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 GIT_FOLDER=$(CURRENT_DIR)/.git
 
 PROJECT_NAME=portalbrasil-intranet
-STACK_NAME=intranet-demo-plone-org-br
+STACK_NAME=portalbrasil-intranet-plone-org-br
 STACK_FILE=docker-compose-dev.yml
 
-VOLTO_VERSION = $(shell cat frontend/mrs.developer.json | python -c "import sys, json; print(json.load(sys.stdin)['core']['tag'])")
-PLONE_VERSION=$(shell cat backend/version.txt)
+VOLTO_VERSION=$(shell cat frontend/mrs.developer.json | python -c "import sys, json; print(json.load(sys.stdin)['core']['tag'])")
+PB_VERSION=$(shell cat backend/version.txt)
 
 # We like colors
 # From: https://coderwall.com/p/izxssa/colored-makefile-for-golang-projects
@@ -83,10 +83,30 @@ backend-test:  ## Test backend codebase
 	@echo "Test backend"
 	$(MAKE) -C "./backend/" test
 
+###########################################
+# Docs
+###########################################
+.PHONY: docs-install
+docs-install:  ## Install documentation dependencies
+	$(MAKE) -C "./docs/" install
+
+.PHONY: docs-build
+docs-build:  ## Build documentation
+	$(MAKE) -C "./docs/" html
+
+.PHONY: docs-live
+docs-live:  ## Rebuild documentation on changes, with live-reload in the browser
+	$(MAKE) -C "./docs/" livehtml
+
+###########################################
+# Environment
+###########################################
+
 .PHONY: install
 install:  ## Install
-	@echo "Install Backend & Frontend"
+	@echo "Install Backend, Frontend and Docs"
 	$(MAKE) backend-install
+	$(MAKE) docs-install
 	$(MAKE) frontend-install
 
 .PHONY: start
@@ -101,46 +121,65 @@ clean:  ## Clean installation
 	$(MAKE) -C "./backend/" clean
 	$(MAKE) -C "./frontend/" clean
 
+
+###########################################
+# QA
+###########################################
 .PHONY: format
 format:  ## Format codebase
-	@echo "Format codebase"
+	@echo "Format the codebase"
 	$(MAKE) -C "./backend/" format
 	$(MAKE) -C "./frontend/" format
 
 .PHONY: lint
-lint:  ## Lint codebase
-	@echo "Lint codebase"
+lint:  ## Format codebase
+	@echo "Lint the codebasecodebase"
 	$(MAKE) -C "./backend/" lint
 	$(MAKE) -C "./frontend/" lint
 
+.PHONY: check
+check:  format lint ## Lint and Format codebase
+
+
+###########################################
+# i18n
+###########################################
 .PHONY: i18n
 i18n:  ## Update locales
 	@echo "Update locales"
 	$(MAKE) -C "./backend/" i18n
 	$(MAKE) -C "./frontend/" i18n
 
+###########################################
+# Tests
+###########################################
 .PHONY: test
 test:  backend-test frontend-test ## Test codebase
 
+###########################################
+# Docker Images
+###########################################
 .PHONY: build-images
 build-images:  ## Build docker images
-	@echo "Build Images"
+	@echo "Build"
 	$(MAKE) -C "./backend/" build-image
 	$(MAKE) -C "./frontend/" build-image
 
-## Docker stack
+###########################################
+# Stack: Development
+###########################################
 .PHONY: stack-start
 stack-start:  ## Local Stack: Start Services
 	@echo "Start local Docker stack"
-	VOLTO_VERSION=$(VOLTO_VERSION) PLONE_VERSION=$(PLONE_VERSION) docker compose -f $(STACK_FILE) up -d --build
+	VOLTO_VERSION=$(VOLTO_VERSION) PB_VERSION=$(PB_VERSION) docker compose -f $(STACK_FILE) up -d --build
 	@echo "Now visit: http://portalbrasil-intranet.localhost"
 
-.PHONY: start-stack
+.PHONY: stack-create-site
 stack-create-site:  ## Local Stack: Create a new site
 	@echo "Create a new site in the local Docker stack"
-	@docker compose -f $(STACK_FILE) exec backend ./docker-entrypoint.sh create-site
+	VOLTO_VERSION=$(VOLTO_VERSION) PB_VERSION=$(PB_VERSION) docker compose -f $(STACK_FILE) exec backend ./docker-entrypoint.sh create-site
 
-.PHONY: start-ps
+.PHONY: stack-status
 stack-status:  ## Local Stack: Check Status
 	@echo "Check the status of the local Docker stack"
 	@docker compose -f $(STACK_FILE) ps
@@ -156,63 +195,3 @@ stack-rm:  ## Local Stack: Remove Services and Volumes
 	@docker compose -f $(STACK_FILE) down
 	@echo "Remove local volume data"
 	@docker volume rm $(PROJECT_NAME)_vol-site-data
-
-## Acceptance
-.PHONY: acceptance-backend-dev-start
-acceptance-backend-dev-start: ## Build Acceptance Servers
-	@echo "Build acceptance backend"
-	$(MAKE) -C "./backend/" acceptance-backend-start
-
-.PHONY: acceptance-frontend-dev-start
-acceptance-frontend-dev-start: ## Build Acceptance Servers
-	@echo "Build acceptance backend"
-	$(MAKE) -C "./frontend/" acceptance-frontend-dev-start
-
-.PHONY: acceptance-test
-acceptance-test: ## Start Acceptance tests in interactive mode
-	@echo "Build acceptance backend"
-	$(MAKE) -C "./frontend/" acceptance-test
-
-# Build Docker images
-.PHONY: acceptance-frontend-image-build
-acceptance-frontend-image-build: ## Build Acceptance frontend server image
-	@echo "Build acceptance frontend"
-	@docker build frontend -t plonegovbr/portalbrasil-intranet-frontend:acceptance -f frontend/Dockerfile --build-arg VOLTO_VERSION=$(VOLTO_VERSION)
-
-.PHONY: acceptance-backend-image-build
-acceptance-backend-image-build: ## Build Acceptance backend server image
-	@echo "Build acceptance backend"
-	@docker build backend -t plonegovbr/portalbrasil-intranet-backend:acceptance -f backend/Dockerfile.acceptance --build-arg PLONE_VERSION=$(PLONE_VERSION)
-
-.PHONY: acceptance-images-build
-acceptance-images-build: ## Build Acceptance frontend/backend images
-	$(MAKE) acceptance-backend-image-build
-	$(MAKE) acceptance-frontend-image-build
-
-.PHONY: acceptance-frontend-container-start
-acceptance-frontend-container-start: ## Start Acceptance frontend container
-	@echo "Start acceptance frontend"
-	@docker run --rm -p 3000:3000 --name portalbrasil-intranet-frontend-acceptance --link portalbrasil-intranet-backend-acceptance:backend -e RAZZLE_API_PATH=http://localhost:55001/plone -e RAZZLE_INTERNAL_API_PATH=http://backend:55001/plone -d plonegovbr/portalbrasil-intranet-frontend:acceptance
-
-.PHONY: acceptance-backend-container-start
-acceptance-backend-container-start: ## Start Acceptance backend container
-	@echo "Start acceptance backend"
-	@docker run --rm -p 55001:55001 --name portalbrasil-intranet-backend-acceptance -d plonegovbr/portalbrasil-intranet-backend:acceptance
-
-.PHONY: acceptance-containers-start
-acceptance-containers-start: ## Start Acceptance containers
-	$(MAKE) acceptance-backend-container-start
-	$(MAKE) acceptance-frontend-container-start
-
-.PHONY: acceptance-containers-stop
-acceptance-containers-stop: ## Stop Acceptance containers
-	@echo "Stop acceptance containers"
-	@docker stop portalbrasil-intranet-frontend-acceptance
-	@docker stop portalbrasil-intranet-backend-acceptance
-
-.PHONY: ci-acceptance-test
-ci-acceptance-test: ## Run Acceptance tests in ci mode
-	$(MAKE) acceptance-containers-start
-	pnpm dlx wait-on --httpTimeout 20000 http-get://localhost:55001/plone http://localhost:3000
-	$(MAKE) -C "./frontend/" ci-acceptance-test
-	$(MAKE) acceptance-containers-stop

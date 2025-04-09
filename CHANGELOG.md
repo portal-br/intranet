@@ -19,7 +19,7 @@
 
 #### Documentação
 
-- Altera a geração do label `org.label-schema.docker.cmd` para que ele utilize a tag gerada [@ericof] [#9](https://github.com/plonegovbr/portalbrasil-intranet/issue/9)
+- Altera a geração do label `org.label-schema.docker.cmd` para que ele utilize a tag gerada [@ericof] [#9](https://github.com/portal-br/intranet/issue/9)
 
 
 ### Frontend
@@ -35,7 +35,7 @@
 ### Frontend
 #### Funcionalidade
 
-- Atualizar Volto para 18.0.0-alpha.43 [@ericof] [#6](https://github.com/plonegovbr/portalbrasil-intranet/issue/6)
+- Atualizar Volto para 18.0.0-alpha.43 [@ericof] [#6](https://github.com/portal-br/intranet/issue/6)
 
 ## 1.0.0a2 (2024-07-24)
 
@@ -43,15 +43,15 @@
 
 #### Funcionalidade
 
-- Serializar data de aniversário completa apenas para quem pode editar o conteúdo [@ericof] [#3](https://github.com/plonegovbr/portalbrasil-intranet/issues/3)
+- Serializar data de aniversário completa apenas para quem pode editar o conteúdo [@ericof] [#3](https://github.com/portal-br/intranet/issues/3)
 
 ### Frontend
 
 #### Funcionalidade
 
-- Habilita VLibras por padrão em todas as páginas da Intranet [@ericof] [#1](https://github.com/plonegovbr/portalbrasil-intranet/issue/1)
-- Suporte a exibição do mapa do site no rodapé [@ericof] [#2](https://github.com/plonegovbr/portalbrasil-intranet/issue/2)
-- Exibe data de aniversário de um colaborador [@ericof] [#3](https://github.com/plonegovbr/portalbrasil-intranet/issue/3)
+- Habilita VLibras por padrão em todas as páginas da Intranet [@ericof] [#1](https://github.com/portal-br/intranet/issue/1)
+- Suporte a exibição do mapa do site no rodapé [@ericof] [#2](https://github.com/portal-br/intranet/issue/2)
+- Exibe data de aniversário de um colaborador [@ericof] [#3](https://github.com/portal-br/intranet/issue/3)
 
 ## 1.0.0a1 (2024-07-10)
 

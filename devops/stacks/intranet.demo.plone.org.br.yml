@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   frontend:
-    image: ghcr.io/plonegovbr/portalbrasil-intranet-frontend:${STACK_PARAM:-latest}
+    image: ghcr.io/portal-br/intranet-frontend:${STACK_PARAM:-latest}
     environment:
       RAZZLE_INTERNAL_API_PATH: http://pb-intranet-demo-org_backend:8080/Plone
       RAZZLE_MATOMO_SITE_ID: 12
@@ -36,7 +36,7 @@ services:
         - traefik.http.routers.rt-pb-intranet-demo-frontend.middlewares=gzip
 
   backend:
-    image: ghcr.io/plonegovbr/portalbrasil-intranet-backend:${STACK_PARAM:-latest}
+    image: ghcr.io/portal-br/intranet-backend:${STACK_PARAM:-latest}
     environment:
       RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_USER:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-plone}'"
       ZOPE_FORM_MEMORY_LIMIT: 250MB

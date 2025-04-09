@@ -1,0 +1,31 @@
+[repository]
+name = "portalbrasil-intranet"
+managed_by_uv = true
+changelog = "CHANGELOG.md"
+version = "version.txt"
+compose = "docker-compose.yml"
+
+[repository.towncrier]
+section = "Projeto"
+settings = "towncrier.toml"
+
+[backend]
+path = "backend"
+
+[backend.package]
+name = "portalbrasil.intranet"
+path = "backend"
+changelog = "backend/CHANGELOG.md"
+towncrier_settings = "backend/pyproject.toml"
+base_package = "portalbrasil.core"
+publish = true
+
+[frontend]
+path = "frontend"
+
+[frontend.package]
+name = "@portalbrasil/intranet"
+path = "frontend/packages/intranet"
+changelog = "frontend/packages/intranet/CHANGELOG.md"
+towncrier_settings = "frontend/packages/intranet/towncrier.toml"
+publish = true

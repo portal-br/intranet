@@ -3,7 +3,7 @@
   "version": "1.0.0-alpha.4",
   "description": "Solu\u00e7\u00e3o de Intranet constru\u00edda com Plone",
   "author": "PloneGov-BR",
-  "homepage": "https://github.com/plonegovbr/portalbrasil-intranet",
+  "homepage": "https://github.com/portal-br/intranet",
   "license": "MIT",
   "keywords": [
     "volto-addon",
@@ -35,7 +35,7 @@
   "dependencies": {
     "@plone/volto": "workspace:*",
     "@plone/registry": "workspace:*",
-    "@plonegovbr/portalbrasil-intranet": "workspace:*"
+    "@portal-br/intranet": "workspace:*"
   },
   "devDependencies": {
     "mrs-developer": "^2.2.0"

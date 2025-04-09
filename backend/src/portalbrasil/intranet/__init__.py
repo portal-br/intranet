@@ -1,0 +1,15 @@
+"""Init and utils."""
+
+from zope.i18nmessageid import MessageFactory
+
+import logging
+
+
+__version__ = "1.0.0a4"
+
+PACKAGE_NAME = "portalbrasil.intranet"
+
+
+_ = MessageFactory(PACKAGE_NAME)
+
+logger = logging.getLogger(PACKAGE_NAME)

@@ -32,8 +32,8 @@ LABEL maintainer="PloneGov-BR <gov@plone.org.br>" \
       org.label-schema.description="PortalBrasil: Intranet backend acceptance image." \
       org.label-schema.vendor="PloneGov-BR"
 
-ENV CONFIGURE_PACKAGES="plone.restapi,plone.volto,plone.volto.cors,plonegovbr.intranet"
-ENV APPLY_PROFILES="plonegovbr.intranet:default"
+ENV CONFIGURE_PACKAGES="plone.restapi,plone.volto,plone.volto.cors,portalbrasil.intranet"
+ENV APPLY_PROFILES="portalbrasil.intranet:default"
 
 ENV ALLOWED_DISTRIBUTIONS=portalbrasil-intranet
 

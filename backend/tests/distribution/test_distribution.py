@@ -24,9 +24,9 @@ class TestDistribution:
         "package,expected",
         [
             ("plone.app.contenttypes", True),
-            ("plonetheme.barceloneta", True),
             ("plone.restapi", True),
             ("plone.volto", True),
+            ("plonegovbr.brfields", True),
             ("collective.bookmarks", True),
             ("collective.volto.formsupport", True),
         ],

@@ -1,0 +1,64 @@
+{
+  "name": "@portal-br/intranet",
+  "version": "1.0.0-alpha.4",
+  "description": "Solução de Intranet construída com PortalBrasil & Plone",
+  "main": "src/index.js",
+  "license": "MIT",
+  "keywords": [
+    "volto-addon",
+    "volto",
+    "plone",
+    "plonegovbr",
+    "intranet",
+    "react"
+  ],
+  "author": "PloneGov-BR",
+  "homepage": "https://github.com/portal-br/intranet#readme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:portal-br/intranet.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon",
+    "dry-release": "release-it --dry-run",
+    "release": "release-it",
+    "release-major-alpha": "release-it major --preRelease=alpha",
+    "release-alpha": "release-it --preRelease=alpha"
+  },
+  "addons": [
+    "volto-form-block",
+    "@eeacms/volto-accordion-block",
+    "@eeacms/volto-pdf-block",
+    "@kitconcept/volto-button-block",
+    "@kitconcept/volto-heading-block",
+    "@kitconcept/volto-separator-block",
+    "@kitconcept/volto-slider-block",
+    "@plone-collective/volto-bookmarks",
+    "@mbarde/volto-image-crop-widget",
+    "@plonegovbr/volto-vlibras",
+    "@plonegovbr/volto-brwidgets",
+    "@kitconcept/volto-light-theme",
+    "@portalbrasil/core"
+  ],
+  "dependencies": {
+    "@plone/components": "workspace:*",
+    "@plone-collective/volto-bookmarks": "3.0.2",
+    "@portalbrasil/core": "1.0.0-alpha.3"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@plone/scripts": "^3.6.2",
+    "@plone/types": "workspace:*",
+    "@types/jest": "^29.5.8",
+    "@types/lodash": "^4.14.201",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "release-it": "^17.7.0"
+  }
+}
