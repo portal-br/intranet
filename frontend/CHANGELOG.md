@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-beta.3 (2025-04-09)
+
+### Funcionalidade
+
+- Atualiza @portalbrasil/core para versão 1.0.0-alpha.5 @ericof [#1](https://github.com/portal-br/intranet/issue/1)
+
 ## 1.0.0-beta.2 (2025-04-09)
 
 ### Breaking

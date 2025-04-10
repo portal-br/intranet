@@ -1,6 +1,32 @@
 # Alterações
 
 <!-- towncrier release notes start -->
+## 1.0.0b3 (2025-04-09)
+
+### Backend
+
+
+#### Funcionalidade
+
+- Atualiza portalbrasil.core para versão 1.0.0a5 @ericof [#1](https://github.com/portal-br/intranet/issues/1)
+
+
+
+### Frontend
+
+#### Funcionalidade
+
+- Atualiza @portalbrasil/core para versão 1.0.0-alpha.5 @ericof [#1](https://github.com/portal-br/intranet/issue/1)
+
+
+
+### Projeto
+
+No significant changes.
+
+
+
+
 ## 1.0.0b2 (2025-04-09)
 
 ### Backend

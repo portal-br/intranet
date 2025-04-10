@@ -1,6 +1,6 @@
 {
   "name": "@portalbrasil/intranet",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "Solução de Intranet construída com PortalBrasil & Plone",
   "main": "src/index.js",
   "license": "MIT",
