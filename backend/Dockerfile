@@ -50,7 +50,6 @@ LABEL maintainer="PloneGov-BR <gov@plone.org.br>" \
       org.label-schema.description="PortalBrasil: Intranet (Backend)." \
       org.label-schema.vendor="PloneGov-BR"
 
-ENV CHAMELEON_CACHE=/data/cache
 ENV ALLOWED_DISTRIBUTIONS=portalbrasil-intranet
 
 # Copy the pre-built `/app` directory to the runtime container
