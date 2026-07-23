@@ -1,9 +1,9 @@
 [project]
-name = "voltolighttheme-docs"
+name = "intranet-docs"
 version = "1.0.0"
-description = "Volto Light Theme documentation"
+description = "Intranet documentation"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = "==3.12.*"
 dependencies = [
     "linkify-it-py",
     "myst-parser",

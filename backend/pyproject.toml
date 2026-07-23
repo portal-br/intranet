@@ -8,7 +8,7 @@ dynamic = ["version"]
 description = "Solução de Intranet construída com PortalBrasil"
 readme = "README.md"
 license = "GPL-2.0-only"
-requires-python = ">=3.12"
+requires-python = "==3.12.*"
 authors = [
     { name = "PloneGov-BR", email = "gov@plone.org.br" },
 ]
@@ -28,7 +28,6 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
 ]
 dependencies = [
     "plone.app.discussion",

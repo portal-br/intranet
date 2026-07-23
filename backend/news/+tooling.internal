@@ -1,0 +1,1 @@
+Fixa o suporte ao Python 3.12 (`requires-python = "==3.12.*"`) e regenera o `uv.lock` com a versão atual do uv. @ericof

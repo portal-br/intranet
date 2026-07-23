@@ -1,0 +1,1 @@
+Atualiza `repository.toml` para o novo formato esperado pelas ferramentas de release e corrige os metadados de `docs/pyproject.toml`, que ainda referenciavam o Volto Light Theme. @ericof
