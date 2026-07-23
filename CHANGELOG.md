@@ -1,6 +1,34 @@
 # Alterações
 
 <!-- towncrier release notes start -->
+## 1.0.0 (2026-07-23)
+
+### Backend
+
+
+#### Interno
+
+- Fixa o suporte ao Python 3.12 (`requires-python = "==3.12.*"`) e regenera o `uv.lock` com a versão atual do uv. @ericof 
+
+
+
+### Frontend
+
+#### Interno
+
+- Utiliza `uvx` no lugar de `pipx run` para executar o towncrier durante o processo de release. @ericof 
+
+
+
+### Projeto
+
+
+#### Interno
+
+- Atualiza `repository.toml` para o novo formato esperado pelas ferramentas de release e corrige os metadados de `docs/pyproject.toml`, que ainda referenciavam o Volto Light Theme. @ericof 
+
+
+
 ## 1.0.0b3 (2025-04-09)
 
 ### Backend

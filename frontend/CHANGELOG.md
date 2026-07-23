@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0 (2026-07-23)
+
+### Interno
+
+- Utiliza `uvx` no lugar de `pipx run` para executar o towncrier durante o processo de release. @ericof 
+
 ## 1.0.0-beta.3 (2025-04-09)
 
 ### Funcionalidade

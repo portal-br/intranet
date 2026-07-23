@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0 (2026-07-23)
+
+
+### Interno
+
+- Fixa o suporte ao Python 3.12 (`requires-python = "==3.12.*"`) e regenera o `uv.lock` com a versão atual do uv. @ericof 
+
 ## 1.0.0b3 (2025-04-09)
 
 
