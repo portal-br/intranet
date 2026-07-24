@@ -1,5 +1,4 @@
 import type { ConfigType } from '@plone/registry';
-import type { BlocksConfig, BlockConfigBase } from '@plone/types';
 
 // Blocks
 /// Listing block variations

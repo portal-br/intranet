@@ -1,0 +1,1 @@
+Renderiza os retratos de colaboradores e os avatares com o componente `Image` do Volto no lugar da tag `img` crua. @ericof

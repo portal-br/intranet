@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
+import Image from '@plone/volto/components/theme/Image/Image';
 import UniversalLink from '@plone/volto/components/manage/UniversalLink/UniversalLink';
 import { Card } from 'semantic-ui-react';
 import personSVG from '@plone/volto/icons/user.svg';
@@ -11,7 +12,7 @@ const ColaboradorSummary = ({ content }) => {
   return (
     <Card key={content.UID} className={'colaborador'}>
       {img ? (
-        <img
+        <Image
           src={`${content['@id']}/${scale.download}`}
           alt={`Foto de ${content.title}`}
           className={'portrait listitem'}

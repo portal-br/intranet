@@ -4,6 +4,7 @@
  */
 import React from 'react';
 import { Container } from '@plone/components';
+import Image from '@plone/volto/components/theme/Image/Image';
 import UniversalLink from '@plone/volto/components/manage/UniversalLink/UniversalLink';
 import {
   TabPane,
@@ -111,7 +112,7 @@ const ColaboradorView = (props) => {
         </Container>
         {img && (
           <Container className={'portrait'}>
-            <img
+            <Image
               src={img.download}
               alt={`Foto de ${title}`}
               className={'portrait item'}
