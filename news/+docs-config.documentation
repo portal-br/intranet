@@ -1,0 +1,1 @@
+Ajusta a configuração da documentação: usa a versão de `portalbrasil.intranet`, declara o backend como dependência via `tool.uv.sources` e remove as extensões Sphinx do plone.restapi (httpdomain/httpexample). @ericof

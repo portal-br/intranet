@@ -7,7 +7,7 @@
 from datetime import datetime
 
 from packaging.version import Version
-from plone_sphinx_theme import __version__
+from portalbrasil.intranet import __version__
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -24,7 +24,7 @@ author = "PloneGov-BR"
 trademark_name = "portal-br"
 now = datetime.now()
 year = str(now.year)
-copyright = year
+# copyright = year
 
 
 # The version info for the project you're documenting, acts as replacement for
@@ -72,8 +72,6 @@ extensions = [
     "sphinx_reredirects",
     "sphinx_sitemap",
     "sphinx_tippy",
-    "sphinxcontrib.httpdomain",  # plone.restapi
-    "sphinxcontrib.httpexample",  # plone.restapi
     "sphinxcontrib.mermaid",
     "sphinxcontrib.video",
     "sphinxcontrib.youtube",
