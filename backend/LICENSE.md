@@ -1,4 +1,4 @@
-portalbrasil.intranet Copyright 2023, PloneGov-BR
+portalbrasil.intranet Copyright 2026, PloneGov-BR
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License version 2
