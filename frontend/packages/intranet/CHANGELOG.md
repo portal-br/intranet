@@ -1,10 +1,4 @@
-# Changelog
-
-<!-- You should *NOT* be adding new change log entries to this file.
-     You should create a file in the news directory instead.
-     For helpful instructions, please see:
-     https://6.docs.plone.org/volto/developer-guidelines/contributing.html#create-a-pull-request
--->
+# Alterações
 
 <!-- towncrier release notes start -->
 
@@ -12,7 +6,7 @@
 
 ### Interno
 
-- Utiliza `uvx` no lugar de `pipx run` para executar o towncrier durante o processo de release. @ericof 
+- Utiliza `uvx` no lugar de `pipx run` para executar o towncrier durante o processo de release. @ericof
 
 ## 1.0.0-beta.3 (2025-04-09)
 
@@ -24,11 +18,11 @@
 
 ### Breaking
 
-- Renomeia pacote para @portalbrasil/intranet @ericof 
+- Renomeia pacote para @portalbrasil/intranet @ericof
 
 ### Funcionalidade
 
-- Dependência do @portalbrasil/core @ericof 
+- Dependência do @portalbrasil/core @ericof
 
 ### Interno
 

@@ -1,22 +1,20 @@
 {
   "name": "@portalbrasil/intranet",
-  "version": "1.0.0",
+  "version": "2.0.0-alpha.0",
   "description": "Solução de Intranet construída com PortalBrasil & Plone",
-  "main": "src/index.js",
+  "main": "src/index.ts",
   "license": "MIT",
   "keywords": [
     "volto-addon",
     "volto",
     "plone",
-    "plonegovbr",
-    "intranet",
     "react"
   ],
   "author": "PloneGov-BR",
   "homepage": "https://github.com/portal-br/intranet#readme",
   "repository": {
     "type": "git",
-    "url": "git@github.com:portal-br/intranet.git"
+    "url": "git@github.com:portal-br/intranet"
   },
   "publishConfig": {
     "access": "public"
@@ -28,37 +26,71 @@
     "release-major-alpha": "release-it major --preRelease=alpha",
     "release-alpha": "release-it --preRelease=alpha"
   },
+  "theme": "@kitconcept/volto-light-theme",
   "addons": [
-    "volto-form-block",
     "@eeacms/volto-accordion-block",
     "@eeacms/volto-pdf-block",
+    "@plone-collective/volto-bookmarks",
     "@kitconcept/volto-button-block",
+    "@kitconcept/volto-highlight-block",
     "@kitconcept/volto-heading-block",
     "@kitconcept/volto-separator-block",
+    "@kitconcept/volto-social-blocks",
+    "@kitconcept/volto-carousel-block",
     "@kitconcept/volto-slider-block",
-    "@plone-collective/volto-bookmarks",
-    "@mbarde/volto-image-crop-widget",
+    "@kitconcept/volto-logos-block",
+    "@kitconcept/volto-introduction-block",
+    "@plonegovbr/volto-social-media",
+    "@kitconcept/volto-bm3-compat",
+    "@plone-collective/volto-image-editor",
+    "@plone-collective/volto-authomatic",
     "@plonegovbr/volto-vlibras",
     "@plonegovbr/volto-brwidgets",
-    "@kitconcept/volto-light-theme",
-    "@portalbrasil/core"
+    "@plone/volto-form-block",
+    "@kitconcept/volto-light-theme"
   ],
   "dependencies": {
+    "@eeacms/volto-accordion-block": "^10.4.6",
+    "@eeacms/volto-pdf-block": "1.0.12",
+    "@kitconcept/volto-banner-block": "^1.1.0",
+    "@kitconcept/volto-bm3-compat": "^1.0.0-alpha.1",
+    "@kitconcept/volto-button-block": "^5.0.0-alpha.0",
+    "@kitconcept/volto-carousel-block": "^3.0.0-alpha.0",
+    "@kitconcept/volto-heading-block": "^2.5.0",
+    "@kitconcept/volto-highlight-block": "^5.0.0-alpha.2",
+    "@kitconcept/volto-introduction-block": "^1.1.0",
+    "@kitconcept/volto-light-theme": "8.0.0-alpha.31",
+    "@kitconcept/volto-logos-block": "^4.0.0-alpha.0",
+    "@kitconcept/volto-separator-block": "^5.0.0-alpha.0",
+    "@kitconcept/volto-slider-block": "^7.0.0-alpha.0",
+    "@kitconcept/volto-social-blocks": "1.0.0",
+    "@plonegovbr/volto-brwidgets": "1.0.0-alpha.3",
+    "@plonegovbr/volto-vlibras": "0.4.1",
+    "@plone-collective/volto-authomatic": "3.0.0-alpha.6",
+    "@plone-collective/volto-bookmarks": "3.0.4",
+    "@plone-collective/volto-image-editor": "1.0.1",
     "@plone/components": "workspace:*",
-    "@plone-collective/volto-bookmarks": "3.0.2",
-    "@portalbrasil/core": "1.0.0-alpha.5"
+    "@plone/volto-form-block": "1.0.0-alpha.3",
+    "@plonegovbr/volto-code-block": "3.0.0",
+    "@plonegovbr/volto-social-media": "^3.0.0-alpha.0"
   },
   "peerDependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@plone/registry": "workspace:*",
+    "@plone/types": "workspace:*",
+    "classnames": "2.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-intl": "3.12.1"
   },
   "devDependencies": {
-    "@plone/scripts": "^3.6.2",
+    "@plone/registry": "workspace:*",
+    "@plone/scripts": "workspace:*",
     "@plone/types": "workspace:*",
-    "@types/jest": "^29.5.8",
-    "@types/lodash": "^4.14.201",
-    "@types/react": "^18.3.12",
+    "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.1",
-    "release-it": "^17.7.0"
+    "typescript": "^5.7.3",
+    "@testing-library/react": "^16.2.0",
+    "release-it": "^19.0.5",
+    "vitest": "^3.1.2"
   }
 }
