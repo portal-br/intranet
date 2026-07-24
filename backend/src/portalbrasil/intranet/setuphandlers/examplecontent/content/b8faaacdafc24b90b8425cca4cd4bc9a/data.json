@@ -2,7 +2,8 @@
   "@id": "/imagens/bonito",
   "@type": "Image",
   "UID": "b8faaacdafc24b90b8425cca4cd4bc9a",
-  "allow_discussion": false,
+  "allow_discussion": null,
+  "changeNote": "",
   "contributors": [],
   "created": "2024-07-04T22:47:15+00:00",
   "creators": [
@@ -10,11 +11,10 @@
   ],
   "description": "",
   "effective": null,
-  "exclude_from_nav": false,
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
-  "exportimport.versions": {},
+  "head_title": null,
   "id": "bonito",
   "image": {
     "blob_path": "b8faaacdafc24b90b8425cca4cd4bc9a/image/Bonito",
@@ -27,27 +27,20 @@
   "is_folderish": false,
   "language": "##DEFAULT##",
   "layout": "image_view",
-  "lock": {},
-  "modified": "2024-07-04T22:50:36+00:00",
-  "parent": {
-    "@id": "/imagens",
-    "@type": "Document",
-    "Subject": [],
-    "UID": "26e5fc286fce4c2e9613411cc0f0663f",
-    "description": "Imagens utilizadas na Intranet",
-    "effective": "2024-07-04T19:37:00+00:00",
-    "id": "imagens",
-    "image_field": null,
-    "image_scales": {},
-    "review_state": "published",
-    "title": "Imagens",
-    "type_title": "Page"
+  "lock": {
+    "locked": false,
+    "stealable": true
   },
+  "modified": "2024-07-04T22:50:36+00:00",
+  "nav_title": null,
   "review_state": null,
   "rights": "https://www.flickr.com/photos/mturdestinos/26205771787/in/album-72157695004743755/",
   "subjects": [],
   "title": "Bonito",
   "type_title": "Image",
   "version": "current",
-  "workflow_history": {}
+  "versioning_enabled": true,
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
 }

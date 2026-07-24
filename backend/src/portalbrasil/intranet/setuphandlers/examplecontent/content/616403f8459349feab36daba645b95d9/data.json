@@ -2,7 +2,7 @@
   "@id": "/servicos/ferias",
   "@type": "Servico",
   "UID": "616403f8459349feab36daba645b95d9",
-  "allow_discussion": false,
+  "allow_discussion": null,
   "authentication": null,
   "changeNote": "",
   "created": "2024-07-07T15:10:15+00:00",
@@ -10,7 +10,6 @@
   "exclude_from_nav": false,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
-  "exportimport.versions": {},
   "href": "https://plone.org.br/",
   "id": "ferias",
   "is_folderish": true,
@@ -19,20 +18,6 @@
   "lock": {},
   "modified": "2024-07-10T14:40:39+00:00",
   "nav_title": null,
-  "parent": {
-    "@id": "/servicos",
-    "@type": "Document",
-    "Subject": [],
-    "UID": "87b599b4dd5a419da58c59632bace85c",
-    "description": "Servi\u00e7os e sistema da institui\u00e7\u00e3o",
-    "effective": "2024-07-07T15:06:00+00:00",
-    "id": "servicos",
-    "image_field": null,
-    "image_scales": {},
-    "review_state": "published",
-    "title": "Servi\u00e7os",
-    "type_title": "Page"
-  },
   "preview_caption": null,
   "preview_image": null,
   "review_state": "active",
@@ -62,5 +47,7 @@
         "time": "2024-05-17T09:39:07+00:00"
       }
     ]
-  }
+  },
+  "working_copy": null,
+  "working_copy_of": null
 }

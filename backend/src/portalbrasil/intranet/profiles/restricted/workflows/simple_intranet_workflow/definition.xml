@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <dc-workflow xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-             description=" - Workflow for Intranets. Requires authentication."
+             description=" - Workflow para Intranets: Acesso restrito."
              initial_state="private"
              state_variable="review_state"
              title="Intranet Restricted Workflow"

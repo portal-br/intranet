@@ -57,13 +57,14 @@
       "128ce72b-e6b9-4a75-bb27-161994ed9ac7"
     ]
   },
+  "changeNote": "",
   "contributors": [],
   "created": "2024-07-04T19:36:41+00:00",
   "creators": [
     "admin"
   ],
   "description": "Imagens utilizadas na Intranet",
-  "effective": "2024-07-04T16:37:00",
+  "effective": "2024-07-04T16:37:00+00:00",
   "exclude_from_nav": true,
   "expires": null,
   "exportimport.constrains": {
@@ -75,7 +76,7 @@
     ]
   },
   "exportimport.conversation": [],
-  "exportimport.versions": {},
+  "head_title": null,
   "id": "imagens",
   "is_folderish": true,
   "language": "##DEFAULT##",
@@ -86,22 +87,14 @@
   },
   "modified": "2024-07-10T14:30:34+00:00",
   "nav_title": null,
-  "parent": {
-    "@id": "/",
-    "@type": "Plone Site",
-    "UID": "plone_site_root",
-    "description": "Intranet",
-    "title": "Intranet",
-    "type_title": "Plone Site"
-  },
-  "preview_caption": null,
-  "preview_image": null,
+  "preview_caption_link": null,
   "review_state": "published",
   "rights": "",
   "subjects": [],
   "title": "Imagens",
   "type_title": "Page",
   "version": "current",
+  "versioning_enabled": true,
   "workflow_history": {
     "simple_intranet_workflow": [
       {
@@ -119,5 +112,7 @@
         "time": "2024-07-04T19:37:21+00:00"
       }
     ]
-  }
+  },
+  "working_copy": null,
+  "working_copy_of": null
 }

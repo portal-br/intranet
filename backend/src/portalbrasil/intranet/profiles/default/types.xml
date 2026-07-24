@@ -2,16 +2,13 @@
 <object meta_type="Plone Types Tool"
         name="portal_types"
 >
-
   <object meta_type="Dexterity FTI"
           name="Area"
   />
   <object meta_type="Dexterity FTI"
           name="Colaborador"
   />
-
   <object meta_type="Dexterity FTI"
           name="Servico"
   />
-
 </object>

@@ -53,13 +53,14 @@
       "e26305e1-9fe9-4188-a1aa-b224dc6cc7d6"
     ]
   },
+  "changeNote": "",
   "contributors": [],
   "created": "2024-07-07T15:06:14+00:00",
   "creators": [
     "admin"
   ],
   "description": "Servi\u00e7os e sistema da institui\u00e7\u00e3o",
-  "effective": "2024-07-07T12:06:00",
+  "effective": "2024-07-07T12:06:00+00:00",
   "exclude_from_nav": false,
   "expires": null,
   "exportimport.constrains": {
@@ -78,7 +79,7 @@
     ]
   },
   "exportimport.conversation": [],
-  "exportimport.versions": {},
+  "head_title": null,
   "id": "servicos",
   "is_folderish": true,
   "language": "##DEFAULT##",
@@ -89,22 +90,14 @@
   },
   "modified": "2024-07-10T14:30:34+00:00",
   "nav_title": null,
-  "parent": {
-    "@id": "/",
-    "@type": "Plone Site",
-    "UID": "plone_site_root",
-    "description": "Intranet",
-    "title": "Intranet",
-    "type_title": "Plone Site"
-  },
-  "preview_caption": null,
-  "preview_image": null,
+  "preview_caption_link": null,
   "review_state": "published",
   "rights": "",
   "subjects": [],
   "title": "Servi\u00e7os",
   "type_title": "Page",
   "version": "current",
+  "versioning_enabled": true,
   "workflow_history": {
     "simple_intranet_workflow": [
       {
@@ -122,5 +115,7 @@
         "time": "2024-07-07T15:06:18+00:00"
       }
     ]
-  }
+  },
+  "working_copy": null,
+  "working_copy_of": null
 }

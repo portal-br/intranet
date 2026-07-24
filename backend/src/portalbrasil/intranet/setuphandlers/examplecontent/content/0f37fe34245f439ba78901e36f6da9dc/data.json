@@ -76,13 +76,14 @@
       "7197995a-a9b8-474f-b861-20dc300c5c83"
     ]
   },
+  "changeNote": "",
   "contributors": [],
   "created": "2024-07-04T23:05:48+00:00",
   "creators": [
     "admin"
   ],
   "description": "Estrutura organizacional de nossa institui\u00e7\u00e3o",
-  "effective": "2024-07-04T20:06:00",
+  "effective": "2024-07-04T20:06:00+00:00",
   "exclude_from_nav": false,
   "expires": null,
   "exportimport.constrains": {
@@ -95,7 +96,7 @@
     ]
   },
   "exportimport.conversation": [],
-  "exportimport.versions": {},
+  "head_title": null,
   "id": "estrutura",
   "is_folderish": true,
   "language": "##DEFAULT##",
@@ -106,29 +107,14 @@
   },
   "modified": "2024-07-10T14:56:24+00:00",
   "nav_title": null,
-  "parent": {
-    "@id": "/",
-    "@type": "Plone Site",
-    "UID": "plone_site_root",
-    "description": "Intranet",
-    "title": "Intranet",
-    "type_title": "Plone Site"
-  },
-  "preview_caption": null,
-  "preview_image": {
-    "blob_path": "0f37fe34245f439ba78901e36f6da9dc/preview_image/estrutura.png",
-    "content-type": "image/png",
-    "filename": "estrutura.png",
-    "height": 1966,
-    "size": 320538,
-    "width": 3600
-  },
+  "preview_caption_link": null,
   "review_state": "published",
   "rights": "",
   "subjects": [],
   "title": "Estrutura",
   "type_title": "Page",
   "version": "current",
+  "versioning_enabled": true,
   "workflow_history": {
     "simple_intranet_workflow": [
       {
@@ -146,5 +132,7 @@
         "time": "2024-07-04T23:06:41+00:00"
       }
     ]
-  }
+  },
+  "working_copy": null,
+  "working_copy_of": null
 }

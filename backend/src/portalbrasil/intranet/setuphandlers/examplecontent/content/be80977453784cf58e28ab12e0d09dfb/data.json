@@ -58,12 +58,11 @@
     "admin"
   ],
   "description": "Ingressos antecipados para a Plone Conference e Python Cerrado 2024 em Bras\u00edlia, Brasil, j\u00e1 est\u00e3o dispon\u00edveis at\u00e9 15 de agosto.",
-  "effective": "2024-07-10T11:37:11",
+  "effective": "2024-07-10T11:37:00+00:00",
   "exclude_from_nav": false,
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
-  "exportimport.versions": {},
   "id": "incricoes-abertas-para-a-plone-conference",
   "image": {
     "blob_path": "be80977453784cf58e28ab12e0d09dfb/image/ingressos-ploneconf.png",
@@ -82,20 +81,8 @@
     "stealable": true
   },
   "modified": "2024-07-10T14:37:11+00:00",
-  "parent": {
-    "@id": "/noticias",
-    "@type": "Document",
-    "Subject": [],
-    "UID": "42bb0222abfe4356949de633f5cc25e6",
-    "description": "Not\u00edcias da nossa institui\u00e7\u00e3o",
-    "effective": "2024-07-04T22:46:00+00:00",
-    "id": "noticias",
-    "image_field": null,
-    "image_scales": {},
-    "review_state": "published",
-    "title": "Not\u00edcias",
-    "type_title": "Page"
-  },
+  "nav_title": null,
+  "preview_caption_link": null,
   "review_state": "published",
   "rights": "",
   "subjects": [
@@ -122,5 +109,7 @@
         "time": "2024-07-10T14:37:11+00:00"
       }
     ]
-  }
+  },
+  "working_copy": null,
+  "working_copy_of": null
 }
