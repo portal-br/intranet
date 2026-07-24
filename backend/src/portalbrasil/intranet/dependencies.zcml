@@ -1,12 +1,18 @@
 <configure xmlns="http://namespaces.zope.org/zope">
 
   <!-- List all packages you depend here -->
+  <include package="plone.restapi" />
+  <include package="plone.volto" />
   <include package="plone.app.discussion" />
-  <include package="plone.distribution" />
-  <include package="portalbrasil.core" />
-  <include package="collective.volto.formsupport" />
-  <include package="collective.honeypot" />
   <include package="collective.bookmarks" />
-  <include package="collective.taxonomy" />
+  <include package="collective.person" />
+  <include package="plone.formblock" />
+  <include package="kitconcept.voltolighttheme" />
+  <include package="plonegovbr.socialmedia" />
+  <include package="plonegovbr.brfields" />
+
+  <include package="pas.plugins.authomatic" />
+  <include package="pas.plugins.keycloakgroups" />
+  <include package="pas.plugins.oidc" />
 
 </configure>

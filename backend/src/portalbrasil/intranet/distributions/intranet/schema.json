@@ -94,12 +94,106 @@
         "$ref": "#/definitions/workflows",
         "default": "restricted"
       },
+      "available_languages": {
+        "type": "array",
+        "title": "Idiomas disponíveis",
+        "description": "Idiomas que estarão disponíveis. Se mais de um idioma for selecionado, o primeiro da lista será o idioma padrão.",
+        "items": {"$ref": "#/definitions/languages"},
+        "default": ["pt-br"]
+      },
       "default_language": {
         "type": "string",
         "title": "Idioma",
         "default": "pt-br"
       },
       "portal_timezone": {"$ref": "#/definitions/timezones"},
+      "authentication": {
+        "title": "Authentication",
+        "type": "object",
+        "properties": {
+          "provider" : {
+            "type": "string",
+            "title": "User authentication",
+            "description": "Which authentication would be used?",
+            "default": "internal",
+            "oneOf": [
+              { "const": "internal", "title": "Plone" },
+              { "const": "keycloak", "title": "Keycloak" },
+              { "const": "oidc", "title": "OIDC / OAuth2" },
+              { "const": "authomatic-google", "title": "Social Login Google" },
+              { "const": "authomatic-github", "title": "Social Login GitHub" }
+            ]
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "provider": {
+                  "const": "keycloak"
+                }
+              }
+            },
+            "then": {
+              "$ref": "#/definitions/keycloak"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "provider": {
+                  "const": "oidc"
+                }
+              }
+            },
+            "then": {
+              "$ref": "#/definitions/oidc"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "provider": {
+                  "const": "authomatic-github"
+                }
+              }
+            },
+            "then": {
+              "$ref": "#/definitions/authomatic-github"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "provider": {
+                  "const": "authomatic-google"
+                }
+              }
+            },
+            "then": {
+              "$ref": "#/definitions/authomatic-google"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "provider": {
+                  "const": "internal"
+                }
+              }
+            },
+            "then": {
+              "properties": {},
+              "required": []
+            }
+          },
+          {
+            "required": [
+              "provider"
+            ]
+          }
+        ]
+      },
       "setup_content": {
         "type": "boolean",
         "title": "Conteúdo Base",
@@ -117,6 +211,7 @@
   "uischema": {
     "site_id": {"ui:widget": "hidden"},
     "setup_content": {"ui:widget": "hidden"},
+    "available_languages": {"ui:widget": "hidden"},
     "default_language": {"ui:widget": "hidden"}
   }
 }

@@ -1,46 +1,52 @@
-from plone.app.testing import FunctionalTesting
-from plone.app.testing import IntegrationTesting
-from plone.app.testing import PloneSandboxLayer
 from plone.app.testing.interfaces import SITE_OWNER_NAME
 from plone.app.testing.interfaces import SITE_OWNER_PASSWORD
 from plone.app.testing.interfaces import TEST_USER_ID
 from plone.app.testing.interfaces import TEST_USER_NAME
 from plone.app.testing.interfaces import TEST_USER_PASSWORD
 from plone.app.testing.interfaces import TEST_USER_ROLES
+from plone.app.testing.layers import PloneFixture
 from plone.testing import zope
-from plone.testing.zope import WSGI_SERVER_FIXTURE
-from portalbrasil.core.testing.layers import PortalBrasilFixture
 from zope.globalrequest import setRequest
 
 
+PLONE_SITE_TITLE = "Portal Brasil: Intranet"
+
 DEFAULT_ANSWERS = {
     "site_id": "plone",
-    "title": "Intranet",
-    "description": "Intranet desenvolvida com Plone",
+    "title": PLONE_SITE_TITLE,
+    "description": "Testing site.",
+    "available_languages": ["pt-br"],
     "default_language": "pt-br",
-    "portal_timezone": "America/Sao_Paulo",
+    "authentication": {"provider": "internal"},
+    "portal_timezone": "UTC",
     "setup_content": True,
-    "demo_content": True,
+    "demo_content": False,
 }
 
 
-class BaseFixture(PortalBrasilFixture):
-    SITES = (("portalbrasil-intranet", DEFAULT_ANSWERS),)
-    internal_packages: tuple[str] = (
+class PBFixture(PloneFixture):
+    package_name: str = "portalbrasil.intranet"
+    internal_packages: tuple[str, ...] = (
         "plone.restapi",
         "plone.volto",
-        "portalbrasil.core",
-        "portalbrasil.intranet",
     )
 
     @property
-    def sites(self):
-        """Guarantee there is at least one site created."""
-        return self.SITES
+    def products(self) -> tuple[tuple[str, dict], ...]:
+        products = list(super().products)
+        for package in self.internal_packages:
+            products.append((package, {"loadZCML": True}))
+        # Add current package
+        products.append((self.package_name, {"loadZCML": True}))
+        return tuple(products)
+
+
+class PBDistributionFixture(PBFixture):
+    sites: tuple[tuple[str, dict], ...] = ()
 
     def setUpDefaultContent(self, app):
         """Create a Plone site using plone.distribution."""
-        from portalbrasil.core.factory import add_site
+        from portalbrasil.intranet.factory import add_site
 
         # Create the owner user and "log in" so that the site object gets
         # the right ownership information
@@ -51,6 +57,9 @@ class BaseFixture(PortalBrasilFixture):
         setRequest(app.REQUEST)
         zope.login(app["acl_users"], SITE_OWNER_NAME)
         sites = self.sites
+        if not sites:
+            raise RuntimeError("No sites defined in this fixture")
+
         for distribution_name, answers in sites:
             site_id = answers["site_id"]
             # Create Plone site
@@ -60,7 +69,6 @@ class BaseFixture(PortalBrasilFixture):
                 distribution=distribution_name,
                 **answers,
             )
-
             # Create the test user. (Plone)PAS does not have an API to create a
             # user with different userid and login name, so we call the plugin
             # directly.
@@ -74,22 +82,9 @@ class BaseFixture(PortalBrasilFixture):
         setRequest(None)
 
 
-BASE_FIXTURE = BaseFixture()
-
-
-class Layer(PloneSandboxLayer):
-    defaultBases = (BASE_FIXTURE,)
-
-
-FIXTURE = Layer()
-
-INTEGRATION_TESTING = IntegrationTesting(
-    bases=(FIXTURE,),
-    name="IntranetLayer:IntegrationTesting",
-)
-
-
-FUNCTIONAL_TESTING = FunctionalTesting(
-    bases=(FIXTURE, WSGI_SERVER_FIXTURE),
-    name="IntranetLayer:FunctionalTesting",
-)
+class IntranetFixture(PBDistributionFixture):
+    sites = (("testing", DEFAULT_ANSWERS),)
+    internal_packages: tuple[str, ...] = (
+        "plone.restapi",
+        "plone.volto",
+    )
