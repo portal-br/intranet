@@ -11,12 +11,14 @@ MAKEFLAGS+=--no-builtin-rules
 CURRENT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 GIT_FOLDER=$(CURRENT_DIR)/.git
 
-PROJECT_NAME=portalbrasil-intranet
-STACK_NAME=portalbrasil-intranet-plone-org-br
-STACK_FILE=docker-compose-dev.yml
+REPOSITORY_SETTINGS := $(shell uvx repoplone settings dump)
 
-VOLTO_VERSION=$(shell cat frontend/mrs.developer.json | python -c "import sys, json; print(json.load(sys.stdin)['core']['tag'])")
-PB_VERSION=$(shell cat backend/version.txt)
+PROJECT_NAME := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.name')
+STACK_NAME=intranet-demo-plone-org-br
+
+VOLTO_VERSION := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.frontend.volto_version')
+PLONE_VERSION := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.backend.base_package_version')
+
 
 # We like colors
 # From: https://coderwall.com/p/izxssa/colored-makefile-for-golang-projects
@@ -33,6 +35,13 @@ all: install
 .PHONY: help
 help: ## This help message
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+
+.PHONY: debug-settings
+debug-settings:  ## Debug settings
+	@echo "Debug settings"
+	@echo "PROJECT_NAME: $(PROJECT_NAME)"
+	@echo "VOLTO_VERSION: $(VOLTO_VERSION)"
+	@echo "PLONE_VERSION: $(PLONE_VERSION)"
 
 ###########################################
 # Frontend
@@ -84,43 +93,19 @@ backend-test:  ## Test backend codebase
 	$(MAKE) -C "./backend/" test
 
 ###########################################
-# Docs
-###########################################
-.PHONY: docs-install
-docs-install:  ## Install documentation dependencies
-	$(MAKE) -C "./docs/" install
-
-.PHONY: docs-build
-docs-build:  ## Build documentation
-	$(MAKE) -C "./docs/" html
-
-.PHONY: docs-live
-docs-live:  ## Rebuild documentation on changes, with live-reload in the browser
-	$(MAKE) -C "./docs/" livehtml
-
-###########################################
 # Environment
 ###########################################
-
 .PHONY: install
 install:  ## Install
-	@echo "Install Backend, Frontend and Docs"
+	@echo "Install Backend & Frontend"
 	$(MAKE) backend-install
-	$(MAKE) docs-install
 	$(MAKE) frontend-install
-
-.PHONY: start
-start:  ## Start
-	@echo "Starting application"
-	$(MAKE) backend-start
-	$(MAKE) frontend-start
 
 .PHONY: clean
 clean:  ## Clean installation
 	@echo "Clean installation"
 	$(MAKE) -C "./backend/" clean
 	$(MAKE) -C "./frontend/" clean
-
 
 ###########################################
 # QA
@@ -133,13 +118,12 @@ format:  ## Format codebase
 
 .PHONY: lint
 lint:  ## Format codebase
-	@echo "Lint the codebasecodebase"
+	@echo "Lint the codebase"
 	$(MAKE) -C "./backend/" lint
 	$(MAKE) -C "./frontend/" lint
 
 .PHONY: check
 check:  format lint ## Lint and Format codebase
-
 
 ###########################################
 # i18n
@@ -151,47 +135,115 @@ i18n:  ## Update locales
 	$(MAKE) -C "./frontend/" i18n
 
 ###########################################
-# Tests
+# Testing
 ###########################################
 .PHONY: test
 test:  backend-test frontend-test ## Test codebase
 
 ###########################################
-# Docker Images
+# Container images
 ###########################################
 .PHONY: build-images
-build-images:  ## Build docker images
+build-images:  ## Build container images
 	@echo "Build"
 	$(MAKE) -C "./backend/" build-image
 	$(MAKE) -C "./frontend/" build-image
 
 ###########################################
-# Stack: Development
+# Local Stack
 ###########################################
-.PHONY: stack-start
-stack-start:  ## Local Stack: Start Services
-	@echo "Start local Docker stack"
-	VOLTO_VERSION=$(VOLTO_VERSION) PB_VERSION=$(PB_VERSION) docker compose -f $(STACK_FILE) up -d --build
-	@echo "Now visit: http://portalbrasil-intranet.localhost"
-
 .PHONY: stack-create-site
 stack-create-site:  ## Local Stack: Create a new site
 	@echo "Create a new site in the local Docker stack"
-	VOLTO_VERSION=$(VOLTO_VERSION) PB_VERSION=$(PB_VERSION) docker compose -f $(STACK_FILE) exec backend ./docker-entrypoint.sh create-site
+	@echo "(Stack must not be running already.)"
+	VOLTO_VERSION=$(VOLTO_VERSION) PLONE_VERSION=$(PLONE_VERSION) docker compose -f docker-compose.yml run --build backend ./docker-entrypoint.sh create-site
+
+.PHONY: stack-start
+stack-start:  ## Local Stack: Start Services
+	@echo "Start local Docker stack"
+	VOLTO_VERSION=$(VOLTO_VERSION) PLONE_VERSION=$(PLONE_VERSION) docker compose -f docker-compose.yml up -d --build
+	@echo "Now visit: http://intranet.localhost"
 
 .PHONY: stack-status
 stack-status:  ## Local Stack: Check Status
 	@echo "Check the status of the local Docker stack"
-	@docker compose -f $(STACK_FILE) ps
+	@docker compose -f docker-compose.yml ps
 
 .PHONY: stack-stop
 stack-stop:  ##  Local Stack: Stop Services
 	@echo "Stop local Docker stack"
-	@docker compose -f $(STACK_FILE) stop
+	@docker compose -f docker-compose.yml stop
 
 .PHONY: stack-rm
 stack-rm:  ## Local Stack: Remove Services and Volumes
 	@echo "Remove local Docker stack"
-	@docker compose -f $(STACK_FILE) down
+	@docker compose -f docker-compose.yml down
 	@echo "Remove local volume data"
 	@docker volume rm $(PROJECT_NAME)_vol-site-data
+
+###########################################
+# Acceptance
+###########################################
+.PHONY: acceptance-backend-start
+acceptance-backend-start:
+	@echo "Start acceptance backend"
+	$(MAKE) -C "./backend/" acceptance-backend-start
+
+.PHONY: acceptance-frontend-dev-start
+acceptance-frontend-dev-start:
+	@echo "Start acceptance frontend"
+	$(MAKE) -C "./frontend/" acceptance-frontend-dev-start
+
+.PHONY: acceptance-test
+acceptance-test:
+	@echo "Start acceptance tests in interactive mode"
+	$(MAKE) -C "./frontend/" acceptance-test
+
+# Build Docker images
+.PHONY: acceptance-frontend-image-build
+acceptance-frontend-image-build:
+	@echo "Build acceptance frontend image"
+	@docker build frontend -t portal-br/intranet-frontend:acceptance -f frontend/Dockerfile --build-arg VOLTO_VERSION=$(VOLTO_VERSION)
+
+.PHONY: acceptance-backend-image-build
+acceptance-backend-image-build:
+	@echo "Build acceptance backend image"
+	@docker build backend -t portal-br/intranet-backend:acceptance -f backend/Dockerfile.acceptance --build-arg PLONE_VERSION=$(PLONE_VERSION)
+
+.PHONY: acceptance-images-build
+acceptance-images-build: ## Build Acceptance frontend/backend images
+	$(MAKE) acceptance-backend-image-build
+	$(MAKE) acceptance-frontend-image-build
+
+.PHONY: acceptance-frontend-container-start
+acceptance-frontend-container-start:
+	@echo "Start acceptance frontend"
+	@docker run --rm -p 3000:3000 --name intranet-frontend-acceptance --link intranet-backend-acceptance:backend -e RAZZLE_API_PATH=http://localhost:55001/plone -e RAZZLE_INTERNAL_API_PATH=http://backend:55001/plone -d portal-br/intranet-frontend:acceptance
+
+.PHONY: acceptance-backend-container-start
+acceptance-backend-container-start:
+	@echo "Start acceptance backend"
+	@docker run --rm -p 55001:55001 --name intranet-backend-acceptance -d portal-br/intranet-backend:acceptance
+
+.PHONY: acceptance-containers-start
+acceptance-containers-start: ## Start Acceptance containers
+	$(MAKE) acceptance-backend-container-start
+	$(MAKE) acceptance-frontend-container-start
+
+.PHONY: acceptance-containers-stop
+acceptance-containers-stop: ## Stop Acceptance containers
+	@echo "Stop acceptance containers"
+	@docker stop intranet-frontend-acceptance
+	@docker stop intranet-backend-acceptance
+
+.PHONY: ci-acceptance-test
+ci-acceptance-test:
+	@echo "Run acceptance tests in CI mode"
+	$(MAKE) acceptance-containers-start
+	pnpm dlx wait-on --httpTimeout 20000 http-get://localhost:55001/plone http://localhost:3000
+	$(MAKE) -C "./frontend/" ci-acceptance-test
+	$(MAKE) acceptance-containers-stop
+
+###########################################
+# Release
+###########################################

@@ -1,6 +1,7 @@
 # Alterações
 
 <!-- towncrier release notes start -->
+
 ## 1.0.0 (2026-07-23)
 
 ### Backend
@@ -8,7 +9,7 @@
 
 #### Interno
 
-- Fixa o suporte ao Python 3.12 (`requires-python = "==3.12.*"`) e regenera o `uv.lock` com a versão atual do uv. @ericof 
+- Fixa o suporte ao Python 3.12 (`requires-python = "==3.12.*"`) e regenera o `uv.lock` com a versão atual do uv. @ericof
 
 
 
@@ -16,7 +17,7 @@
 
 #### Interno
 
-- Utiliza `uvx` no lugar de `pipx run` para executar o towncrier durante o processo de release. @ericof 
+- Utiliza `uvx` no lugar de `pipx run` para executar o towncrier durante o processo de release. @ericof
 
 
 
@@ -25,7 +26,7 @@
 
 #### Interno
 
-- Atualiza `repository.toml` para o novo formato esperado pelas ferramentas de release e corrige os metadados de `docs/pyproject.toml`, que ainda referenciavam o Volto Light Theme. @ericof 
+- Atualiza `repository.toml` para o novo formato esperado pelas ferramentas de release e corrige os metadados de `docs/pyproject.toml`, que ainda referenciavam o Volto Light Theme. @ericof
 
 
 
@@ -62,18 +63,18 @@ No significant changes.
 
 #### Breaking
 
-- Renomeia pacote para portalbrasil.intranet @ericof 
+- Renomeia pacote para portalbrasil.intranet @ericof
 
 
 #### Funcionalidade
 
-- Adiciona dependência do portabrasil.core @ericof 
+- Adiciona dependência do portabrasil.core @ericof
 
 
 #### Interno
 
 - Atualiza versão do Plone para 6.1.1 [@ericof] [#22](https://github.com/portal-br/intranet/issues/22)
-- Utiliza versão 1.0.0a4 do portabrasil.core @ericof 
+- Utiliza versão 1.0.0a4 do portabrasil.core @ericof
 
 
 
@@ -81,11 +82,11 @@ No significant changes.
 
 #### Breaking
 
-- Renomeia pacote para @portalbrasil/intranet @ericof 
+- Renomeia pacote para @portalbrasil/intranet @ericof
 
 #### Funcionalidade
 
-- Dependência do @portalbrasil/core @ericof 
+- Dependência do @portalbrasil/core @ericof
 
 #### Interno
 
@@ -100,10 +101,10 @@ No significant changes.
 
 #### Interno
 
-- GHA: Adiciona novos templates para issues @ericof 
-- GHA: Adiciona validação de fragmentos de changelog em cada Pull Request @ericof 
-- Move o repositório de github.com/plonegovbr/portalbrasil-intranet para github.com/portal-br/intranet @ericof 
-- Reorganiza o repositório seguindo as melhores práticas da comunidade Plone @ericof 
+- GHA: Adiciona novos templates para issues @ericof
+- GHA: Adiciona validação de fragmentos de changelog em cada Pull Request @ericof
+- Move o repositório de github.com/plonegovbr/portalbrasil-intranet para github.com/portal-br/intranet @ericof
+- Reorganiza o repositório seguindo as melhores práticas da comunidade Plone @ericof
 
 
 
