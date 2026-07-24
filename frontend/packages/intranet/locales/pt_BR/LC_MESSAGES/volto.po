@@ -1,54 +1,17 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: Plone\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
+"POT-Creation-Date: 2023-04-06T16:01:32.969Z\n"
 "PO-Revision-Date: \n"
-"Last-Translator: \n"
+"Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language: \n"
-"Language-Team: \n"
-"Content-Type: \n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
-
-#. Default: "Colaboradores"
-#: components/Blocks/Colaboradores/schema
-msgid "Colaboradores"
-msgstr ""
-
-#. Default: "Gestor"
-#: components/Blocks/Gestor/schema
-msgid "Gestor"
-msgstr ""
-
-#. Default: "Portal Brasil: Intranet"
-#: components/ToolLogo/ToolLogo
-msgid "Portal Brasil: Intranet"
-msgstr ""
-
-#. Default: "Título"
-#: components/Blocks/Areas/schema
-#: components/Blocks/Colaboradores/schema
-#: components/Blocks/Gestor/schema
-msgid "Título"
-msgstr ""
-
-#. Default: "Unauthorized"
-#: components/Unauthorized/Unauthorized
-msgid "Unauthorized"
-msgstr "Não autorizado"
-
-#. Default: "You are trying to access a protected resource, please {login} first."
-#: components/Unauthorized/Unauthorized
-msgid "You are trying to access a protected resource, please {login} first."
-msgstr "Você está tentando acessar um conteúdo restrito, por favor, {login} primeiro"
-
-#. Default: "log in"
-#: components/Unauthorized/Unauthorized
-msgid "log in"
-msgstr "acessar"
-
-#. Default: "Áreas"
-#: components/Blocks/Areas/schema
-msgid "Áreas"
-msgstr ""
+"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Language-Code: pt_BR\n"
+"Language-Name: Português do Brasil\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: volto\n"
