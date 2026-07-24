@@ -124,7 +124,7 @@ def parse_answers(answers_file: Path, answers_env: dict) -> dict:
     answers = json.loads(answers_file.read_text())
     for key in answers:
         env_value = answers_env.get(key, "")
-        if key == "setup_content" and env_value.strip():
+        if key in ("demo_content", "setup_content") and env_value.strip():
             env_value = as_bool(env_value)
         elif not env_value:
             continue

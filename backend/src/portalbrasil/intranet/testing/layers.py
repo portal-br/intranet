@@ -14,7 +14,7 @@ PLONE_SITE_TITLE = "Portal Brasil: Intranet"
 DEFAULT_ANSWERS = {
     "site_id": "plone",
     "title": PLONE_SITE_TITLE,
-    "description": "Testing site.",
+    "description": "Intranet site.",
     "available_languages": ["pt-br"],
     "default_language": "pt-br",
     "authentication": {"provider": "internal"},
@@ -83,7 +83,7 @@ class PBDistributionFixture(PBFixture):
 
 
 class IntranetFixture(PBDistributionFixture):
-    sites = (("testing", DEFAULT_ANSWERS),)
+    sites = (("portalbrasil-intranet", DEFAULT_ANSWERS),)
     internal_packages: tuple[str, ...] = (
         "plone.restapi",
         "plone.volto",

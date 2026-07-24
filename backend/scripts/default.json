@@ -1,6 +1,7 @@
 {
   "site_id": "Plone",
   "title": "Portal Brasil: Intranet",
+  "description": "Intranet desenvolvida com Portal Brasil",
   "distribution": "portalbrasil-intranet",
   "workflow": "restricted",
   "setup_content": true,
