@@ -1,0 +1,1 @@
+Reescreve a suíte de testes do backend para a estrutura internalizada, cobrindo criação de site, autenticação (Authomatic, Keycloak, OIDC), tipos de conteúdo, serviços REST e utilitários, com fixtures anotadas e documentadas. @ericof

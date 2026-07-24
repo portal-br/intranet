@@ -1,0 +1,13 @@
+{
+  "site_id": "Plone",
+  "title": "Portal Brasil: Intranet",
+  "description": "Intranet desenvolvida com Portal Brasil",
+  "distribution": "portalbrasil-intranet",
+  "workflow": "restricted",
+  "setup_content": true,
+  "demo_content": false,
+  "authentication": {"provider": "internal"},
+  "available_languages": ["pt-br"],
+  "default_language": "pt-br",
+  "portal_timezone": "America/Sao_Paulo"
+}
