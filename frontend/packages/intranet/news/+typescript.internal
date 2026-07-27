@@ -1,1 +1,0 @@
-Migra todo o pacote frontend para TypeScript, removendo `PropTypes`, e substitui o Jest pelo Vitest. @ericof

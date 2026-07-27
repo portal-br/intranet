@@ -1,1 +1,0 @@
-Corrige a criação de site e a instalação de dependências após a internalização do core: aponta a distribuição usada nos testes para `portalbrasil-intranet`, move `HiddenProfiles` para `factory.py`, coage `demo_content` via variável de ambiente e ajusta os behaviors dos tipos Person e News Item. @ericof

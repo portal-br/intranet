@@ -1,6 +1,60 @@
 # Alterações
 
 <!-- towncrier release notes start -->
+## 2.0.0a1 (2026-07-27)
+
+### Backend
+
+
+#### Breaking
+
+- Atualiza para Plone 6.2.1 e Python 3.14. @ericof 
+- Internaliza o `portalbrasil.core` no pacote: criação de site, distribuições, patches de schema, perfis base e utilitários passam a ser mantidos aqui. @ericof 
+
+
+#### Interno
+
+- Corrige a criação de site e a instalação de dependências após a internalização do core: aponta a distribuição usada nos testes para `portalbrasil-intranet`, move `HiddenProfiles` para `factory.py`, coage `demo_content` via variável de ambiente e ajusta os behaviors dos tipos Person e News Item. @ericof 
+- Reorganiza os perfis GenericSetup e o conteúdo de exemplo da distribuição. @ericof 
+
+
+#### Teste
+
+- Reescreve a suíte de testes do backend para a estrutura internalizada, cobrindo criação de site, autenticação (Authomatic, Keycloak, OIDC), tipos de conteúdo, serviços REST e utilitários, com fixtures anotadas e documentadas. @ericof 
+
+
+
+### Frontend
+
+#### Breaking
+
+- Atualiza para Volto 19.3.0 e pnpm 10. @ericof 
+- Remove a barra de acessibilidade e os estilos legados substituídos pelo Volto Light Theme. @ericof 
+
+#### Interno
+
+- Migra todo o pacote frontend para TypeScript, removendo `PropTypes`, e substitui o Jest pelo Vitest. @ericof 
+- Move as implementações dos componentes customizados (Avatar, Tags, Unauthorized) e da action de vocabulários para o add-on — deixando em `customizations/` apenas shims que reexportam via `@portalbrasil/intranet` — e registra o alias do add-on na configuração do Vitest. @ericof 
+- Renderiza os retratos de colaboradores e os avatares com o componente `Image` do Volto no lugar da tag `img` crua. @ericof 
+
+
+
+### Project
+
+
+#### Interno
+
+- Moderniza os workflows de CI, delegando os jobs comuns para `plone/meta@2.x` e removendo a automação local de release. @ericof 
+- Regenera a estrutura do projeto a partir do template `project` do cookieplone. @ericof 
+
+
+#### Documentação
+
+- Ajusta a configuração da documentação: usa a versão de `portalbrasil.intranet`, declara o backend como dependência via `tool.uv.sources` e remove as extensões Sphinx do plone.restapi (httpdomain/httpexample). @ericof 
+- Migra a documentação para `docs/docs/` e adiciona verificação de estilo com Vale. @ericof 
+
+
+
 
 ## 1.0.0 (2026-07-23)
 
