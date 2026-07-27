@@ -1,3 +1,3 @@
-import Tags from '../../../../../components/Unauthorized/Unauthorized';
+import Unauthorized from '@portalbrasil/intranet/components/Unauthorized/Unauthorized';
 
-export default Tags;
+export default Unauthorized;

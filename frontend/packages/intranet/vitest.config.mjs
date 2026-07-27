@@ -7,6 +7,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@plone/volto': path.resolve(__dirname, '../../core/packages/volto/src'), // Add paths accordingly
+      '@portalbrasil/intranet': path.resolve(__dirname, './src'), // Add paths accordingly
       // 'promise-file-reader': require.resolve('promise-file-reader') // Add to identify dependency from package
     },
   },
