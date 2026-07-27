@@ -1,15 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { Card } from 'semantic-ui-react';
 import ColaboradorSummary from '../../Summary/ColaboradorSummary';
+import type { BlockViewProps } from '@plone/types';
+import type { Area } from '../../../types';
 
-const Header = ({ title }) => {
+const Header = ({ title }: { title?: string }) => {
   return <h2 className={'headline'}>{title}</h2>;
 };
 
-const ColaboradoresView = (props) => {
-  const { className, title, content, isEditMode } = props;
-  const { colaboradores } = content;
+const ColaboradoresView = (props: BlockViewProps & { title?: string }) => {
+  const { className, title = 'Colaboradores', content, isEditMode } = props;
+  const { colaboradores } = content as Area;
   const items = colaboradores;
   return (
     <div className={`block colaboradores ${className}`}>
@@ -26,17 +26,6 @@ const ColaboradoresView = (props) => {
       )}
     </div>
   );
-};
-/**
- * Property types.
- * @property {Object} propTypes Property types.
- * @static
- */
-ColaboradoresView.propTypes = {
-  title: PropTypes.string,
-};
-ColaboradoresView.defaultProps = {
-  title: 'Colaboradores',
 };
 
 export default ColaboradoresView;

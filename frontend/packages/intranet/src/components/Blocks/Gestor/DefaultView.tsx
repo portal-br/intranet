@@ -1,15 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { Card } from 'semantic-ui-react';
 import ColaboradorSummary from '../../Summary/ColaboradorSummary';
+import type { BlockViewProps } from '@plone/types';
+import type { Area } from '../../../types';
 
-const Header = ({ title }) => {
+const Header = ({ title }: { title?: string }) => {
   return <h2 className={'headline'}>{title}</h2>;
 };
 
-const GestorView = (props) => {
-  const { className, title, content } = props;
-  const { gestor } = content;
+const GestorView = (props: BlockViewProps & { title?: string }) => {
+  const { className, title = 'Gestor', content } = props;
+  const { gestor } = content as Area;
   return (
     <div className={`block gestor ${className}`}>
       {gestor && (
@@ -22,17 +22,6 @@ const GestorView = (props) => {
       )}
     </div>
   );
-};
-/**
- * Property types.
- * @property {Object} propTypes Property types.
- * @static
- */
-GestorView.propTypes = {
-  title: PropTypes.string,
-};
-GestorView.defaultProps = {
-  title: 'Gestor',
 };
 
 export default GestorView;

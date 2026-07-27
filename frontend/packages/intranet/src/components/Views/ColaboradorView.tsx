@@ -2,7 +2,6 @@
  * Colaborador view component.
  * @module components/Views/ColaboradorView
  */
-import React from 'react';
 import { Container } from '@plone/components';
 import Image from '@plone/volto/components/theme/Image/Image';
 import UniversalLink from '@plone/volto/components/manage/UniversalLink/UniversalLink';
@@ -14,8 +13,19 @@ import {
   TableBody,
   Table,
 } from 'semantic-ui-react';
+import type {
+  Colaborador,
+  ContentReference,
+  ContentTypeViewProps,
+} from '../../types';
 
-const DadosPessoais = ({ area_info, aniversario, id }) => {
+type DadosPessoaisProps = {
+  area_info?: ContentReference | null;
+  aniversario?: string;
+  id: string;
+};
+
+const DadosPessoais = ({ area_info, aniversario, id }: DadosPessoaisProps) => {
   return (
     <Table className={'details'}>
       <TableBody>
@@ -41,7 +51,13 @@ const DadosPessoais = ({ area_info, aniversario, id }) => {
     </Table>
   );
 };
-const DadosContato = ({ email, telefone }) => {
+
+type DadosContatoProps = {
+  email?: string;
+  telefone?: string;
+};
+
+const DadosContato = ({ email, telefone }: DadosContatoProps) => {
   return (
     <Table className={'details'}>
       <TableBody>
@@ -58,7 +74,7 @@ const DadosContato = ({ email, telefone }) => {
   );
 };
 
-const ColaboradorView = (props) => {
+const ColaboradorView = (props: ContentTypeViewProps<Colaborador>) => {
   const { content } = props;
   const {
     title,

@@ -1,4 +1,5 @@
 import { defineMessages } from 'react-intl';
+import type { BlockSchemaArgs, JSONSchema } from '@plone/types';
 
 const messages = defineMessages({
   gestor: {
@@ -11,9 +12,9 @@ const messages = defineMessages({
   },
 });
 
-export const gestorSchema = (props) => {
+export const gestorSchema = ({ intl }: BlockSchemaArgs = {}): JSONSchema => {
   return {
-    title: props.intl.formatMessage(messages.gestor),
+    title: intl.formatMessage(messages.gestor),
     fieldsets: [
       {
         id: 'default',
@@ -23,7 +24,7 @@ export const gestorSchema = (props) => {
     ],
     properties: {
       title: {
-        title: props.intl.formatMessage(messages.title),
+        title: intl.formatMessage(messages.title),
         default: 'Gestor',
       },
     },

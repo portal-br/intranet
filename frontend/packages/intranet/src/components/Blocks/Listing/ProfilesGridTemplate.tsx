@@ -1,14 +1,31 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import ConditionalLink from '@plone/volto/components/manage/ConditionalLink/ConditionalLink';
 import Image from '@plone/volto/components/theme/Image/Image';
-import { flattenToAppURL } from '@plone/volto/helpers/Url/Url';
+import { flattenToAppURL, isInternalURL } from '@plone/volto/helpers/Url/Url';
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
-import { isInternalURL } from '@plone/volto/helpers/Url/Url';
+import type { Image as PloneImage } from '@plone/types';
 
-const ProfilesTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
+type ProfileItem = {
+  '@id': string;
+  title?: string;
+  description?: string;
+  image_scales?: Record<string, PloneImage[]> | null;
+};
+
+type ProfilesTemplateProps = {
+  items: ProfileItem[];
+  linkTitle?: string;
+  linkHref?: { '@id': string }[];
+  isEditMode?: boolean;
+};
+
+const ProfilesTemplate = ({
+  items,
+  linkTitle,
+  linkHref,
+  isEditMode,
+}: ProfilesTemplateProps) => {
   let link = null;
-  let href = linkHref?.[0]?.['@id'] || '';
+  const href = linkHref?.[0]?.['@id'] || '';
 
   if (isInternalURL(href)) {
     link = (
@@ -27,7 +44,7 @@ const ProfilesTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
           const ItemBodyTemplate = () => {
             const image = item?.image_scales?.image;
             const image_url = image
-              ? `${item['@id']}/${image[0].scales.mini.download}`
+              ? `${item['@id']}/${image[0].scales.mini?.download}`
               : null;
             return (
               <div className="card-container person">
@@ -56,7 +73,7 @@ const ProfilesTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
           return (
             <div className="listing-person" key={item['@id']}>
               <ConditionalLink item={item} condition={!isEditMode}>
-                <ItemBodyTemplate item={item} />
+                <ItemBodyTemplate />
               </ConditionalLink>
             </div>
           );
@@ -65,12 +82,6 @@ const ProfilesTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
       {link && <div className="footer">{link}</div>}
     </>
   );
-};
-
-ProfilesTemplate.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.any).isRequired,
-  linkMore: PropTypes.any,
-  isEditMode: PropTypes.bool,
 };
 
 export default ProfilesTemplate;

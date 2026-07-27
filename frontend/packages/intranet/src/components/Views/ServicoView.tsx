@@ -2,19 +2,19 @@
  * ServicoView view component.
  * @module components/View/ServicoView
  */
-import React from 'react';
 import { Container } from '@plone/components';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
 import UniversalLink from '@plone/volto/components/manage/UniversalLink/UniversalLink';
 import lockSVG from '@plone/volto/icons/lock.svg';
+import type { ContentTypeViewProps, Servico } from '../../types';
 
 /**
- * ServicoView view component class.
+ * ServicoView view component.
  * @function ServicoView
- * @params {object} content Content object.
- * @returns {string} Markup of the component.
+ * @param content Content object.
+ * @returns Markup of the component.
  */
-const ServicoView = (props) => {
+const ServicoView = (props: ContentTypeViewProps<Servico>) => {
   const { content } = props;
 
   return (

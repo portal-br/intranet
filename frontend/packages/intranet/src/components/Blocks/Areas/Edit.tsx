@@ -1,17 +1,16 @@
-import React from 'react';
 import { withBlockExtensions } from '@plone/volto/helpers/Extensions';
 import SidebarPortal from '@plone/volto/components/manage/Sidebar/SidebarPortal';
+import AreasBlockData from './Data';
+import AreasBlockView from './View';
+import type { BlockEditProps } from '@plone/types';
 
-import GestorBlockData from './Data';
-import GestorBlockView from './View';
-
-const GestorBlockEdit = (props) => {
+const AreasBlockEdit = (props: BlockEditProps) => {
   const { data, onChangeBlock, block, selected } = props;
   return (
     <>
-      <GestorBlockView {...props} isEditMode />
+      <AreasBlockView {...props} isEditMode />
       <SidebarPortal selected={selected}>
-        <GestorBlockData
+        <AreasBlockData
           data={data}
           block={block}
           onChangeBlock={onChangeBlock}
@@ -21,4 +20,4 @@ const GestorBlockEdit = (props) => {
   );
 };
 
-export default withBlockExtensions(GestorBlockEdit);
+export default withBlockExtensions(AreasBlockEdit);

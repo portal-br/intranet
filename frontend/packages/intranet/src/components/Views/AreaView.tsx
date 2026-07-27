@@ -2,19 +2,19 @@
  * AreaView view component.
  * @module components/View/AreaView
  */
-import React from 'react';
 import { Container } from '@plone/components';
 import { getBaseUrl } from '@plone/volto/helpers/Url/Url';
 import { hasBlocksData } from '@plone/volto/helpers/Blocks/Blocks';
 import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
+import type { Area, ContentTypeViewProps } from '../../types';
 
 /**
- * AreaView view component class.
+ * AreaView view component.
  * @function AreaView
- * @params {object} content Content object.
- * @returns {string} Markup of the component.
+ * @param content Content object.
+ * @returns Markup of the component.
  */
-const AreaView = (props) => {
+const AreaView = (props: ContentTypeViewProps<Area>) => {
   const { content, location } = props;
   const path = getBaseUrl(location?.pathname || '');
 

@@ -1,11 +1,10 @@
-import React from 'react';
 import { withBlockExtensions } from '@plone/volto/helpers/Extensions';
 import SidebarPortal from '@plone/volto/components/manage/Sidebar/SidebarPortal';
-
 import ColaboradoresBlockData from './Data';
 import ColaboradoresBlockView from './View';
+import type { BlockEditProps } from '@plone/types';
 
-const ColaboradoresBlockEdit = (props) => {
+const ColaboradoresBlockEdit = (props: BlockEditProps) => {
   const { data, onChangeBlock, block, selected } = props;
   return (
     <>

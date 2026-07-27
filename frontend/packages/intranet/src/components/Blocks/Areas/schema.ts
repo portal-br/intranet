@@ -1,4 +1,5 @@
 import { defineMessages } from 'react-intl';
+import type { BlockSchemaArgs, JSONSchema } from '@plone/types';
 
 const messages = defineMessages({
   areas: {
@@ -11,9 +12,9 @@ const messages = defineMessages({
   },
 });
 
-export const areasSchema = (props) => {
+export const areasSchema = ({ intl }: BlockSchemaArgs = {}): JSONSchema => {
   return {
-    title: props.intl.formatMessage(messages.areas),
+    title: intl.formatMessage(messages.areas),
     fieldsets: [
       {
         id: 'default',
@@ -23,7 +24,7 @@ export const areasSchema = (props) => {
     ],
     properties: {
       title: {
-        title: props.intl.formatMessage(messages.title),
+        title: intl.formatMessage(messages.title),
         default: 'Áreas',
       },
     },

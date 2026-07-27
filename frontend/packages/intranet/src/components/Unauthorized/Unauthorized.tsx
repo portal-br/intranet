@@ -2,7 +2,6 @@
  * @module components/Unauthorized/Unauthorized
  */
 
-import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { useHistory, useLocation } from 'react-router-dom';
 import { Container } from '@plone/components';
@@ -13,12 +12,12 @@ import { getBaseUrl } from '@plone/volto/helpers/Url/Url';
 import BodyClass from '@plone/volto/helpers/BodyClass/BodyClass';
 
 /**
- * unauthorized function.
+ * Unauthorized component.
  * @function Unauthorized
- * @returns {string} Markup of the unauthorized page.
+ * @returns Markup of the unauthorized page.
  */
 const Unauthorized = () => {
-  let location = useLocation();
+  const location = useLocation();
   const history = useHistory();
   if (location.pathname.indexOf('/login') === -1) {
     history.push(`${getBaseUrl(location.pathname)}/login`);

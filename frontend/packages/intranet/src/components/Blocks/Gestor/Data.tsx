@@ -1,16 +1,22 @@
-import React from 'react';
 import { BlockDataForm } from '@plone/volto/components/manage/Form';
-import { colaboradoresSchema } from './schema';
 import { useIntl } from 'react-intl';
+import { gestorSchema } from './schema';
+import type { BlockEditProps, BlockSchemaArgs } from '@plone/types';
 
-const titleBlockData = (props) => {
+type GestorBlockDataProps = Pick<
+  BlockEditProps,
+  'data' | 'block' | 'onChangeBlock'
+> &
+  Partial<BlockEditProps>;
+
+const titleBlockData = (props: GestorBlockDataProps) => {
   const { data, block, onChangeBlock, blocksConfig, navRoot, contentType } =
     props;
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const intl = useIntl();
-  const schema = colaboradoresSchema({ ...props, intl });
-  const onChangeField = (id, value) => {
+  const schema = gestorSchema({ ...props, intl } as BlockSchemaArgs);
+  const onChangeField = (id: string, value: unknown) => {
     onChangeBlock(block, {
       ...data,
       [id]: value,
