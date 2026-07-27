@@ -2,6 +2,8 @@
   "@id": "/Plone",
   "@type": "Plone Site",
   "UID": "plone_site_root",
+  "accent_color": null,
+  "accent_foreground_color": null,
   "allow_discussion": null,
   "blocks": {
     "4979b879-0499-494e-9ca9-967aae7af1f4": {
@@ -16,12 +18,23 @@
               "@id": "resolveuid/fdd8db018975496db797f1aa1ce559ef",
               "@type": "Document",
               "Description": "A vers\u00e3o 1.0 do Portal Brasil: Intranet disponibiliza alguns novos tipos de conte\u00fado.",
+              "Subject": [],
               "Title": "Tipos de Conte\u00fado",
+              "description": "A vers\u00e3o 1.0 do Portal Brasil: Intranet disponibiliza alguns novos tipos de conte\u00fado.",
+              "effective": "2024-07-06T19:13:00+00:00",
+              "end": null,
+              "getObjSize": "0 KB",
               "getRemoteUrl": null,
               "hasPreviewImage": true,
               "head_title": null,
-              "image_field": "preview_image",
-              "title": "Tipos de Conte\u00fado"
+              "id": "tipos-de-conteudo",
+              "image_field": "",
+              "mime_type": "text/plain",
+              "nav_title": null,
+              "review_state": "published",
+              "start": null,
+              "title": "Tipos de Conte\u00fado",
+              "type_title": "P\u00e1gina"
             }
           ],
           "overwrite": true,
@@ -39,12 +52,23 @@
               "@id": "resolveuid/0f37fe34245f439ba78901e36f6da9dc",
               "@type": "Document",
               "Description": "Estrutura organizacional de nossa institui\u00e7\u00e3o",
+              "Subject": [],
               "Title": "Estrutura",
+              "description": "Estrutura organizacional de nossa institui\u00e7\u00e3o",
+              "effective": "2024-07-04T20:06:00+00:00",
+              "end": null,
+              "getObjSize": "0 KB",
               "getRemoteUrl": null,
               "hasPreviewImage": true,
               "head_title": null,
-              "image_field": "preview_image",
-              "title": "Estrutura"
+              "id": "estrutura",
+              "image_field": "",
+              "mime_type": "text/plain",
+              "nav_title": null,
+              "review_state": "published",
+              "start": null,
+              "title": "Estrutura",
+              "type_title": "P\u00e1gina"
             }
           ],
           "overwrite": true,
@@ -62,12 +86,23 @@
               "@id": "resolveuid/17b06e11b95941f08a6c483d0869f69d",
               "@type": "Document",
               "Description": "Tema visual baseado no volto-light-theme",
+              "Subject": [],
               "Title": "Tema",
+              "description": "Tema visual baseado no volto-light-theme",
+              "effective": "2024-07-06T19:13:00+00:00",
+              "end": null,
+              "getObjSize": "0 KB",
               "getRemoteUrl": null,
               "hasPreviewImage": true,
               "head_title": null,
-              "image_field": "preview_image",
-              "title": "Tema"
+              "id": "tema",
+              "image_field": "",
+              "mime_type": "text/plain",
+              "nav_title": null,
+              "review_state": "published",
+              "start": null,
+              "title": "Tema",
+              "type_title": "P\u00e1gina"
             }
           ],
           "overwrite": false,
@@ -85,9 +120,8 @@
         ]
       },
       "headline": "Funcionalidades",
-      "styles": {
-        "backgroundColor": "grey"
-      }
+      "styles": {},
+      "theme": "grey"
     },
     "86715d66-2c57-4f44-be47-38b5ae722732": {
       "@type": "listing",
@@ -131,12 +165,23 @@
               "@id": "resolveuid/abcd08c1843b4540b90cb73b9e9fc050",
               "@type": "Document",
               "Description": "Eventos internos ou externos. com participa\u00e7\u00e3o de nossa institui\u00e7\u00e3o",
+              "Subject": [],
               "Title": "Eventos",
+              "description": "Eventos internos ou externos. com participa\u00e7\u00e3o de nossa institui\u00e7\u00e3o",
+              "effective": "2024-07-06T19:28:00+00:00",
+              "end": null,
+              "getObjSize": "0 KB",
               "getRemoteUrl": null,
               "hasPreviewImage": true,
               "head_title": null,
-              "image_field": "preview_image",
-              "title": "Eventos"
+              "id": "eventos",
+              "image_field": "",
+              "mime_type": "text/plain",
+              "nav_title": null,
+              "review_state": "published",
+              "start": null,
+              "title": "Eventos",
+              "type_title": "P\u00e1gina"
             }
           ],
           "overwrite": true,
@@ -154,12 +199,23 @@
               "@id": "resolveuid/1eb1b5c533dc4cb8b3faff4eb8750785",
               "@type": "Document",
               "Description": "Construa formul\u00e1rios e os adicione em qualquer conte\u00fado com o bloco de formul\u00e1rios.",
+              "Subject": [],
               "Title": "Formul\u00e1rios",
+              "description": "Construa formul\u00e1rios e os adicione em qualquer conte\u00fado com o bloco de formul\u00e1rios.",
+              "effective": "2024-07-06T19:13:00+00:00",
+              "end": null,
+              "getObjSize": "0 KB",
               "getRemoteUrl": null,
               "hasPreviewImage": true,
               "head_title": null,
-              "image_field": "preview_image",
-              "title": "Formul\u00e1rios"
+              "id": "formularios",
+              "image_field": "",
+              "mime_type": "text/plain",
+              "nav_title": null,
+              "review_state": "published",
+              "start": null,
+              "title": "Formul\u00e1rios",
+              "type_title": "P\u00e1gina"
             }
           ],
           "overwrite": false,
@@ -177,12 +233,23 @@
               "@id": "resolveuid/7bc5679d36c44d7ea81663b0595c6be0",
               "@type": "Document",
               "Description": "O Portal Brasil: Intranet disponibiliza mecanismo de participa\u00e7\u00e3o via coment\u00e1rios.",
+              "Subject": [],
               "Title": "Interatividade",
+              "description": "Usu\u00e1rios podem favoritar suas p\u00e1ginas e conte\u00fados mais acessados, e tamb\u00e9m podem comentar e deixar suas opini\u00f5es.",
+              "effective": "2024-07-06T19:13:00+00:00",
+              "end": null,
+              "getObjSize": "0 KB",
               "getRemoteUrl": null,
               "hasPreviewImage": true,
               "head_title": null,
-              "image_field": "preview_image",
-              "title": "Interatividade"
+              "id": "interatividade",
+              "image_field": "",
+              "mime_type": "text/plain",
+              "nav_title": null,
+              "review_state": "published",
+              "start": null,
+              "title": "Interatividade",
+              "type_title": "P\u00e1gina"
             }
           ],
           "overwrite": true,
@@ -199,9 +266,8 @@
           "71047227-7fac-4012-8c5f-e2f54cc9ad70"
         ]
       },
-      "styles": {
-        "backgroundColor": "grey"
-      }
+      "styles": {},
+      "theme": "grey"
     },
     "e5fb316f-f3af-4df1-b3d8-fb46ac07cc11": {
       "@type": "slider",
@@ -303,9 +369,9 @@
           "title": "Plone Conference 2024"
         }
       ],
-      "styles": {
-        "backgroundColor": "transparent"
-      }
+      "styles": {},
+      "theme": "default",
+      "variation": "default"
     }
   },
   "blocks_layout": {
@@ -316,31 +382,91 @@
       "86715d66-2c57-4f44-be47-38b5ae722732"
     ]
   },
-  "contributors": [],
-  "creators": [
-    "admin"
-  ],
-  "description": "Intranet",
-  "effective": null,
-  "exclude_from_nav": false,
-  "expires": null,
+  "complementary_logo": null,
+  "description": "Exemplo de Intranet desenvolvida com o Portal Brasil: Intranet",
+  "enable_mobile_sticky_menu": false,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
-  "exportimport.versions": {},
+  "facebook_app_id": "",
+  "facebook_username": "",
+  "footer_address": "Portal Brasil: Intranet",
+  "footer_colophon_text": [
+    {
+      "children": [
+        {
+          "text": "Portal Brasil: Intranet \u00e9 desenvolvida pela comunidade "
+        },
+        {
+          "children": [
+            {
+              "text": "PloneGov-BR"
+            }
+          ],
+          "data": {
+            "url": "https://plone.org.br"
+          },
+          "type": "link"
+        },
+        {
+          "text": ""
+        }
+      ],
+      "type": "p"
+    }
+  ],
+  "footer_column_left": [],
+  "footer_column_left_header": null,
+  "footer_column_middle": [],
+  "footer_column_middle_header": null,
+  "footer_column_right": [],
+  "footer_column_right_header": null,
+  "footer_links": [],
+  "footer_logo": {
+    "blob_path": "plone_site_root/footer_logo/logo.svg",
+    "content-type": "image/svg+xml",
+    "filename": "logo.svg",
+    "height": 512,
+    "size": 46918,
+    "width": 1920
+  },
+  "footer_logos": [],
+  "footer_logos_container_width": "default",
+  "footer_logos_size": "s",
+  "has_fat_menu": true,
+  "has_intranet_header": true,
+  "header_actions": [],
+  "header_foreground": null,
   "id": "Plone",
+  "intranet_flag": null,
   "is_folderish": true,
   "items_total": 6,
   "language": "##DEFAULT##",
+  "layout": "document_view",
   "lock": {
     "locked": false,
     "stealable": true
   },
-  "parent": {},
-  "review_state": "published",
-  "rights": "",
+  "logo": {
+    "blob_path": "plone_site_root/logo/logo.svg",
+    "content-type": "image/svg+xml",
+    "filename": "logo.svg",
+    "height": 512,
+    "size": 46918,
+    "width": 1920
+  },
+  "post_footer_logo": null,
+  "post_footer_logo_link": null,
+  "preview_caption_link": null,
+  "review_state": null,
+  "secondary_color": null,
+  "secondary_foreground_color": null,
+  "share_social_data": true,
+  "social_links": [],
+  "sticky_menu": [],
+  "sticky_menu_color": null,
+  "sticky_menu_foreground_color": null,
   "subjects": [],
-  "table_of_contents": null,
-  "title": "Intranet",
+  "title": "Portal Brasil: Intranet",
   "type_title": "Plone Site",
   "workflow_history": {
     "simple_intranet_workflow": [
@@ -359,5 +485,8 @@
         "time": "2024-05-17T09:39:07+00:00"
       }
     ]
-  }
+  },
+  "working_copy": null,
+  "working_copy_of": null,
+  "x_username": ""
 }

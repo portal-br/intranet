@@ -1,0 +1,1 @@
+Moderniza os workflows de CI, delegando os jobs comuns para `plone/meta@2.x` e removendo a automação local de release. @ericof

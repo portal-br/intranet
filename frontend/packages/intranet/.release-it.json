@@ -15,6 +15,9 @@
   "npm": {
     "publish": false
   },
+  "plonePrePublish": {
+    "publish": false
+  },
   "git": {
     "changelog": "uvx towncrier build --draft --yes --version 0.0.0",
     "requireUpstream": false,
@@ -24,7 +27,7 @@
     "tagAnnotation": "Release ${version}"
   },
   "github": {
-    "release": true,
+    "release": false,
     "releaseName": "${version}",
     "releaseNotes": "cat .changelog.draft"
   }

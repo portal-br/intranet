@@ -92,18 +92,19 @@
       "9c61bb43-a2de-46c8-bdff-4ae6b3b34a6f"
     ]
   },
+  "changeNote": "",
   "contributors": [],
   "created": "2024-07-06T22:08:14+00:00",
   "creators": [
     "admin"
   ],
   "description": "Construa formul\u00e1rios e os adicione em qualquer conte\u00fado com o bloco de formul\u00e1rios.",
-  "effective": "2024-07-06T19:13:00",
+  "effective": "2024-07-06T19:13:00+00:00",
   "exclude_from_nav": false,
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
-  "exportimport.versions": {},
+  "head_title": null,
   "id": "formularios",
   "is_folderish": true,
   "language": "##DEFAULT##",
@@ -114,35 +115,14 @@
   },
   "modified": "2024-07-07T01:21:26+00:00",
   "nav_title": null,
-  "parent": {
-    "@id": "/sobre",
-    "@type": "Document",
-    "Subject": [],
-    "UID": "e65e86c1d5d14560a6aeffe2e90d747b",
-    "description": "Conhe\u00e7a a nova Intranet da nossa institui\u00e7\u00e3o",
-    "effective": "2024-07-06T21:57:00+00:00",
-    "id": "sobre",
-    "image_field": null,
-    "image_scales": {},
-    "review_state": "published",
-    "title": "Sobre",
-    "type_title": "Page"
-  },
-  "preview_caption": null,
-  "preview_image": {
-    "blob_path": "1eb1b5c533dc4cb8b3faff4eb8750785/preview_image/scott-graham-OQMZwNd3ThU-unsplash.jpg",
-    "content-type": "image/jpeg",
-    "filename": "scott-graham-OQMZwNd3ThU-unsplash.jpg",
-    "height": 4912,
-    "size": 3647929,
-    "width": 7360
-  },
+  "preview_caption_link": null,
   "review_state": "published",
   "rights": "",
   "subjects": [],
   "title": "Formul\u00e1rios",
   "type_title": "Page",
   "version": "current",
+  "versioning_enabled": true,
   "workflow_history": {
     "simple_intranet_workflow": [
       {
@@ -160,5 +140,7 @@
         "time": "2024-07-06T22:13:49+00:00"
       }
     ]
-  }
+  },
+  "working_copy": null,
+  "working_copy_of": null
 }

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2025-04-09T19:32:01.711Z\n"
+"POT-Creation-Date: 2024-03-22T12:43:34.158Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -12,45 +12,3 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
-
-#. Default: "Colaboradores"
-#: components/Blocks/Colaboradores/schema
-msgid "Colaboradores"
-msgstr ""
-
-#. Default: "Gestor"
-#: components/Blocks/Gestor/schema
-msgid "Gestor"
-msgstr ""
-
-#. Default: "Portal Brasil: Intranet"
-#: components/ToolLogo/ToolLogo
-msgid "Portal Brasil: Intranet"
-msgstr ""
-
-#. Default: "Título"
-#: components/Blocks/Areas/schema
-#: components/Blocks/Colaboradores/schema
-#: components/Blocks/Gestor/schema
-msgid "Título"
-msgstr ""
-
-#. Default: "Unauthorized"
-#: components/Unauthorized/Unauthorized
-msgid "Unauthorized"
-msgstr ""
-
-#. Default: "You are trying to access a protected resource, please {login} first."
-#: components/Unauthorized/Unauthorized
-msgid "You are trying to access a protected resource, please {login} first."
-msgstr ""
-
-#. Default: "log in"
-#: components/Unauthorized/Unauthorized
-msgid "log in"
-msgstr ""
-
-#. Default: "Áreas"
-#: components/Blocks/Areas/schema
-msgid "Áreas"
-msgstr ""

@@ -49,13 +49,14 @@
       "ac6c4502-973a-4566-8ed4-21261dbf26c8"
     ]
   },
+  "changeNote": "",
   "contributors": [],
   "created": "2024-07-04T19:29:15+00:00",
   "creators": [
     "admin"
   ],
   "description": "Not\u00edcias da nossa institui\u00e7\u00e3o",
-  "effective": "2024-07-04T19:46:00",
+  "effective": "2024-07-04T19:46:00+00:00",
   "exclude_from_nav": false,
   "expires": null,
   "exportimport.constrains": {
@@ -70,7 +71,7 @@
     ]
   },
   "exportimport.conversation": [],
-  "exportimport.versions": {},
+  "head_title": null,
   "id": "noticias",
   "is_folderish": true,
   "language": "##DEFAULT##",
@@ -81,22 +82,14 @@
   },
   "modified": "2024-07-10T14:37:08+00:00",
   "nav_title": null,
-  "parent": {
-    "@id": "/",
-    "@type": "Plone Site",
-    "UID": "plone_site_root",
-    "description": "Intranet",
-    "title": "Intranet",
-    "type_title": "Plone Site"
-  },
-  "preview_caption": null,
-  "preview_image": null,
+  "preview_caption_link": null,
   "review_state": "published",
   "rights": "",
   "subjects": [],
   "title": "Not\u00edcias",
   "type_title": "Page",
   "version": "current",
+  "versioning_enabled": true,
   "workflow_history": {
     "simple_intranet_workflow": [
       {
@@ -114,5 +107,7 @@
         "time": "2024-07-04T22:46:14+00:00"
       }
     ]
-  }
+  },
+  "working_copy": null,
+  "working_copy_of": null
 }

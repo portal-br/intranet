@@ -1,5 +1,4 @@
-import type { ConfigType as BaseConfigType } from '@plone/registry';
-import type { BlocksConfig, StyleDefinition } from '@plone/types';
+import type { ConfigType } from '@plone/registry';
 
 // Blocks
 /// Listing block variations
@@ -23,30 +22,6 @@ import GestorBlockView from '../components/Blocks/Gestor/View';
 import { gestorSchema } from '../components/Blocks/Gestor/schema';
 import gestorSVG from '@plone/volto/icons/user.svg';
 
-declare module '@plone/types' {
-  export interface BlocksConfigData {
-    areasBlock: BlockConfigBase;
-    colaboradoresBlock: BlockConfigBase;
-    gestorBlock: BlockConfigBase;
-  }
-  export interface BlockConfigBase {
-    themes?: StyleDefinition[];
-    allowedBlocks?: string[];
-    allowed_headline_tags?: string[][];
-    dataAdapter?: any;
-    unwantedButtons?: string[];
-    imageScale?: string;
-    allowed_headings?: string[][];
-  }
-}
-
-export interface CustomBlocksConfig
-  extends Omit<BlocksConfig, 'groupBlocksOrder'> {
-  groupBlocksOrder: { id: string; title: string }[];
-}
-export interface ConfigType extends Omit<BaseConfigType, 'blocks'> {
-  blocks: CustomBlocksConfig;
-}
 export default function install(config: ConfigType) {
   // Blocks
   /// Group Blocks

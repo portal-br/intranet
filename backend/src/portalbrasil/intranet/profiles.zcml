@@ -5,6 +5,23 @@
     >
 
   <genericsetup:registerProfile
+      name="base"
+      title="Portal Brasil: Intranet - Configuração Base"
+      description="Configuração base da Intranet."
+      directory="profiles/base"
+      post_handler="portalbrasil.intranet.setuphandlers.base.import_final_steps"
+      />
+
+  <genericsetup:registerProfile
+      name="cmfdependencies"
+      title="Portal Brasil: Intranet - Dependências CMF"
+      description="Perfil de configuração genérica com dependências principais necessárias pelo CMF."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="plone.base.interfaces.IPloneSiteRoot"
+      directory="profiles/cmfdependencies"
+      />
+
+  <genericsetup:registerProfile
       name="default"
       title="PortalBrasil: Intranet"
       description="Instalação da solução de Intranet utilizando Plone"
@@ -31,10 +48,9 @@
 
   <!-- Hide Uninstall Profile-->
   <utility
-      factory=".setuphandlers.HiddenProfiles"
+      factory=".factory.HiddenProfiles"
       name="portalbrasil.intranet"
       />
-
 
   <include package=".upgrades" />
 

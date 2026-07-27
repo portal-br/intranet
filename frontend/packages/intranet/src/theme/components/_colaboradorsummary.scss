@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  background-color: var(--color-surface-container-highest);
+  background-color: var(--secondary-color);
   .portrait {
     margin-left: $spacing-xsmall;
   }
@@ -14,7 +14,7 @@
       }
     }
     .meta {
-      color: var(--color-on-surface);
+      color: var(--secondary-color-foreground);
     }
   }
 }

@@ -1,0 +1,22 @@
+{
+    "title": "PortalBrasil: Intranet",
+    "description": "Solu\u00e7\u00e3o de Intranet constru\u00edda com PortalBrasil & Plone",
+    "project_slug": "intranet",
+    "hostname": "intranet.demo.plone.org.br",
+    "author": "PloneGov-BR",
+    "email": "gov@plone.org.br",
+    "use_prerelease_versions": false,
+    "plone_version": "6.2.1",
+    "volto_version": "19.3.0",
+    "python_package_name": "portalbrasil.intranet",
+    "frontend_addon_name": "@portalbrasil/intranet",
+    "language_code": "pt-br",
+    "github_organization": "portal-br",
+    "container_registry": "github",
+    "devops_storage": "relstorage",
+    "devops_cache": false,
+    "devops_ansible": false,
+    "devops_gha_deploy": false,
+    "initialize_documentation": true,
+    "__template__": "project"
+}

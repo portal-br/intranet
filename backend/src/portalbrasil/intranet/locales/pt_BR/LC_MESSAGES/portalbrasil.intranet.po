@@ -1,0 +1,316 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2026-07-24 01:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: pt_BR\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+msgid "- Workflow para Intranets: Acesso aberto para conteúdo publicado."
+msgstr ""
+
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "- Workflow para Intranets: Acesso restrito."
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:35
+msgid "Acesso"
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:43
+msgid "Acesso restrito"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "An item's workflow state (e.g.published)"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/endereco.py:43
+msgid "CEP"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Can only be seen and edited by the owner."
+msgstr ""
+
+#: portalbrasil/intranet/content/colaborador.py:19
+msgid "Cargo"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/endereco.py:34
+msgid "Cidade"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/default/types/Colaborador.xml
+msgid "Colaborador"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/endereco.py:29
+msgid "Complemento"
+msgstr ""
+
+#: portalbrasil/intranet/profiles.zcml:13
+msgid "Configuração base da Intranet."
+msgstr ""
+
+#: portalbrasil/intranet/profiles.zcml:38
+msgid "Configuração de autenticação obrigatória."
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/contato.py:13
+msgid "Contato"
+msgstr ""
+
+#: portalbrasil/intranet/profiles.zcml:47
+msgid "Conteúdo de exemplo para a Intranet"
+msgstr ""
+
+#: portalbrasil/intranet/content/colaborador.py:23
+msgid "Data de nascimento"
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:27
+msgid "Detalhes"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/contato.py:20
+msgid "Email"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/endereco.py:14
+msgid "Endereço"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/endereco.py:39
+msgid "Estado"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "If you submitted the item by mistake or want to perform additional edits, this will take it back."
+msgstr ""
+
+#: portalbrasil/intranet/content/colaborador.py:20
+msgid "Informe o cargo do colaborador."
+msgstr ""
+
+#: portalbrasil/intranet/profiles.zcml:30
+msgid "Instalação da solução de Intranet utilizando Plone"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "Intranet"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+msgid "Intranet Public Workflow"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Intranet Restricted Workflow"
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:41
+msgid "Link"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/matricula.py:13
+msgid "Matrícula"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/matricula.py:14
+msgid "Matrícula deste colaborador"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Member retracts submission"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Member submits content for publication"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "Metadata"
+msgstr ""
+
+#: portalbrasil/intranet/content/colaborador.py:14
+msgid "Nome completo"
+msgstr ""
+
+#: portalbrasil/intranet/content/colaborador.py:15
+msgid "Nome completo do colaborador."
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:18
+msgid "Nome do sistema / serviço"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Pending review"
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:23
+msgid "Pequena explicação sobre o sistema / serviço"
+msgstr ""
+
+#: portalbrasil/intranet/profiles.zcml:22
+msgid "Perfil de configuração genérica com dependências principais necessárias pelo CMF."
+msgstr ""
+
+#: portalbrasil/intranet/profiles.zcml:13
+msgid "Portal Brasil: Intranet - Configuração Base"
+msgstr ""
+
+#: portalbrasil/intranet/profiles.zcml:22
+msgid "Portal Brasil: Intranet - Dependências CMF"
+msgstr ""
+
+#: portalbrasil/intranet/distributions/configure.zcml:17
+#: portalbrasil/intranet/profiles.zcml:30
+msgid "PortalBrasil: Intranet"
+msgstr ""
+
+#: portalbrasil/intranet/profiles.zcml:47
+msgid "PortalBrasil: Intranet (Conteúdo de Exemplo)"
+msgstr ""
+
+#: portalbrasil/intranet/profiles.zcml:38
+msgid "PortalBrasil: Intranet (Restrito)"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Private"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Publish"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Published"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Publishing the item makes it visible to other users."
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Puts your item in a review queue, so it can be published on the site."
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Retract"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "Review state"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Reviewer publishes content"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Reviewer sends content back for re-drafting"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Send back"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Sending the item back will return the item to the original author instead of publishing it. You should preferably include a reason for why it was not published."
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:17
+#: portalbrasil/intranet/profiles/default/types/Servico.xml
+msgid "Serviço"
+msgstr ""
+
+#: portalbrasil/intranet/distributions/configure.zcml:17
+msgid "Solução de Intranet desenvolvida com Plone."
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Submit for publication"
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:22
+msgid "Sumário"
+msgstr ""
+
+#: portalbrasil/intranet/behaviors/contato.py:24
+msgid "Telefone"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/default/types/Colaborador.xml
+msgid "Um colaborador da Instituição"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/default/types/Servico.xml
+msgid "Um sistema ou serviço da Instituição"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/default/types/Area.xml
+msgid "Uma Área dentro da Instuição"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+msgid "Visible to anonymous users, editable by editors and reviewers."
+msgstr ""
+
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Visible to authenticated users, editable by editors and reviewers."
+msgstr ""
+
+#: portalbrasil/intranet/profiles/base/workflows/simple_intranet_workflow/definition.xml
+#: portalbrasil/intranet/profiles/restricted/workflows/simple_intranet_workflow/definition.xml
+msgid "Waiting to be reviewed, not editable by the owner."
+msgstr ""
+
+#. Default: "Filtro por Área."
+#: portalbrasil/intranet/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "description_area"
+msgstr ""
+
+#. Default: "Área"
+#: portalbrasil/intranet/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "label_area"
+msgstr ""
+
+#: portalbrasil/intranet/profiles/default/types/Area.xml
+msgid "Área"
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:47
+msgid "Área responsável"
+msgstr ""
+
+#: portalbrasil/intranet/content/servico.py:48
+msgid "Área responsável por este serviço"
+msgstr ""

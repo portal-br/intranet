@@ -1,12 +1,10 @@
 {
   "__version__": "1.0.0",
   "_blob_files_": [
-    "0f37fe34245f439ba78901e36f6da9dc/preview_image/estrutura.png",
+    "plone_site_root/logo/logo.svg",
+    "plone_site_root/footer_logo/logo.svg",
     "fe1c6ad17162484680a1143ac4ad47f6/image/image.15359.3654189.jpg",
-    "abcd08c1843b4540b90cb73b9e9fc050/preview_image/towfiqu-barbhuiya-bwOAixLG0uc-unsplash.jpg",
-    "62f52ef944a1485893df3a7248f6eba5/preview_image/chamada-ploneconf.png",
-    "8076c71e86844965b2e07bee35949f17/preview_image/ploneconf.png",
-    "0f70ad1edb4b4baab3fd39ee0817f0ea/preview_image/WPD 17th April 2024 1920x1080 (PT) .png",
+    "9b37dfbe71ba477791e511975741e6b0/image/rh.jpeg",
     "b8faaacdafc24b90b8425cca4cd4bc9a/image/Bonito",
     "8741d333db4c4736957db5742906aba6/image/image-3600-d11e328d24e6a75a36d38008b7b1e0c8.jpeg",
     "df21ec28680143ffb122692019686a4a/image/Jo\u00e3o Pessoa",
@@ -14,13 +12,8 @@
     "dd7a0f02ab9b45da9159a9ccee9a0fad/image/PloneGov-BR",
     "478d8e09dc85468a85125df5caec7342/image/Praia - Jo\u00e3o Pessoa",
     "ab9796ee584142ceb86df51343cee5e0/image/S\u00e3o Paulo",
-    "9575155bfeb4440bb719d3c96ed43da4/image/portalbrasil.png",
-    "1eb1b5c533dc4cb8b3faff4eb8750785/preview_image/scott-graham-OQMZwNd3ThU-unsplash.jpg",
-    "7bc5679d36c44d7ea81663b0595c6be0/preview_image/volodymyr-hryshchenko-V5vqWC9gyEU-unsplash.jpg",
-    "17b06e11b95941f08a6c483d0869f69d/preview_image/tema.png",
-    "fdd8db018975496db797f1aa1ce559ef/preview_image/tipos.png",
-    "9b37dfbe71ba477791e511975741e6b0/image/rh.jpeg",
-    "be80977453784cf58e28ab12e0d09dfb/image/ingressos-ploneconf.png"
+    "be80977453784cf58e28ab12e0d09dfb/image/ingressos-ploneconf.png",
+    "9575155bfeb4440bb719d3c96ed43da4/image/portalbrasil.png"
   ],
   "_data_files_": [
     "plone_site_root/data.json",
@@ -160,6 +153,48 @@
         "acquire": false,
         "roles": [
           "Authenticated"
+        ]
+      },
+      "collective.contact_behaviors: View Basic Address Information": {
+        "acquire": false,
+        "roles": [
+          "Manager",
+          "Site Administrator",
+          "Owner",
+          "Editor",
+          "Contributor",
+          "Reader",
+          "Anonymous"
+        ]
+      },
+      "collective.contact_behaviors: View Contact Information": {
+        "acquire": false,
+        "roles": [
+          "Manager",
+          "Site Administrator",
+          "Owner",
+          "Editor",
+          "Contributor"
+        ]
+      },
+      "collective.contact_behaviors: View Detailed Address Information": {
+        "acquire": false,
+        "roles": [
+          "Manager",
+          "Site Administrator",
+          "Owner",
+          "Editor",
+          "Contributor"
+        ]
+      },
+      "collective.person: Add Person": {
+        "acquire": false,
+        "roles": [
+          "Manager",
+          "Site Administrator",
+          "Owner",
+          "Editor",
+          "Contributor"
         ]
       },
       "plone.resource: Export ZIP file": {
@@ -381,30 +416,30 @@
     }
   },
   "ordering": {
-    "0f37fe34245f439ba78901e36f6da9dc": 44,
+    "0f37fe34245f439ba78901e36f6da9dc": 43,
     "0f70ad1edb4b4baab3fd39ee0817f0ea": 1,
     "12da9643d3ab4671ab995ca620900922": 5,
     "17b06e11b95941f08a6c483d0869f69d": 0,
     "1eb1b5c533dc4cb8b3faff4eb8750785": 2,
-    "26e5fc286fce4c2e9613411cc0f0663f": 42,
-    "42bb0222abfe4356949de633f5cc25e6": 45,
+    "26e5fc286fce4c2e9613411cc0f0663f": 41,
+    "42bb0222abfe4356949de633f5cc25e6": 44,
     "478d8e09dc85468a85125df5caec7342": 3,
     "616403f8459349feab36daba645b95d9": 0,
     "62f52ef944a1485893df3a7248f6eba5": 0,
     "7bc5679d36c44d7ea81663b0595c6be0": 3,
     "8741d333db4c4736957db5742906aba6": 0,
-    "87b599b4dd5a419da58c59632bace85c": 47,
+    "87b599b4dd5a419da58c59632bace85c": 46,
     "9575155bfeb4440bb719d3c96ed43da4": 0,
     "9b37dfbe71ba477791e511975741e6b0": 0,
     "ab9796ee584142ceb86df51343cee5e0": 1,
-    "abcd08c1843b4540b90cb73b9e9fc050": 46,
+    "abcd08c1843b4540b90cb73b9e9fc050": 45,
     "b31a223c7b0b4146b8b17b640b9d39e1": 1,
     "b8faaacdafc24b90b8425cca4cd4bc9a": 4,
     "be80977453784cf58e28ab12e0d09dfb": 1,
     "c50064410cc94ebaa3d744b3852414ed": 0,
     "dd7a0f02ab9b45da9159a9ccee9a0fad": 6,
     "df21ec28680143ffb122692019686a4a": 2,
-    "e65e86c1d5d14560a6aeffe2e90d747b": 43,
+    "e65e86c1d5d14560a6aeffe2e90d747b": 42,
     "fdd8db018975496db797f1aa1ce559ef": 1,
     "fe1c6ad17162484680a1143ac4ad47f6": 0
   },

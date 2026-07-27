@@ -131,74 +131,18 @@
       "969e7169-c48c-433a-a61c-095cd31b21d4"
     ]
   },
-  "changeActor": "admin",
-  "changeNote": null,
+  "changeNote": "",
   "contributors": [],
   "created": "2024-07-04T23:04:20+00:00",
   "creators": [
     "admin"
   ],
   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus.",
-  "effective": "2024-07-04T20:04:00",
+  "effective": "2024-07-04T20:04:00+00:00",
   "exclude_from_nav": false,
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
-  "exportimport.versions": {
-    "0": {
-      "@id": "/noticias/lancada-a-nova-intranet",
-      "@type": "News Item",
-      "UID": "310892f8c65c4c978fd6e2a9826cf29c",
-      "allow_discussion": true,
-      "blocks": {},
-      "blocks_layout": {
-        "items": []
-      },
-      "changeNote": "",
-      "contributors": [],
-      "created": "2024-07-10T14:30:34+00:00",
-      "creators": [
-        "admin"
-      ],
-      "description": "",
-      "effective": null,
-      "exclude_from_nav": false,
-      "expires": null,
-      "id": "lancada-a-nova-intranet",
-      "image": null,
-      "image_caption": null,
-      "is_folderish": true,
-      "language": "",
-      "layout": "newsitem_view",
-      "lock": {
-        "locked": false,
-        "stealable": true
-      },
-      "modified": "2024-07-10T14:30:34+00:00",
-      "parent": {
-        "@id": "/noticias",
-        "@type": "Document",
-        "Subject": [],
-        "UID": "42bb0222abfe4356949de633f5cc25e6",
-        "description": "Not\u00edcias da nossa institui\u00e7\u00e3o",
-        "effective": "2024-07-04T22:46:00+00:00",
-        "id": "noticias",
-        "image_field": null,
-        "image_scales": {},
-        "review_state": "published",
-        "title": "Not\u00edcias",
-        "type_title": "Page"
-      },
-      "relatedItems": [],
-      "review_state": "published",
-      "rights": "",
-      "subjects": [],
-      "title": "",
-      "type_title": "News Item",
-      "version": 0,
-      "versioning_enabled": true
-    }
-  },
   "id": "lancada-a-nova-intranet",
   "image": {
     "blob_path": "9575155bfeb4440bb719d3c96ed43da4/image/portalbrasil.png",
@@ -217,20 +161,8 @@
     "stealable": true
   },
   "modified": "2024-07-04T23:04:45+00:00",
-  "parent": {
-    "@id": "/noticias",
-    "@type": "Document",
-    "Subject": [],
-    "UID": "42bb0222abfe4356949de633f5cc25e6",
-    "description": "Not\u00edcias da nossa institui\u00e7\u00e3o",
-    "effective": "2024-07-04T22:46:00+00:00",
-    "id": "noticias",
-    "image_field": null,
-    "image_scales": {},
-    "review_state": "published",
-    "title": "Not\u00edcias",
-    "type_title": "Page"
-  },
+  "nav_title": null,
+  "preview_caption_link": null,
   "review_state": "published",
   "rights": "",
   "subjects": [],
@@ -255,5 +187,7 @@
         "time": "2024-07-04T23:04:45+00:00"
       }
     ]
-  }
+  },
+  "working_copy": null,
+  "working_copy_of": null
 }

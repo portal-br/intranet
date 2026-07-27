@@ -1,3 +1,3 @@
-import Tags from '../../../../../components/Tags/Tags';
+import Tags from '@portalbrasil/intranet/components/Tags/Tags';
 
 export default Tags;

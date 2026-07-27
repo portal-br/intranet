@@ -1,4 +1,4 @@
-name: "PortalBrasil: Intranet - Changelog"
+name: "Changelog"
 on:
   pull_request:
     types: [assigned, opened, synchronize, reopened, labeled, unlabeled]
@@ -6,7 +6,8 @@ on:
       - main
 
 env:
-  NODE_VERSION: 22.x
+  PYTHON_VERSION: 3.14
+  NODE_VERSION: 24
   ADDON_NAME: intranet
   BASE_BRANCH: main
 
@@ -19,9 +20,9 @@ jobs:
       repository: ${{ steps.filter.outputs.repository }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
-      - uses: dorny/paths-filter@v3.0.2
+      - uses: dorny/paths-filter@v4.0.1
         id: filter
         with:
           filters: |
@@ -43,13 +44,16 @@ jobs:
     needs:
       - config
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           # Fetch all history
           fetch-depth: '0'
 
-      - name: Install pipx
-        run: pip install towncrier
+      - name: Setup uv
+        uses: plone/meta/.github/actions/setup_uv@2.x
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          working-directory: '.'
 
       - name: Check for presence of a Change Log fragment (only pull requests)
         if: github.event_name == 'pull_request'
@@ -58,7 +62,7 @@ jobs:
           # compare the current branch with the base branch.
           # Source: https://github.com/actions/checkout/#fetch-all-branches.
           git fetch --no-tags origin ${BASE_BRANCH}
-          towncrier check  --compare-with origin/${{ env.BASE_BRANCH }} --config backend/pyproject.toml --dir backend/
+          uvx towncrier check  --compare-with origin/${{ env.BASE_BRANCH }} --config backend/pyproject.toml --dir backend/
 
   frontend:
     if: ${{ needs.config.outputs.frontend == 'true' }}
@@ -69,16 +73,19 @@ jobs:
       run:
         working-directory: ./frontend
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           # Fetch all history
           fetch-depth: '0'
 
-      - name: Install pipx
-        run: pip install towncrier
+      - name: Setup uv
+        uses: plone/meta/.github/actions/setup_uv@2.x
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          working-directory: '.'
 
       - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -109,7 +116,7 @@ jobs:
           # Source: https://github.com/actions/checkout/#fetch-all-branches.
           git fetch --no-tags origin ${BASE_BRANCH}
           cd ..
-          towncrier check --compare-with origin/${{ env.BASE_BRANCH }} --config frontend/packages/${{ env.ADDON_NAME }}/towncrier.toml --dir frontend/packages/${{ env.ADDON_NAME }}
+          uvx towncrier check --compare-with origin/${{ env.BASE_BRANCH }} --config frontend/packages/${{ env.ADDON_NAME }}/towncrier.toml --dir frontend/packages/${{ env.ADDON_NAME }}
 
   repository:
     if: ${{ needs.config.outputs.repository == 'true' }}
@@ -117,13 +124,16 @@ jobs:
     needs:
       - config
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           # Fetch all history
           fetch-depth: '0'
 
-      - name: Install pipx
-        run: pip install towncrier
+      - name: Setup uv
+        uses: plone/meta/.github/actions/setup_uv@2.x
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          working-directory: '.'
 
       - name: Check for presence of a Change Log fragment (only pull requests)
         if: github.event_name == 'pull_request'
@@ -132,4 +142,4 @@ jobs:
           # compare the current branch with the base branch.
           # Source: https://github.com/actions/checkout/#fetch-all-branches.
           git fetch --no-tags origin ${BASE_BRANCH}
-          towncrier check  --compare-with origin/${{ env.BASE_BRANCH }} --config towncrier.toml --dir .
+          uvx towncrier check  --compare-with origin/${{ env.BASE_BRANCH }} --config towncrier.toml --dir .

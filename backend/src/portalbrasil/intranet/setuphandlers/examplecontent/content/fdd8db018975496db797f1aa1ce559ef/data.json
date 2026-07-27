@@ -65,18 +65,19 @@
       "f986621d-450e-4015-97d1-15a821f185a4"
     ]
   },
+  "changeNote": "",
   "contributors": [],
   "created": "2024-07-06T22:01:34+00:00",
   "creators": [
     "admin"
   ],
   "description": "A vers\u00e3o 1.0 do Portal Brasil: Intranet disponibiliza alguns novos tipos de conte\u00fado.",
-  "effective": "2024-07-06T19:13:00",
+  "effective": "2024-07-06T19:13:00+00:00",
   "exclude_from_nav": false,
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
-  "exportimport.versions": {},
+  "head_title": null,
   "id": "tipos-de-conteudo",
   "is_folderish": true,
   "language": "##DEFAULT##",
@@ -87,35 +88,14 @@
   },
   "modified": "2024-07-07T13:53:54+00:00",
   "nav_title": null,
-  "parent": {
-    "@id": "/sobre",
-    "@type": "Document",
-    "Subject": [],
-    "UID": "e65e86c1d5d14560a6aeffe2e90d747b",
-    "description": "Conhe\u00e7a a nova Intranet da nossa institui\u00e7\u00e3o",
-    "effective": "2024-07-06T21:57:00+00:00",
-    "id": "sobre",
-    "image_field": null,
-    "image_scales": {},
-    "review_state": "published",
-    "title": "Sobre",
-    "type_title": "Page"
-  },
-  "preview_caption": null,
-  "preview_image": {
-    "blob_path": "fdd8db018975496db797f1aa1ce559ef/preview_image/tipos.png",
-    "content-type": "image/png",
-    "filename": "tipos.png",
-    "height": 1966,
-    "size": 521502,
-    "width": 3600
-  },
+  "preview_caption_link": null,
   "review_state": "published",
   "rights": "",
   "subjects": [],
   "title": "Tipos de Conte\u00fado",
   "type_title": "Page",
   "version": "current",
+  "versioning_enabled": true,
   "workflow_history": {
     "simple_intranet_workflow": [
       {
@@ -133,5 +113,7 @@
         "time": "2024-07-06T22:13:49+00:00"
       }
     ]
-  }
+  },
+  "working_copy": null,
+  "working_copy_of": null
 }

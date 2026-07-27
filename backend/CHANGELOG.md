@@ -1,11 +1,4 @@
-# Changelog
-
-<!--
-   You should *NOT* be adding new change log entries to this file.
-   You should create a file in the news directory instead.
-   For helpful instructions, please see:
-   https://github.com/plone/plone.releaser/blob/master/ADD-A-NEWS-ITEM.rst
--->
+# Alterações
 
 <!-- towncrier release notes start -->
 
@@ -14,7 +7,7 @@
 
 ### Interno
 
-- Fixa o suporte ao Python 3.12 (`requires-python = "==3.12.*"`) e regenera o `uv.lock` com a versão atual do uv. @ericof 
+- Fixa o suporte ao Python 3.12 (`requires-python = "==3.12.*"`) e regenera o `uv.lock` com a versão atual do uv. @ericof
 
 ## 1.0.0b3 (2025-04-09)
 
@@ -28,18 +21,18 @@
 
 ### Breaking
 
-- Renomeia pacote para portalbrasil.intranet @ericof 
+- Renomeia pacote para portalbrasil.intranet @ericof
 
 
 ### Funcionalidade
 
-- Adiciona dependência do portabrasil.core @ericof 
+- Adiciona dependência do portabrasil.core @ericof
 
 
 ### Interno
 
 - Atualiza versão do Plone para 6.1.1 [@ericof] [#22](https://github.com/portal-br/intranet/issues/22)
-- Utiliza versão 1.0.0a4 do portabrasil.core @ericof 
+- Utiliza versão 1.0.0a4 do portabrasil.core @ericof
 
 ## 1.0.0a4 (2024-10-14)
 

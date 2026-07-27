@@ -1,0 +1,1 @@
+Move as implementações dos componentes customizados (Avatar, Tags, Unauthorized) e da action de vocabulários para o add-on — deixando em `customizations/` apenas shims que reexportam via `@portalbrasil/intranet` — e registra o alias do add-on na configuração do Vitest. @ericof

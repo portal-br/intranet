@@ -1,5 +1,6 @@
 # PortalBrasil: Intranet 🚀
 
+[![Built with Cookieplone](https://img.shields.io/badge/built%20with-Cookieplone-0083be.svg?logo=cookiecutter)](https://github.com/plone/cookieplone-templates/)
 [![Testes](https://github.com/portal-br/intranet/actions/workflows/main.yml/badge.svg)](https://github.com/portal-br/intranet/actions/workflows/main.yml)
 
 Solução de Intranet construída com PortalBrasil & Plone
@@ -10,10 +11,14 @@ Solução de Intranet construída com PortalBrasil & Plone
 
 Certifique-se de ter os seguintes itens instalados:
 
-- UV 🐍
-- Node 22 🟩
-- pnpm 🧶
-- Docker 🐳
+-   Um [sistema operacional](https://6.docs.plone.org/install/create-project-cookieplone.html#prerequisites-for-installation) que suporte todos os pré-requisitos listados.
+-   [uv](https://6.docs.plone.org/install/create-project-cookieplone.html#uv)
+-   [nvm](https://6.docs.plone.org/install/create-project-cookieplone.html#nvm)
+-   [Node.js and pnpm](https://6.docs.plone.org/install/create-project.html#node-js) 24
+-   [Make](https://6.docs.plone.org/install/create-project-cookieplone.html#make)
+-   [Git](https://6.docs.plone.org/install/create-project-cookieplone.html#git)
+-   [Docker](https://docs.docker.com/get-started/get-docker/) (optional)
+
 
 ### Instalação 🔧
 
@@ -29,6 +34,7 @@ cd intranet
 ```shell
 make install
 ```
+
 
 ### Inicialize os Servidores 🔥
 
@@ -50,7 +56,7 @@ make backend-start
 make frontend-start
 ```
 
-Voilá! Seu site Plone está no ar e funcionando! 🎉
+Voilá! O ambiente de desenvolvimento da Intranet está no ar e funcionando! 🎉
 
 ### Implantação Local com Stack 📦
 
@@ -63,21 +69,11 @@ Implemente um ambiente local com `Docker Compose`, incluindo:
 Execute os seguintes comandos:
 
 ```shell
-make stack-start
 make stack-create-site
+make stack-start
 ```
 
-E... pronto! Seu site Plone está rodando localmente! 🚀
-
-### Troubleshoot 🔧
-
-Caso tenha problemas para instalar o pnpm, utilize:
-
-```npm install -g pnpm```
-
-Em caso de `RequiredDependencyException`, instalar o pacote `libjpeg-dev`
-
-```sudo apt install libjpeg-dev```
+E... pronto! A intranet está no ar e funcionando! 🎉
 
 ## Estrutura do Projeto 🏗️
 
@@ -99,10 +95,45 @@ Este monorepo consiste em três seções distintas: `backend`, `frontend` e `dev
 Para formatar automaticamente seu código e garantir que ele atenda aos padrões de qualidade, execute:
 
 ```shell
+make check
+```
+
+### Formatar a base de código
+
+To format and rewrite the code base, ensuring it adheres to quality standards, run the following shell command.
+
+```shell
 make format
 ```
 
-Os linters podem ser executados individualmente dentro das pastas `backend` ou `frontend`.
+| Section | Tool | Description | Configuration |
+| --- | --- | --- | --- |
+| backend | Ruff | Python code formatting, imports sorting  | [`backend/pyproject.toml`](./backend/pyproject.toml) |
+| backend | `zpretty` | XML and ZCML formatting  | -- |
+| frontend | ESLint | Fixes most common frontend issues | [`frontend/.eslintrc.js`](.frontend/.eslintrc.js) |
+| frontend | prettier | Format JS and Typescript code  | [`frontend/.prettierrc`](.frontend/.prettierrc) |
+| frontend | Stylelint | Format Styles (css, less, sass)  | [`frontend/.stylelintrc`](.frontend/.stylelintrc) |
+
+Formatters can also be run within the `backend` or `frontend` folders.
+
+### Linting the codebase
+or `lint`:
+
+ ```shell
+make lint
+```
+
+| Section | Tool | Description | Configuration |
+| --- | --- | --- | --- |
+| backend | Ruff | Checks code formatting, imports sorting  | [`backend/pyproject.toml`](./backend/pyproject.toml) |
+| backend | Pyroma | Checks Python package metadata  | -- |
+| backend | check-python-versions | Checks Python version information  | -- |
+| backend | `zpretty` | Checks XML and ZCML formatting  | -- |
+| frontend | ESLint | Checks JS / Typescript lint | [`frontend/.eslintrc.js`](.frontend/.eslintrc.js) |
+| frontend | prettier | Check JS / Typescript formatting  | [`frontend/.prettierrc`](.frontend/.prettierrc) |
+| frontend | Stylelint | Check Styles (css, less, sass) formatting  | [`frontend/.stylelintrc`](.frontend/.stylelintrc) |
+
+Linters can be run individually within the `backend` or `frontend` folders.
 
 ## Internacionalização 🌐
 
@@ -114,4 +145,4 @@ make i18n
 
 ## Créditos e Agradecimentos 🙏
 
-Criado com carinho usando **[Cookieplone (0.7.1)](https://github.com/plone/cookieplone) e [cookiecutter-plone (fee7a07)](https://github.com/plone/cookiecutter-plone/commit/fee7a0706481b17193a86f06cc674017580e0441) em 01-07-2024 18:46:17.428634**. Um agradecimento especial a todos os colaboradores e apoiadores!
+Criado com carinho usand [Cookieplone (2.0.0b3)](https://github.com/plone/cookieplone) e [cookieplone-templates (a11bbba)](https://github.com/plone/cookieplone-templates/commit/a11bbba152592619ba72bfab9ccc3515425c7484) on 2026-07-23 09:49:43.987533. Um agradecimento especial a todos os colaboradores e apoiadores!
