@@ -10,6 +10,7 @@
     "redhat.vscode-yaml",
     "editorconfig.editorconfig",
     "github.vscode-github-actions",
-    "plone.plone-vs-utilities"
+    "plone.plone-vs-utilities",
+    "ms-python.vscode-python-envs"
   ]
 }
