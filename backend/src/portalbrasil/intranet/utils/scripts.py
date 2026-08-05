@@ -18,6 +18,7 @@ import json
 import logging
 import os
 import transaction
+import warnings
 
 
 marker = object()  # Unique marker object to indicate no value
@@ -113,8 +114,9 @@ def parse_answers(answers_file: Path, answers_env: dict) -> dict:
 
     Answers are read from ``answers_file``; for each key present in that file,
     a matching value in ``answers_env`` takes precedence. The ``setup_content``
-    key is coerced with :func:`as_bool` when a value is supplied. Empty or
-    missing environment values leave the file value untouched.
+    and ``demo_content`` keys are coerced with :func:`as_bool` when a value is
+    supplied. Empty or missing environment values leave the file value
+    untouched.
 
     :param answers_file: Path to a JSON file holding the base answers.
     :param answers_env: Mapping of answer keys to environment-provided
@@ -205,6 +207,8 @@ def get_environmental_variables(
     containing a ``.`` (e.g. ``authentication.provider``) are expanded into a
     nested dictionary.
 
+    :param options: Triples of ``(answer key, environment variable name,
+        transform)`` to read; defaults to :data:`OPTIONS`.
     :returns: Mapping of answer keys to their (optionally transformed) values,
         ready to be merged into the site-creation answers.
     """
@@ -228,7 +232,6 @@ def get_environmental_variables(
 
 def _create_site(
     app: Application,
-    distribution: str,
     delete_existing: bool,
     answers: dict[str, Any],
     package_ifaces: tuple[type[InterfaceClass], ...] = (),
@@ -237,14 +240,14 @@ def _create_site(
     """Create (or reuse) a Plone site inside the Zope application.
 
     Prepares the request, security context and loggers, then adds a site with
-    id ``answers["site_id"]``. If a site with that id already exists it is
-    reused, unless ``delete_existing`` is set, in which case it is removed and
-    recreated. Additional GenericSetup profiles are installed on newly created
-    sites.
+    id ``answers["site_id"]``. The distribution is always
+    ``portalbrasil-intranet``: it is written into ``answers``, overriding any
+    ``distribution`` key already present there. If a site with that id already
+    exists it is reused, unless ``delete_existing`` is set, in which case it is
+    removed and recreated. Additional GenericSetup profiles are installed on
+    newly created sites.
 
     :param app: The Zope application object.
-    :param distribution: Distribution name used when ``answers`` does not carry
-        its own ``distribution`` key.
     :param delete_existing: When ``True``, delete a pre-existing site with the
         same id before creating a new one.
     :param answers: Site-creation parameters passed through to
@@ -259,14 +262,12 @@ def _create_site(
     app = makerequest(app)
     _prepare_request(app, package_ifaces)
     _prepare_user(app)
-    if "distribution" not in answers:
-        answers["distribution"] = distribution
-    else:
-        distribution = answers["distribution"]
+    distribution = "portalbrasil-intranet"
+    answers["distribution"] = distribution
     site_id = answers["site_id"]
 
-    logger.info(f"Creating a new kitconcept site  @ {site_id}")
-    logger.info(f" - Using the {distribution} distribution")
+    logger.info(f"Criando uma nova intranet  @ {site_id}")
+    logger.info(f" - Usando a distribuição {distribution}")
 
     if site_id in app.objectIds():
         if delete_existing:
@@ -296,32 +297,33 @@ def create_site(
     answers_file: Path,
     env_answers: dict[str, Any],
     package_iface: type[InterfaceClass] | Sequence[type[InterfaceClass]] | None = None,
-    env_options: tuple[tuple[str, str, Any], ...] = OPTIONS,
     additional_profiles: Sequence[str] = (),
+    env_options: tuple[tuple[str, str, Any], ...] | None = None,
     distribution: str = "",
 ) -> PloneSite:
     """Create a new Plone site from a JSON answers file and the environment.
 
-    High-level entry point that resolves configuration from arguments,
-    environment variables and ``answers_file``, then delegates the actual
-    creation to :func:`_create_site`. The ``DELETE_EXISTING`` and
-    ``DISTRIBUTION`` environment variables provide defaults for their
-    respective options. When ``env_answers`` is empty, overrides are collected
-    via :func:`get_environmental_variables`.
+    High-level entry point that resolves configuration from ``answers_file``
+    and the environment, then delegates the actual creation to
+    :func:`_create_site`. The distribution is always ``portalbrasil-intranet``
+    and the field mapping is always :data:`OPTIONS` — neither needs to be
+    supplied. The ``DELETE_EXISTING`` environment variable controls whether a
+    pre-existing site with the same id is removed before creation. When
+    ``env_answers`` is empty, overrides are collected via
+    :func:`get_environmental_variables`.
 
     :param app: The Zope application object.
     :param answers_file: Path to the JSON file holding the base answers.
     :param env_answers: Pre-computed environment overrides; when falsy they are
-        gathered from the environment using ``env_options``.
+        gathered from the environment using :data:`OPTIONS`.
     :param package_iface: A single browser-layer interface or a sequence of
         them to provide on the request, or ``None``.
-    :param env_options: Option definitions used to read overrides from the
-        environment via :func:`get_environmental_variables`; defaults to
-        :data:`OPTIONS`.
     :param additional_profiles: GenericSetup profile ids to install on a newly
         created site.
-    :param distribution: Distribution name; falls back to the ``DISTRIBUTION``
-        environment variable when empty.
+    :param env_options: Deprecated and ignored; will be removed in 2.0.0a3.
+        Passing a value emits a :class:`DeprecationWarning`.
+    :param distribution: Deprecated and ignored; will be removed in 2.0.0a3.
+        Passing a value emits a :class:`DeprecationWarning`.
     :returns: The created or reused Plone site.
     :raises FileNotFoundError: If ``answers_file`` does not exist.
     :raises json.JSONDecodeError: If ``answers_file`` is not valid JSON.
@@ -329,7 +331,21 @@ def create_site(
     """
     package_ifaces: tuple[type[InterfaceClass], ...] = ()
     delete_existing = as_bool(os.getenv("DELETE_EXISTING"))
-    distribution = distribution if distribution else str(os.getenv("DISTRIBUTION", ""))
+    if env_options is not None:
+        warnings.warn(
+            "O argumento env_options está obsoleto e será removido na versão 2.0.0a3",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+    if distribution:
+        warnings.warn(
+            "O argumento distribution está obsoleto e será removido na versão 2.0.0a3",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+    # Essa é uma distribuição com opções bem definidas, não há necessidade de
+    # receber outros valores
+    env_options = OPTIONS
     if not env_answers:
         # Extract answers from environment variables
         env_answers = get_environmental_variables(env_options)
@@ -341,7 +357,6 @@ def create_site(
     answers = parse_answers(answers_file, env_answers)
     return _create_site(
         app=app,
-        distribution=distribution,
         delete_existing=delete_existing,
         answers=answers,
         package_ifaces=package_ifaces,

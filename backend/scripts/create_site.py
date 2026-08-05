@@ -1,23 +1,11 @@
 from pathlib import Path
 from portalbrasil.intranet.interfaces import IBrowserLayer
 from portalbrasil.intranet.utils import scripts
-from typing import Any
 
 import os
 
 
 SCRIPT_DIR = Path().cwd() / "scripts"
-
-OPTIONS: tuple[tuple[str, str, Any], ...] = (
-    ("site_id", "SITE_ID", None),
-    ("title", "SITE_TITLE", None),
-    ("description", "SITE_DESCRIPTION", None),
-    ("available_languages", "SITE_AVAILABLE_LANGUAGES", scripts.as_list),
-    ("distribution", "DISTRIBUTION", None),
-    ("default_language", "SITE_DEFAULT_LANGUAGE", None),
-    ("portal_timezone", "SITE_PORTAL_TIMEZONE", None),
-    ("setup_content", "SITE_SETUP_CONTENT", scripts.as_bool),
-)
 
 
 def main():
@@ -29,7 +17,6 @@ def main():
         answers_file=answers_file,
         env_answers={},
         package_iface=[IBrowserLayer],
-        env_options=OPTIONS,
     )
 
 

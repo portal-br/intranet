@@ -1,6 +1,9 @@
 from pathlib import Path
+from portalbrasil.intranet import PACKAGE_NAME
 from portalbrasil.intranet.utils import scripts
+from Products.CMFPlone.Portal import PloneSite
 
+import logging
 import pytest
 
 
@@ -157,22 +160,40 @@ class TestGetEnvironmentalVariables:
 
 
 class TestCreateSite:
-    distribution = "testing"
-
     @pytest.fixture(autouse=True)
     def _setup(self, app, answers_file) -> None:
         """Bind the Zope app root and the answers file to the test instance."""
         self.app = app
         self.answers_file = answers_file
 
-    def test_create_site(self):
-        site = scripts.create_site(
+    def _create_site(self, **kwargs) -> PloneSite:
+        """Call :func:`create_site` with the fixtures bound to this instance."""
+        return scripts.create_site(
             app=self.app,
             answers_file=self.answers_file,
             env_answers={},
             package_iface=None,
-            env_options=scripts.OPTIONS,
-            distribution=self.distribution,
+            **kwargs,
         )
+
+    def test_create_site(self):
+        """Neither the distribution name nor the field mapping are required."""
+        site = self._create_site()
         assert site is not None
+        assert site.id == "Plone"
+
+    def test_create_site_uses_internal_distribution(self, caplog):
+        """The distribution is always resolved to ``portalbrasil-intranet``."""
+        with caplog.at_level(logging.INFO, logger=PACKAGE_NAME):
+            self._create_site()
+        assert " - Usando a distribuição portalbrasil-intranet" in caplog.text
+
+    def test_env_options_is_deprecated(self):
+        with pytest.warns(DeprecationWarning, match="env_options"):
+            site = self._create_site(env_options=scripts.OPTIONS)
+        assert site.id == "Plone"
+
+    def test_distribution_is_deprecated(self):
+        with pytest.warns(DeprecationWarning, match="distribution"):
+            site = self._create_site(distribution="testing")
         assert site.id == "Plone"
