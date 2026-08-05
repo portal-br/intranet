@@ -1,0 +1,1 @@
+Corrige a versão do Node usada na geração do Storybook e habilita a publicação no GitHub Pages a partir da `main`, em repositórios públicos. @ericof

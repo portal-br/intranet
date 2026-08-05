@@ -57,6 +57,9 @@ on:
       volto-version:
         description: "Volto version to be used"
         value: ${{ jobs.config.outputs.volto-version }}
+      storybook-deploy:
+        description: "Should we deploy the storybook"
+        value: ${{ jobs.config.outputs.storybook-deploy }}
       path-backend:
         description: "Path to the backend package"
         value: ${{ jobs.config.outputs.path-backend }}
@@ -87,6 +90,7 @@ jobs:
       plone-version: ${{ steps.vars.outputs.plone-version }}
       volto-version: ${{ steps.vars.outputs.volto-version }}
       image-name-prefix: ${{ steps.vars.outputs.image-name-prefix }}
+      storybook-deploy: ${{ steps.vars.outputs.storybook-deploy }}
 
     steps:
       - name: Checkout
@@ -115,6 +119,7 @@ jobs:
           echo "path-frontend=$(jq -r '.frontend.path' <<< "$REPOSITORY_SETTINGS" | sed "s|^${ROOT}/||")" >> "$GITHUB_OUTPUT"
           echo "path-root=." >> "$GITHUB_OUTPUT"
           echo "base-tag=sha-$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+          echo "storybook-deploy=${{ github.event.repository.private == false }}" >> "$GITHUB_OUTPUT"
 
       - uses: dorny/paths-filter@v4.0.2
         id: filter
