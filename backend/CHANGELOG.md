@@ -2,6 +2,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0a2 (2026-08-05)
+
+
+### Funcionalidade
+
+- Simplifica a rotina `utils.scripts.create_site`: a distribuição e o mapeamento de campos passam a ser resolvidos internamente, dispensando os argumentos `distribution` e `env_options`, agora obsoletos e a serem removidos na versão 2.0.0a3. @ericof [#5](https://github.com/portal-br/intranet/issues/5)
+
 ## 2.0.0a1 (2026-07-27)
 
 

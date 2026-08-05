@@ -2,6 +2,8 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.2 (2026-08-05)
+
 ## 2.0.0-alpha.1 (2026-07-27)
 
 ### Breaking

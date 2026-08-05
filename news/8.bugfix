@@ -1,1 +1,0 @@
-Move o `dependabot.yml` para `.github/`, onde o Dependabot efetivamente lê a configuração: na raiz o arquivo era inerte e as atualizações semanais das GitHub Actions nunca eram executadas. @ericof

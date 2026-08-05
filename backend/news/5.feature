@@ -1,1 +1,0 @@
-Simplifica a rotina `utils.scripts.create_site`: a distribuição e o mapeamento de campos passam a ser resolvidos internamente, dispensando os argumentos `distribution` e `env_options`, agora obsoletos e a serem removidos na versão 2.0.0a3. @ericof

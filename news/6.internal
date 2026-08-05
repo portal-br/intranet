@@ -1,1 +1,0 @@
-Simplifica o workflow de verificação do changelog: reutiliza o `config.yml` para calcular os escopos afetados, reduz os quatro jobs a um, reporta todos os escopos pendentes numa única execução e normaliza os caminhos expostos pelo `repoplone` para relativos à raiz do repositório. @ericof

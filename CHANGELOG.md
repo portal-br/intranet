@@ -1,6 +1,38 @@
 # Alterações
 
 <!-- towncrier release notes start -->
+## 2.0.0a2 (2026-08-05)
+
+### Backend
+
+
+#### Funcionalidade
+
+- Simplifica a rotina `utils.scripts.create_site`: a distribuição e o mapeamento de campos passam a ser resolvidos internamente, dispensando os argumentos `distribution` e `env_options`, agora obsoletos e a serem removidos na versão 2.0.0a3. @ericof [#5](https://github.com/portal-br/intranet/issues/5)
+
+
+
+### Frontend
+
+No significant changes.
+
+
+### Project
+
+
+#### Correção de Bug
+
+- Move o `dependabot.yml` para `.github/`, onde o Dependabot efetivamente lê a configuração: na raiz o arquivo era inerte e as atualizações semanais das GitHub Actions nunca eram executadas. @ericof [#8](https://github.com/portal-br/intranet/issue/8)
+
+
+#### Interno
+
+- Simplifica o workflow de verificação do changelog: reutiliza o `config.yml` para calcular os escopos afetados, reduz os quatro jobs a um, reporta todos os escopos pendentes numa única execução e normaliza os caminhos expostos pelo `repoplone` para relativos à raiz do repositório. @ericof [#6](https://github.com/portal-br/intranet/issue/6)
+- Corrige a versão do Node usada na geração do Storybook e habilita a publicação no GitHub Pages a partir da `main`, em repositórios públicos. @ericof [#7](https://github.com/portal-br/intranet/issue/7)
+- Recomendar o uso da extensão ms-python.vscode-python-envs. @ericof 
+
+
+
 ## 2.0.0a1 (2026-07-27)
 
 ### Backend
