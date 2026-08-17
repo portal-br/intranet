@@ -7,8 +7,8 @@ from plone.restapi.serializer.dxcontent import SerializeFolderToJson
 from portalbrasil.intranet.content.area import IArea
 from zope.component import adapter
 from zope.component import getMultiAdapter
-from zope.interface import Interface
 from zope.interface import implementer
+from zope.interface import Interface
 
 
 @implementer(ISerializeToJson)

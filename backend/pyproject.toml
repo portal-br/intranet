@@ -37,6 +37,7 @@ dependencies = [
     "plone.formblock[honeypot]==1.0.0a3",
     "plonegovbr.brfields==1.0.0a3",
     "plonegovbr.socialmedia==3.0.0a0",
+    "sc.voltolighttheme",
 ]
 
 [dependency-groups]
@@ -644,3 +645,5 @@ parallel = true
 omit = [
   "src/portalbrasil/intranet/locales/*.py",
 ]
+[tool.uv.sources]
+"sc.voltolighttheme" = { path = "../../sc-volto-light-theme/backend", editable = true }
