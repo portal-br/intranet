@@ -30,14 +30,14 @@ dependencies = [
     "plone.volto",
     "collective.bookmarks==1.1",
     "collective.person==1.0.0b6",
-    "kitconcept.voltolighttheme==8.0.0a31",
+    "kitconcept.voltolighttheme==8.0.0a28",
     "pas.plugins.authomatic==2.0.0",
     "pas.plugins.keycloakgroups==1.0.0b1",
     "pas.plugins.oidc==2.0.0",
     "plone.formblock[honeypot]==1.0.0a3",
     "plonegovbr.brfields==1.0.0a3",
     "plonegovbr.socialmedia==3.0.0a0",
-    "sc.voltolighttheme",
+    "sc-voltolighttheme==1.0.0a4",
 ]
 
 [dependency-groups]
@@ -645,5 +645,3 @@ parallel = true
 omit = [
   "src/portalbrasil/intranet/locales/*.py",
 ]
-[tool.uv.sources]
-"sc.voltolighttheme" = { path = "../../sc-volto-light-theme/backend", editable = true }
