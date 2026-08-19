@@ -1,4 +1,4 @@
-const addons = ['@portalbrasil/intranet'];
+const addons = ['@simplesconsultoria/volto-light-theme', '@portalbrasil/intranet'];
 const theme = '';
 
 module.exports = {
