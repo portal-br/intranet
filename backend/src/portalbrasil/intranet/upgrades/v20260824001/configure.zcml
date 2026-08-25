@@ -1,0 +1,27 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    >
+
+  <genericsetup:upgradeSteps
+      profile="portalbrasil.intranet:base"
+      source="20260723001"
+      destination="20260824001"
+      >
+    <genericsetup:upgradeStep
+        title="Upgrade sc.voltolighttheme"
+        handler=".upgrade_sc_volto_light_theme"
+        />
+    <genericsetup:upgradeDepends
+        title="Update registry value"
+        import_profile="profile-sc.voltolighttheme:intranet"
+        />
+    <genericsetup:upgradeDepends
+        title="Update Plone site type information"
+        import_steps="typeinfo"
+        />
+  </genericsetup:upgradeSteps>
+
+  <!-- -*- extra stuff goes here -*- -->
+
+</configure>

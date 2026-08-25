@@ -33,7 +33,7 @@ class TestUpgrades:
 
     @pytest.mark.parametrize(
         "src_version",
-        [],
+        ["20260723001"],
     )
     def test_upgrade_to_latest(self, list_upgrades, src_version: str) -> None:
         """Test that the upgrade step to the latest version is available."""
