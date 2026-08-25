@@ -30,19 +30,20 @@ class TestContentTypeFTI:
     @pytest.mark.parametrize(
         "idx,behavior",
         enumerate((
-            "volto.preview_image_link",
-            "voltolighttheme.header",
-            "voltolighttheme.theme",
-            "voltolighttheme.footer",
-            "kitconcept.footer",
-            "kitconcept.sticky_menu",
             "plonegovbr.socialmedia.settings",
+            "sc.voltolighttheme.themeselector",
+            "sc.voltolighttheme.intranetheader",
+            "sc.voltolighttheme.footer",
+            "volto.preview_image_link",
             "plone.basic",
             "plone.categorization",
             "plone.relateditems",
             "plone.locking",
+            "plone.relateditems",
+            "plone.locking",
+            "plone.excludefromnavigation",
             "volto.blocks",
-            "kitconcept.blocks.config",
+            "kitconcept.sticky_menu",
         )),
     )
     def test_behaviors(self, idx: int, behavior: str):
