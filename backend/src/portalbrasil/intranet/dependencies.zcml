@@ -7,7 +7,7 @@
   <include package="collective.bookmarks" />
   <include package="collective.person" />
   <include package="plone.formblock" />
-  <include package="kitconcept.voltolighttheme" />
+  <include package="sc.voltolighttheme" />
   <include package="plonegovbr.socialmedia" />
   <include package="plonegovbr.brfields" />
 

@@ -3838,7 +3838,7 @@ requires-dist = [
     { name = "plonegovbr-brfields", specifier = "==1.0.0a3" },
     { name = "plonegovbr-socialmedia", specifier = "==3.0.0a0" },
     { name = "products-cmfplone", specifier = "==6.2.1" },
-    { name = "sc-voltolighttheme", specifier = "==1.0.0a4" },
+    { name = "sc-voltolighttheme", specifier = "==1.0.0a5" },
 ]
 
 [package.metadata.requires-dev]
@@ -5082,7 +5082,7 @@ wheels = [
 
 [[package]]
 name = "sc-voltolighttheme"
-version = "1.0.0a4"
+version = "1.0.0a5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "kitconcept-voltolighttheme" },
@@ -5092,9 +5092,9 @@ dependencies = [
     { name = "plonegovbr-socialmedia" },
     { name = "products-cmfplone" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/19/ae/7ab7e0052d2a9ff6caeb5694936788a0f727c946b43cd32190b1cda41de2/sc_voltolighttheme-1.0.0a4.tar.gz", hash = "sha256:73eb358cc86eb03c7a6d97d36c27eb4e476253a22ce0bf0ba0dbb279e476f0ac", size = 1232249, upload-time = "2026-08-05T12:55:19.783Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/8d/a0/486405de2be0120778517ba6e729b8f7411ac84f662b203ac42065aacbc1/sc_voltolighttheme-1.0.0a5.tar.gz", hash = "sha256:6aacb748495bc073be7b1e20560673897c2f9d00b785d988cd974649b6e67036", size = 1253694, upload-time = "2026-08-24T15:15:29.994Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/5c/8c/6d6527580f35dee9e63c34b23dbf60abb2465c8bb7b2099f7fa195dc9371/sc_voltolighttheme-1.0.0a4-py3-none-any.whl", hash = "sha256:453bb8382c4cadc744c3c04ac9b38cee2ae0938384d3a3ac245a5a898276fe23", size = 1256262, upload-time = "2026-08-05T12:55:17.837Z" },
+    { url = "https://files.pythonhosted.org/packages/58/2b/01dabf061597575119267ad441d22c4fea7779527cab3e0df170c5eb5012/sc_voltolighttheme-1.0.0a5-py3-none-any.whl", hash = "sha256:c723b17c5cf0639f893f0c1739a9fa486b6a4e7044ea8fa1ebba27430d43dc2c", size = 1276390, upload-time = "2026-08-24T15:15:28.02Z" },
 ]
 
 [[package]]

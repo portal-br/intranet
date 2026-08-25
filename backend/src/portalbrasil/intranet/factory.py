@@ -81,6 +81,7 @@ _INTRANET_DEPENDENCIES = [
     "plone.formblock",
     "plonegovbr.brfields",
     "plonegovbr.socialmedia",
+    "sc.voltolighttheme",
     "souper.plone",
 ]
 
@@ -89,6 +90,8 @@ _DEPENDENCIES_PROFILES = [
     "collective.bookmarks:default",
     "kitconcept.voltolighttheme:default",
     "kitconcept.voltolighttheme:demo",
+    "sc.voltolighttheme:default",
+    "sc.voltolighttheme:intranet",
     "plone.app.contenttypes:default",
     "plone.app.dexterity:default",
     "plone.app.event:default",
