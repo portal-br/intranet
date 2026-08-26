@@ -1,0 +1,10 @@
+.block.image {
+  figure {
+    figcaption {
+      padding: $spacing-small !important;
+      strong.title {
+        margin: 0 !important;
+      }
+    }
+  }
+}

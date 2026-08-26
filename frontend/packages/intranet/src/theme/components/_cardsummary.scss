@@ -1,0 +1,66 @@
+.ui.card.colaborador,
+.ui.card.area {
+  position: relative; /* Para o link cobrir o card */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px;
+  border: 0;
+  background-color: var(--secondary-color);
+  text-decoration: none !important;
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease;
+
+  &:hover {
+    background-color: var(--primary-color, var(--secondary-color));
+    svg {
+      fill: var(--primary-foreground-color) !important;
+    }
+
+    .content {
+      .header .nome,
+      .meta {
+        color: var(--primary-foreground-color) !important;
+      }
+    }
+  }
+
+  .portrait,
+  .icon {
+    flex-shrink: 0;
+    margin-left: $spacing-xsmall;
+  }
+
+  .portrait {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+  }
+
+  .icon {
+    fill: var(--primary-color) !important;
+  }
+
+  .content {
+    border: 0;
+    margin-left: 16px;
+
+    .header {
+      margin-bottom: 4px;
+      .nome {
+        @include add(weight, bold);
+        color: var(--primary-color);
+        font-size: 1.1rem;
+      }
+    }
+    .meta {
+      color: var(
+        --secondary-foreground-color,
+        var(--secondary-color-foreground)
+      );
+      font-size: 0.95rem;
+    }
+  }
+}

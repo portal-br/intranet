@@ -1,8 +1,7 @@
 import ConditionalLink from '@plone/volto/components/manage/ConditionalLink/ConditionalLink';
-import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL, isInternalURL } from '@plone/volto/helpers/Url/Url';
-import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
 import type { Image as PloneImage } from '@plone/types';
+import ColaboradorSummary from '../../Summary/ColaboradorSummary';
 
 type ProfileItem = {
   '@id': string;
@@ -41,40 +40,12 @@ const ProfilesTemplate = ({
     <>
       <div className="items profiles">
         {items.map((item) => {
-          const ItemBodyTemplate = () => {
-            const image = item?.image_scales?.image;
-            const image_url = image
-              ? `${item['@id']}/${image[0].scales.mini?.download}`
-              : null;
-            return (
-              <div className="card-container person">
-                <div className="person-image-wrapper">
-                  {image_url ? (
-                    <Image src={image_url} alt="" className="person-image" />
-                  ) : (
-                    <Image
-                      src={DefaultImageSVG}
-                      alt=""
-                      className="person-image"
-                    />
-                  )}
-                </div>
-                <div className="item">
-                  <div className="content">
-                    <h3 className="person-name">{item?.title}</h3>
-                    <div className="person-description">
-                      {item.description && item.description}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          };
           return (
             <div className="listing-person" key={item['@id']}>
-              <ConditionalLink item={item} condition={!isEditMode}>
-                <ItemBodyTemplate />
-              </ConditionalLink>
+              <ColaboradorSummary
+                content={item as any}
+                isEditMode={isEditMode}
+              />
             </div>
           );
         })}

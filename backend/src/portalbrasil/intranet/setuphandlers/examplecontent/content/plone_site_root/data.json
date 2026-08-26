@@ -467,6 +467,7 @@
   "sticky_menu_foreground_color": null,
   "subjects": [],
   "title": "Portal Brasil: Intranet",
+  "theme": "default",
   "type_title": "Plone Site",
   "workflow_history": {
     "simple_intranet_workflow": [
