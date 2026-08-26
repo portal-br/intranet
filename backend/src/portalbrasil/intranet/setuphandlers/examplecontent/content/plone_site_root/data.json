@@ -2,8 +2,6 @@
   "@id": "/Plone",
   "@type": "Plone Site",
   "UID": "plone_site_root",
-  "accent_color": null,
-  "accent_foreground_color": null,
   "allow_discussion": null,
   "blocks": {
     "4979b879-0499-494e-9ca9-967aae7af1f4": {
@@ -382,62 +380,14 @@
       "86715d66-2c57-4f44-be47-38b5ae722732"
     ]
   },
-  "complementary_logo": null,
-  "description": "Exemplo de Intranet desenvolvida com o Portal Brasil: Intranet",
+  "description": "Intranet desenvolvida com Portal Brasil",
   "enable_mobile_sticky_menu": false,
+  "exclude_from_nav": false,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
   "facebook_app_id": "",
   "facebook_username": "",
-  "footer_address": "Portal Brasil: Intranet",
-  "footer_colophon_text": [
-    {
-      "children": [
-        {
-          "text": "Portal Brasil: Intranet \u00e9 desenvolvida pela comunidade "
-        },
-        {
-          "children": [
-            {
-              "text": "PloneGov-BR"
-            }
-          ],
-          "data": {
-            "url": "https://plone.org.br"
-          },
-          "type": "link"
-        },
-        {
-          "text": ""
-        }
-      ],
-      "type": "p"
-    }
-  ],
-  "footer_column_left": [],
-  "footer_column_left_header": null,
-  "footer_column_middle": [],
-  "footer_column_middle_header": null,
-  "footer_column_right": [],
-  "footer_column_right_header": null,
-  "footer_links": [],
-  "footer_logo": {
-    "blob_path": "plone_site_root/footer_logo/logo.svg",
-    "content-type": "image/svg+xml",
-    "filename": "logo.svg",
-    "height": 512,
-    "size": 46918,
-    "width": 1920
-  },
-  "footer_logos": [],
-  "footer_logos_container_width": "default",
-  "footer_logos_size": "s",
-  "has_fat_menu": true,
-  "has_intranet_header": true,
-  "header_actions": [],
-  "header_foreground": null,
   "id": "Plone",
-  "intranet_flag": null,
   "is_folderish": true,
   "items_total": 6,
   "language": "##DEFAULT##",
@@ -446,20 +396,8 @@
     "locked": false,
     "stealable": true
   },
-  "logo": {
-    "blob_path": "plone_site_root/logo/logo.svg",
-    "content-type": "image/svg+xml",
-    "filename": "logo.svg",
-    "height": 512,
-    "size": 46918,
-    "width": 1920
-  },
-  "post_footer_logo": null,
-  "post_footer_logo_link": null,
   "preview_caption_link": null,
   "review_state": null,
-  "secondary_color": null,
-  "secondary_foreground_color": null,
   "share_social_data": true,
   "social_links": [],
   "sticky_menu": [],

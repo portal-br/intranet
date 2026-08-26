@@ -100,5 +100,8 @@ export default function install(config: ConfigType) {
     'News Item': ['title', 'description', 'leadimage'],
   };
 
+  /// Alias form to schemaForm for compatibility
+  config.blocks.blocksConfig.form = config.blocks.blocksConfig.schemaForm;
+
   return config;
 }

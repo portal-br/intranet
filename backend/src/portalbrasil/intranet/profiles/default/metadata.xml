@@ -6,7 +6,8 @@
     <dependency>profile-plonetheme.barceloneta:default</dependency>
     <dependency>profile-plone.restapi:default</dependency>
     <dependency>profile-plone.volto:default</dependency>
-    <dependency>profile-kitconcept.voltolighttheme:default</dependency>
+    <dependency>profile-sc.voltolighttheme:default</dependency>
+    <dependency>profile-sc.voltolighttheme:intranet</dependency>
     <dependency>profile-plone.app.discussion:default</dependency>
     <dependency>profile-collective.bookmarks:default</dependency>
     <dependency>profile-collective.person:default</dependency>

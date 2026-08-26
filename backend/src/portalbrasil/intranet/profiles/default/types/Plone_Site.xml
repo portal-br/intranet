@@ -7,19 +7,18 @@
 
   <!-- Enabled behaviors -->
   <property name="behaviors">
-    <element value="volto.preview_image_link" />
-    <element value="voltolighttheme.header" />
-    <element value="voltolighttheme.theme" />
-    <element value="voltolighttheme.footer" />
-    <element value="kitconcept.footer" />
-    <element value="kitconcept.sticky_menu" />
     <element value="plonegovbr.socialmedia.settings" />
+    <element value="sc.voltolighttheme.themeselector" />
+    <element value="sc.voltolighttheme.intranetheader" />
+    <element value="sc.voltolighttheme.footer" />
+    <element value="volto.preview_image_link" />
     <element value="plone.basic" />
     <element value="plone.categorization" />
     <element value="plone.relateditems" />
     <element value="plone.locking" />
+    <element value="plone.excludefromnavigation" />
     <element value="volto.blocks" />
-    <element value="kitconcept.blocks.config" />
+    <element value="kitconcept.sticky_menu" />
   </property>
 
 </object>

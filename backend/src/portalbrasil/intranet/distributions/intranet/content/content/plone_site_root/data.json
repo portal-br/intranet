@@ -66,6 +66,7 @@
   "subjects": [],
   "table_of_contents": null,
   "title": "Intranet",
+  "theme": "default",
   "type_title": "Plone Site",
   "workflow_history": {
     "simple_intranet_workflow": [
