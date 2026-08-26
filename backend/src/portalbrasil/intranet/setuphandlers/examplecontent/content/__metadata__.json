@@ -1,8 +1,6 @@
 {
   "__version__": "1.0.0",
   "_blob_files_": [
-    "plone_site_root/logo/logo.svg",
-    "plone_site_root/footer_logo/logo.svg",
     "fe1c6ad17162484680a1143ac4ad47f6/image/image.15359.3654189.jpg",
     "9b37dfbe71ba477791e511975741e6b0/image/rh.jpeg",
     "b8faaacdafc24b90b8425cca4cd4bc9a/image/Bonito",
@@ -11,9 +9,7 @@
     "12da9643d3ab4671ab995ca620900922/image/Plone Foundation",
     "dd7a0f02ab9b45da9159a9ccee9a0fad/image/PloneGov-BR",
     "478d8e09dc85468a85125df5caec7342/image/Praia - Jo\u00e3o Pessoa",
-    "ab9796ee584142ceb86df51343cee5e0/image/S\u00e3o Paulo",
-    "be80977453784cf58e28ab12e0d09dfb/image/ingressos-ploneconf.png",
-    "9575155bfeb4440bb719d3c96ed43da4/image/portalbrasil.png"
+    "ab9796ee584142ceb86df51343cee5e0/image/S\u00e3o Paulo"
   ],
   "_data_files_": [
     "plone_site_root/data.json",
@@ -221,6 +217,55 @@
       "portalbrasil.intranet: Add Servico": {
         "acquire": false,
         "roles": []
+      },
+      "sc.voltolighttheme: Edit footer settings": {
+        "acquire": false,
+        "roles": [
+          "Manager",
+          "Site Administrator"
+        ]
+      },
+      "sc.voltolighttheme: Edit header settings": {
+        "acquire": false,
+        "roles": [
+          "Manager",
+          "Site Administrator"
+        ]
+      },
+      "sc.voltolighttheme: Edit theme settings": {
+        "acquire": false,
+        "roles": [
+          "Manager",
+          "Site Administrator"
+        ]
+      },
+      "sc.voltolighttheme: Manage themes": {
+        "acquire": false,
+        "roles": [
+          "Manager",
+          "Site Administrator"
+        ]
+      },
+      "sc.voltolighttheme: View footer settings": {
+        "acquire": false,
+        "roles": [
+          "Anonymous",
+          "Authenticated"
+        ]
+      },
+      "sc.voltolighttheme: View header settings": {
+        "acquire": false,
+        "roles": [
+          "Anonymous",
+          "Authenticated"
+        ]
+      },
+      "sc.voltolighttheme: View theme settings": {
+        "acquire": false,
+        "roles": [
+          "Anonymous",
+          "Authenticated"
+        ]
       }
     }
   },

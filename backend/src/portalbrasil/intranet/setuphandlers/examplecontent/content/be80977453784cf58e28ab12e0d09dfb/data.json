@@ -2,7 +2,7 @@
   "@id": "/noticias/incricoes-abertas-para-a-plone-conference",
   "@type": "News Item",
   "UID": "be80977453784cf58e28ab12e0d09dfb",
-  "allow_discussion": true,
+  "allow_discussion": null,
   "blocks": {
     "3e4ba4f6-afad-422d-9d3c-b21fa5a50793": {
       "@type": "__button",
@@ -12,16 +12,26 @@
           "title": "2024.ploneconf.org/pt-br/ingressos"
         }
       ],
-      "inneralign": "center",
       "openLinkInNewTab": true,
-      "styles": {},
+      "styles": {
+        "align:noprefix": "center",
+        "blockWidth:noprefix": "narrow"
+      },
       "title": "Garanta a sua participa\u00e7\u00e3o"
     },
     "81aadd7b-1af6-491e-a800-3bb654bd8fcd": {
       "@type": "description"
     },
-    "986cc3db-6730-44f8-aa1a-e225c01fba1a": {
-      "@type": "leadimage"
+    "8d99d34e-9bcf-4c1b-9310-304bde0cce19": {
+      "@type": "mainImageBlock",
+      "align": "center",
+      "size": "l",
+      "styles": {
+        "blockWidth:noprefix": {
+          "--block-width": "var(--default-container-width)"
+        }
+      },
+      "theme": "default"
     },
     "b1e2fe5b-9a0b-41a4-a928-5015a0dc4ed6": {
       "@type": "title"
@@ -46,7 +56,7 @@
     "items": [
       "b1e2fe5b-9a0b-41a4-a928-5015a0dc4ed6",
       "81aadd7b-1af6-491e-a800-3bb654bd8fcd",
-      "986cc3db-6730-44f8-aa1a-e225c01fba1a",
+      "8d99d34e-9bcf-4c1b-9310-304bde0cce19",
       "b55f964d-aec4-47e2-ab21-3a4dccf2bb6a",
       "3e4ba4f6-afad-422d-9d3c-b21fa5a50793"
     ]
@@ -63,16 +73,8 @@
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
+  "head_title": null,
   "id": "incricoes-abertas-para-a-plone-conference",
-  "image": {
-    "blob_path": "be80977453784cf58e28ab12e0d09dfb/image/ingressos-ploneconf.png",
-    "content-type": "image/png",
-    "filename": "ingressos-ploneconf.png",
-    "height": 1080,
-    "size": 1014044,
-    "width": 1920
-  },
-  "image_caption": null,
   "is_folderish": true,
   "language": "##DEFAULT##",
   "layout": "newsitem_view",
@@ -80,7 +82,7 @@
     "locked": false,
     "stealable": true
   },
-  "modified": "2024-07-10T14:37:11+00:00",
+  "modified": "2026-08-26T17:12:05+00:00",
   "nav_title": null,
   "preview_caption_link": null,
   "review_state": "published",

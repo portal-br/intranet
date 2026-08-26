@@ -39,8 +39,6 @@ class TestContentTypeFTI:
             "plone.categorization",
             "plone.relateditems",
             "plone.locking",
-            "plone.relateditems",
-            "plone.locking",
             "plone.excludefromnavigation",
             "volto.blocks",
             "kitconcept.sticky_menu",

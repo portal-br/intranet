@@ -2,12 +2,14 @@
   "@id": "/noticias/lancada-a-nova-intranet",
   "@type": "News Item",
   "UID": "9575155bfeb4440bb719d3c96ed43da4",
-  "allow_discussion": true,
+  "allow_discussion": null,
   "blocks": {
     "4b812064-d040-42e1-b7d7-a4e2e7d11d4e": {
       "@type": "separator",
       "styles": {
-        "align": "full"
+        "align:noprefix": "left",
+        "blockWidth:noprefix": "default",
+        "shortLine": false
       }
     },
     "63bfed15-2cfe-49f0-a9fc-9c246ecd0bce": {
@@ -18,21 +20,27 @@
       "blocks": {
         "572d49b2-b96f-4072-a722-a442317e427c": {
           "@type": "image",
-          "align": "center",
           "credit": {},
           "description": "",
           "image_field": "image",
-          "size": "l",
+          "styles": {
+            "align:noprefix": "center",
+            "blockWidth:noprefix": "narrow",
+            "size:noprefix": "l"
+          },
           "title": "Praia - Jo\u00e3o Pessoa",
           "url": "../../resolveuid/478d8e09dc85468a85125df5caec7342"
         },
         "a29dc520-94f9-46eb-89c2-37a39e8016d4": {
           "@type": "image",
-          "align": "center",
           "credit": {},
           "description": "",
           "image_field": "image",
-          "size": "l",
+          "styles": {
+            "align:noprefix": "center",
+            "blockWidth:noprefix": "narrow",
+            "size:noprefix": "l"
+          },
           "title": "Jo\u00e3o Pessoa",
           "url": "../../resolveuid/df21ec28680143ffb122692019686a4a"
         }
@@ -43,9 +51,8 @@
           "a29dc520-94f9-46eb-89c2-37a39e8016d4"
         ]
       },
-      "styles": {
-        "backgroundColor": "grey"
-      }
+      "styles": {},
+      "theme": "grey"
     },
     "aa8eabd7-beaf-43ed-b67b-92506bff22cb": {
       "@type": "slate",
@@ -67,21 +74,27 @@
       "blocks": {
         "8fa941a4-131c-46ec-b0e8-b9de0642c20f": {
           "@type": "image",
-          "align": "center",
           "credit": {},
           "description": "",
           "image_field": "image",
-          "size": "l",
+          "styles": {
+            "align:noprefix": "center",
+            "blockWidth:noprefix": "narrow",
+            "size:noprefix": "l"
+          },
           "title": "Bonito",
           "url": "../../resolveuid/b8faaacdafc24b90b8425cca4cd4bc9a"
         },
         "e77a3abd-49a8-4284-a418-8aa4362055a8": {
           "@type": "image",
-          "align": "center",
           "credit": {},
           "description": "",
           "image_field": "image",
-          "size": "l",
+          "styles": {
+            "align:noprefix": "center",
+            "blockWidth:noprefix": "narrow",
+            "size:noprefix": "l"
+          },
           "title": "S\u00e3o Paulo",
           "url": "../../resolveuid/ab9796ee584142ceb86df51343cee5e0"
         }
@@ -93,9 +106,19 @@
         ]
       },
       "headline": "Algumas imagens",
+      "styles": {},
+      "theme": "grey"
+    },
+    "c9bfd086-5915-4740-87b9-9bc1c9e39875": {
+      "@type": "mainImageBlock",
+      "align": "center",
+      "size": "l",
       "styles": {
-        "backgroundColor": "grey"
-      }
+        "blockWidth:noprefix": {
+          "--block-width": "var(--default-container-width)"
+        }
+      },
+      "theme": "default"
     },
     "d85ea65c-41e5-4174-a92d-80cc65964582": {
       "@type": "slate",
@@ -111,10 +134,6 @@
         }
       ]
     },
-    "d86c7d43-7418-4e75-ad03-ef81ebdaffdc": {
-      "@type": "leadimage",
-      "align": "center"
-    },
     "ecff1cd8-9e80-4da1-8d49-90509bd5811b": {
       "@type": "title"
     }
@@ -123,7 +142,7 @@
     "items": [
       "ecff1cd8-9e80-4da1-8d49-90509bd5811b",
       "63bfed15-2cfe-49f0-a9fc-9c246ecd0bce",
-      "d86c7d43-7418-4e75-ad03-ef81ebdaffdc",
+      "c9bfd086-5915-4740-87b9-9bc1c9e39875",
       "d85ea65c-41e5-4174-a92d-80cc65964582",
       "aa8eabd7-beaf-43ed-b67b-92506bff22cb",
       "4b812064-d040-42e1-b7d7-a4e2e7d11d4e",
@@ -143,16 +162,8 @@
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
+  "head_title": null,
   "id": "lancada-a-nova-intranet",
-  "image": {
-    "blob_path": "9575155bfeb4440bb719d3c96ed43da4/image/portalbrasil.png",
-    "content-type": "image/png",
-    "filename": "portalbrasil.png",
-    "height": 6400,
-    "size": 286142,
-    "width": 8533
-  },
-  "image_caption": "Portal Brasil",
   "is_folderish": true,
   "language": "##DEFAULT##",
   "layout": "newsitem_view",
@@ -160,7 +171,7 @@
     "locked": false,
     "stealable": true
   },
-  "modified": "2024-07-04T23:04:45+00:00",
+  "modified": "2026-08-26T17:11:37+00:00",
   "nav_title": null,
   "preview_caption_link": null,
   "review_state": "published",
