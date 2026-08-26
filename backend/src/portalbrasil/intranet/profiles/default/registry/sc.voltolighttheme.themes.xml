@@ -19,7 +19,7 @@
     >The default theme for Portal Brasil Intranet.</value>
     <value key="font_family_primary">Inter, sans-serif</value>
     <value key="font_family_secondary">Inter, sans-serif</value>
-    
+
     <!-- Primary (Green from Logo) -->
     <value key="primary_color_light">#ffffff</value>
     <value key="primary_color_dark">#000000</value>
