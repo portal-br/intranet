@@ -1,6 +1,6 @@
 {
   "name": "@portalbrasil/intranet",
-  "version": "2.0.0-alpha.2",
+  "version": "2.0.0-alpha.3",
   "description": "Solução de Intranet construída com PortalBrasil & Plone",
   "main": "src/index.ts",
   "license": "MIT",

@@ -2,6 +2,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.3 (2026-08-26)
+
+### Funcionalidade
+
+- Integra o add-on `@simplesconsultoria/volto-light-theme` no frontend, habilitando o layout customizado para a Intranet. @humanaice [#11](https://github.com/portal-br/intranet/issues/11)
+- Atualiza `@simplesconsultoria/volto-light-theme` para 1.0.0-alpha.5 e remove os add-ons que passaram a ser fornecidos pelo próprio tema. @ericof [#13](https://github.com/portal-br/intranet/issues/13)
+
 ## 2.0.0-alpha.2 (2026-08-05)
 
 ## 2.0.0-alpha.1 (2026-07-27)

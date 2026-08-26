@@ -1,1 +1,0 @@
-Atualiza `sc-voltolighttheme` para 1.0.0a5, substituindo `kitconcept.voltolighttheme` por `sc.voltolighttheme` nas dependências do site, adotando os perfis `default` e `intranet`, revisando os behaviors do Plone Site e adicionando o passo de upgrade `20260824001`. @ericof

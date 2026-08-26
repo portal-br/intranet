@@ -2,6 +2,14 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0a3 (2026-08-26)
+
+
+### Funcionalidade
+
+- Adiciona `sc.voltolighttheme` como dependência no backend da Intranet, permitindo o carregamento dos estilos e customizações no Plone. @humanaice [#11](https://github.com/portal-br/intranet/issues/11)
+- Atualiza `sc-voltolighttheme` para 1.0.0a5, substituindo `kitconcept.voltolighttheme` por `sc.voltolighttheme` nas dependências do site, adotando os perfis `default` e `intranet`, revisando os behaviors do Plone Site e adicionando o passo de upgrade `20260824001`. @ericof [#13](https://github.com/portal-br/intranet/issues/13)
+
 ## 2.0.0a2 (2026-08-05)
 
 
