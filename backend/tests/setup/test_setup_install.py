@@ -53,29 +53,35 @@ class TestSetupDependencies:
             "plone.app.registry:default",
             "plone.app.theming:default",
             "plone.app.users:default",
-            "plone.outputfilters:default",
+            # plone.outputfilters:default is applied too, but its profile has no
+            # metadata.xml, so GenericSetup never records a version for it.
             "plone.protect:default",
             "plone.staticresources:default",
             "plone.app.contenttypes:default",
             "plone.restapi:default",
             "plone.volto:default",
             "plonetheme.barceloneta:default",
-            "kitconcept.voltolighttheme:default",
             "sc.voltolighttheme:default",
             "sc.voltolighttheme:intranet",
-            "sc.voltolighttheme:uninstall",
             "plone.formblock:default",
             "plonegovbr.socialmedia:default",
         ],
     )
     def test_installed(self, profile: str):
-        """Test if a profile is installed."""
-        assert self.setup_tool.getLastVersionForProfile(profile) is not None
+        """Test if a profile is installed.
+
+        ``getLastVersionForProfile`` returns ``"unknown"``, never ``None``,
+        for a profile that was not installed.
+        """
+        assert self.setup_tool.getLastVersionForProfile(profile) != "unknown"
 
     @pytest.mark.parametrize(
         "profile",
         [
             "collective.volto.formsupport:default",
+            # Uninstalled by the sc.voltolighttheme 1001 upgrade step.
+            "kitconcept.voltolighttheme:default",
+            "sc.voltolighttheme:uninstall",
         ],
     )
     def test_uninstalled(self, profile: str):

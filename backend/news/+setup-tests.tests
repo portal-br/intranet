@@ -1,0 +1,1 @@
+Corrige o teste de perfis instalados, que comparava com `None` e passava mesmo para perfis ausentes, e adiciona testes para os behaviors e os campos de rodapé do Plone Site. @ericof
