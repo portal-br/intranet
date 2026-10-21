@@ -76,7 +76,7 @@ def current_versions() -> CurrentVersions:
     from portalbrasil.intranet import __version__
 
     return CurrentVersions(
-        base="20260824001",
+        base="20261021001",
         default="1000",
         package=__version__,
     )

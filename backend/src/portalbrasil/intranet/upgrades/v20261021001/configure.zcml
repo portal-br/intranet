@@ -1,0 +1,28 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    >
+
+  <genericsetup:upgradeSteps
+      profile="portalbrasil.intranet:base"
+      source="20260824001"
+      destination="20261021001"
+      >
+    <genericsetup:upgradeStep
+        title="Upgrade the theme add-ons"
+        description="Runs the pending upgrade steps of plonegovbr.socialmedia and sc.voltolighttheme."
+        handler=".upgrade_dependencies"
+        />
+    <genericsetup:upgradeStep
+        title="Update the IImagingSchema records (Plone 6.2.2)"
+        description="Allows the sizes attribute in picture variants and adds it to the default small variant."
+        handler=".update_imaging_schema"
+        />
+    <genericsetup:upgradeStep
+        title="Add the content-type colors to the themes"
+        description="Creates the event, file and image color records of every theme and fills them in on the default theme."
+        handler=".update_theme_definitions"
+        />
+  </genericsetup:upgradeSteps>
+
+</configure>
