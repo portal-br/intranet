@@ -1,0 +1,1 @@
+Atualiza `sc-voltolighttheme` para 1.0.0a12, junto com `kitconcept.voltolighttheme` 8.0.0 e `plonegovbr.socialmedia` 3.0.0, e adiciona o passo de upgrade `20261021001`, que leva os sites existentes às novas versões. @ericof
