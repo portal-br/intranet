@@ -1,4 +1,6 @@
+from plone.behavior.interfaces import IBehavior
 from plone.dexterity.fti import DexterityFTI
+from zope.component import queryUtility
 
 import pytest
 
@@ -47,3 +49,24 @@ class TestContentTypeFTI:
     def test_behaviors(self, idx: int, behavior: str):
         """Test behaviors are present and in correct order."""
         assert self.fti.behaviors[idx] == behavior
+
+    def test_behaviors_registered(self):
+        """Every behavior of the FTI is still provided by an installed package."""
+        missing = [
+            name
+            for name in self.fti.behaviors
+            if queryUtility(IBehavior, name=name) is None
+        ]
+        assert missing == []
+
+    @pytest.mark.parametrize(
+        "field_name",
+        [
+            "footer_colophon_text",
+            "footer_colophon_right_text",
+        ],
+    )
+    def test_footer_fields(self, field_name: str):
+        """The footer behavior of the site has both colophon texts."""
+        behavior = queryUtility(IBehavior, name="sc.voltolighttheme.footer")
+        assert field_name in behavior.interface.names()

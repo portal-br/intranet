@@ -1,0 +1,1 @@
+Adiciona os primeiros testes unitários do pacote, para a configuração (settings, blocos e views), os schemas dos blocos e os componentes Tags e Avatar, e ajusta o Vitest para resolver os add-ons e as dependências do Volto como o webpack faz. @ericof
