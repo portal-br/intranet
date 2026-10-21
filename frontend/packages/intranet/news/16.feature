@@ -1,0 +1,1 @@
+Atualiza `@simplesconsultoria/volto-light-theme` para 1.0.0-alpha.12, que traz `@kitconcept/volto-light-theme` 8.0.0, `@plonegovbr/volto-social-media` 3, o bloco Custom Grid, o segundo texto do colofão do rodapé e traduções em português do Brasil. @ericof
