@@ -2,6 +2,17 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.4 (2026-10-21)
+
+### Funcionalidade
+
+- Atualiza `@simplesconsultoria/volto-light-theme` para 1.0.0-alpha.12, que traz `@kitconcept/volto-light-theme` 8.0.0, `@plonegovbr/volto-social-media` 3, o bloco Custom Grid, o segundo texto do colofão do rodapé e traduções em português do Brasil. @ericof [#16](https://github.com/portal-br/intranet/issues/16)
+- Atualiza para Volto 19.5.1. @ericof [#17](https://github.com/portal-br/intranet/issues/17)
+
+### Teste
+
+- Adiciona os primeiros testes unitários do pacote, para a configuração (settings, blocos e views), os schemas dos blocos e os componentes Tags e Avatar, e ajusta o Vitest para resolver os add-ons e as dependências do Volto como o webpack faz. @ericof 
+
 ## 2.0.0-alpha.3 (2026-08-26)
 
 ### Funcionalidade

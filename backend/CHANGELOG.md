@@ -2,6 +2,24 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0a4 (2026-10-21)
+
+
+### Funcionalidade
+
+- Atualiza `sc-voltolighttheme` para 1.0.0a12, junto com `kitconcept.voltolighttheme` 8.0.0 e `plonegovbr.socialmedia` 3.0.0, e adiciona o passo de upgrade `20261021001`, que leva os sites existentes às novas versões. @ericof [#16](https://github.com/portal-br/intranet/issues/16)
+- Atualiza para Plone 6.2.2 (Zope 6.2 e plone.restapi 10.0.4). @ericof [#18](https://github.com/portal-br/intranet/issues/18)
+
+
+### Interno
+
+- O passo de upgrade `20261021001` aplica a atualização dos registros `IImagingSchema` do Plone 6.2.2 (atributo `sizes` nas variantes de imagem), que o `plone.app.upgrade` não executa em sites criados a partir do perfil `base` da intranet. @ericof [#18](https://github.com/portal-br/intranet/issues/18)
+
+
+### Teste
+
+- Corrige o teste de perfis instalados, que comparava com `None` e passava mesmo para perfis ausentes, e adiciona testes para os behaviors e os campos de rodapé do Plone Site. @ericof 
+
 ## 2.0.0a3 (2026-08-26)
 
 

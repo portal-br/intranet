@@ -1,1 +1,0 @@
-O passo de upgrade `20261021001` aplica a atualização dos registros `IImagingSchema` do Plone 6.2.2 (atributo `sizes` nas variantes de imagem), que o `plone.app.upgrade` não executa em sites criados a partir do perfil `base` da intranet. @ericof

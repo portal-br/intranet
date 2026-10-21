@@ -1,6 +1,48 @@
 # Alterações
 
 <!-- towncrier release notes start -->
+## 2.0.0a4 (2026-10-21)
+
+### Backend
+
+
+#### Funcionalidade
+
+- Atualiza `sc-voltolighttheme` para 1.0.0a12, junto com `kitconcept.voltolighttheme` 8.0.0 e `plonegovbr.socialmedia` 3.0.0, e adiciona o passo de upgrade `20261021001`, que leva os sites existentes às novas versões. @ericof [#16](https://github.com/portal-br/intranet/issues/16)
+- Atualiza para Plone 6.2.2 (Zope 6.2 e plone.restapi 10.0.4). @ericof [#18](https://github.com/portal-br/intranet/issues/18)
+
+
+#### Interno
+
+- O passo de upgrade `20261021001` aplica a atualização dos registros `IImagingSchema` do Plone 6.2.2 (atributo `sizes` nas variantes de imagem), que o `plone.app.upgrade` não executa em sites criados a partir do perfil `base` da intranet. @ericof [#18](https://github.com/portal-br/intranet/issues/18)
+
+
+#### Teste
+
+- Corrige o teste de perfis instalados, que comparava com `None` e passava mesmo para perfis ausentes, e adiciona testes para os behaviors e os campos de rodapé do Plone Site. @ericof 
+
+
+
+### Frontend
+
+#### Funcionalidade
+
+- Atualiza `@simplesconsultoria/volto-light-theme` para 1.0.0-alpha.12, que traz `@kitconcept/volto-light-theme` 8.0.0, `@plonegovbr/volto-social-media` 3, o bloco Custom Grid, o segundo texto do colofão do rodapé e traduções em português do Brasil. @ericof [#16](https://github.com/portal-br/intranet/issues/16)
+- Atualiza para Volto 19.5.1. @ericof [#17](https://github.com/portal-br/intranet/issues/17)
+
+#### Teste
+
+- Adiciona os primeiros testes unitários do pacote, para a configuração (settings, blocos e views), os schemas dos blocos e os componentes Tags e Avatar, e ajusta o Vitest para resolver os add-ons e as dependências do Volto como o webpack faz. @ericof 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 2.0.0a3 (2026-08-26)
 
 ### Backend
