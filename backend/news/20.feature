@@ -1,0 +1,1 @@
+Atualiza `plonegovbr.brfields` para 1.0.0b1, que valida CEP, CNPJ, CPF e telefone com a biblioteca `brutils` e corrige o tipo de conteúdo de demonstração. @ericof [#20](https://github.com/portal-br/intranet/issues/20)
