@@ -1,0 +1,1 @@
+Atualiza `@plonegovbr/volto-brwidgets` para 1.0.0-beta.1, que valida e formata CEP, CNPJ, CPF e telefone com `@brazilian-utils/brazilian-utils` e reescreve os widgets em TypeScript. @ericof [#20](https://github.com/portal-br/intranet/issues/20)

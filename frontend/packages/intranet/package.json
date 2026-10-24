@@ -39,7 +39,7 @@
   ],
   "dependencies": {
     "@eeacms/volto-pdf-block": "1.0.12",
-    "@plonegovbr/volto-brwidgets": "1.0.0-alpha.3",
+    "@plonegovbr/volto-brwidgets": "1.0.0-beta.1",
     "@plonegovbr/volto-vlibras": "0.4.1",
     "@plone-collective/volto-authomatic": "3.0.0-alpha.6",
     "@plone-collective/volto-bookmarks": "3.0.4",
