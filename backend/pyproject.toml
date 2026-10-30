@@ -36,7 +36,7 @@ dependencies = [
     "pas.plugins.oidc==2.0.0",
     "plone.formblock[honeypot]==1.0.0a3",
     "plonegovbr.brfields==1.0.0b1",
-    "plonegovbr.socialmedia==3.0.0",
+    "plonegovbr.socialmedia==3.1.0",
     "sc-voltolighttheme==1.0.0a12",
 ]
 
