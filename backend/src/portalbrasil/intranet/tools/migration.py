@@ -10,8 +10,8 @@ from Products.CMFPlone.MigrationTool import MigrationTool as BaseTool
 from typing import Any
 from zope.interface import implementer
 
+import importlib.metadata
 import logging
-import pkg_resources
 import sys
 
 
@@ -22,8 +22,7 @@ def get_configuration() -> DefaultConfiguration:
 
 def package_version(package_name: str) -> str:
     """Return the version of an installed package."""
-    package_dist = pkg_resources.get_distribution(package_name)
-    return package_dist.version
+    return importlib.metadata.version(package_name)
 
 
 @contextmanager
