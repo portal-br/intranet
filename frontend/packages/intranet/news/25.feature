@@ -1,1 +1,0 @@
-Atualiza o Volto para 19.7.0 e o `@simplesconsultoria/volto-light-theme` para 1.0.0-alpha.15. O webpack fica fixado no catálogo do Volto, para que o Storybook use a mesma versão da aplicação. @ericof [#25](https://github.com/portal-br/intranet/issues/25)

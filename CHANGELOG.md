@@ -1,6 +1,37 @@
 # Alterações
 
 <!-- towncrier release notes start -->
+## 2.0.0a5 (2026-11-11)
+
+### Backend
+
+
+#### Funcionalidade
+
+- Atualiza `plonegovbr.brfields` para 1.0.0b1, que valida CEP, CNPJ, CPF e telefone com a biblioteca `brutils` e corrige o tipo de conteúdo de demonstração. @ericof [#20](https://github.com/portal-br/intranet/issues/20) [#20](https://github.com/portal-br/intranet/issues/20)
+- Atualiza `plonegovbr.socialmedia` para 3.1.0, que mantém a dependência em dia; esta versão não traz mudanças no backend. @ericof [#22](https://github.com/portal-br/intranet/issues/22) [#22](https://github.com/portal-br/intranet/issues/22)
+- Atualiza o Plone para 6.2.3 e o `sc-voltolighttheme` para 1.0.0a15. O `kitconcept.voltolighttheme` deixa de ser dependência direta e passa a vir pelo `sc-voltolighttheme`. Adiciona o passo de upgrade `20261111001`, que atualiza os sites existentes: aplica os passos do CMFPlone 6.2.3, do `plone.app.querystring` (operação `currentUID` e campo de caminho ordenável) e do `plone.volto` (ações da barra pessoal), além dos passos pendentes do `sc-voltolighttheme`. Troca `pkg_resources` por `importlib.metadata` para obter as versões dos pacotes. @ericof [#25](https://github.com/portal-br/intranet/issues/25) [#25](https://github.com/portal-br/intranet/issues/25)
+
+
+
+### Frontend
+
+#### Funcionalidade
+
+- Atualiza `@plonegovbr/volto-brwidgets` para 1.0.0-beta.1, que valida e formata CEP, CNPJ, CPF e telefone com `@brazilian-utils/brazilian-utils` e reescreve os widgets em TypeScript. @ericof [#20](https://github.com/portal-br/intranet/issues/20) [#20](https://github.com/portal-br/intranet/issues/20)
+- Atualiza o Volto para 19.7.0 e o `@simplesconsultoria/volto-light-theme` para 1.0.0-alpha.15. O webpack fica fixado no catálogo do Volto, para que o Storybook use a mesma versão da aplicação. @ericof [#25](https://github.com/portal-br/intranet/issues/25) [#25](https://github.com/portal-br/intranet/issues/25)
+
+
+
+### Project
+
+
+#### Funcionalidade
+
+- Atualiza o Plone para 6.2.3, o Volto para 19.7.0 e o `sc-voltolighttheme` para 1.0.0a15, no backend e no frontend. @ericof [#25](https://github.com/portal-br/intranet/issues/25) [#25](https://github.com/portal-br/intranet/issue/25)
+
+
+
 ## 2.0.0a4 (2026-10-21)
 
 ### Backend
