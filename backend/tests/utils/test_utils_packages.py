@@ -10,6 +10,8 @@ class TestUtilsPackages:
         [
             ("portalbrasil.intranet", __version__),
             ("portalbrasil.intranet.testing", __version__),
+            ("portalbrasil.intranet.does.not.exist", __version__),
+            ("no-such-distribution-for-intranet", "-"),
             ("", "-"),
         ],
     )

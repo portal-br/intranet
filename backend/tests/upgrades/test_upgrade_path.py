@@ -13,7 +13,7 @@ class TestUpgradePath:
         self.setup_tool = setup_tool
         self.version = current_versions.base
 
-    @pytest.mark.parametrize("source", ["20260723001", "20260824001"])
+    @pytest.mark.parametrize("source", ["20260723001", "20260824001", "20261021001"])
     def test_upgrade_to_latest(self, source: str):
         """A site at an older version upgrades to the current one."""
         self.setup_tool.setLastVersionForProfile(PROFILE, source)
