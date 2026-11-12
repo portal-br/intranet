@@ -7,8 +7,9 @@ const Header = ({ title }: { title?: string }) => {
   return <h2 className={'headline'}>{title}</h2>;
 };
 
-const GestorView = (props: BlockViewProps & { title?: string }) => {
-  const { className, title = 'Gestor', content } = props;
+const GestorView = (props: BlockViewProps) => {
+  const { className, data, content } = props;
+  const title = (data.title as string) || 'Gestor';
   const { gestor } = content as Area;
   return (
     <div className={`block gestor ${className}`}>

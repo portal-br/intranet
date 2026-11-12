@@ -8,7 +8,7 @@ The block stores only its `title` field. The people shown are not stored in the 
 
 ### Fields
 
-- `title`: the title of the block. Defaults to `Colaboradores` when omitted. It is required in the editor. The block shows its headline with the fixed name `Colaboradores`, so this value is kept in the data but is not shown in the headline.
+- `title`: the title of the block. Defaults to `Colaboradores` when omitted. It is required in the editor, and it is shown as the headline above the cards.
 
 ### Data read from the Area content
 

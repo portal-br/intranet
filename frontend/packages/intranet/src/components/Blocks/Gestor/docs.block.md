@@ -8,7 +8,7 @@ The block stores only its `title` field. The manager is not stored in the block:
 
 ### Fields
 
-- `title`: the title of the block. Defaults to `Gestor` when omitted. It is required in the editor. The block shows its headline with the fixed name `Gestor`, so this value is kept in the data but is not shown in the headline.
+- `title`: the title of the block. Defaults to `Gestor` when omitted. It is required in the editor, and it is shown as the headline above the card.
 
 ### Data read from the Area content
 
