@@ -4,23 +4,10 @@ import type { ConfigType } from '@plone/registry';
 /// Listing block variations
 import ProfilesTemplate from '../components/Blocks/Listing/ProfilesGridTemplate';
 
-/// Areas
-import AreasBlockEdit from '../components/Blocks/Areas/Edit';
-import AreasBlockView from '../components/Blocks/Areas/View';
-import { areasSchema } from '../components/Blocks/Areas/schema';
-import areasSVG from '@plone/volto/icons/home.svg';
-
-/// Colaboradores
-import ColaboradoresBlockEdit from '../components/Blocks/Colaboradores/Edit';
-import ColaboradoresBlockView from '../components/Blocks/Colaboradores/View';
-import { colaboradoresSchema } from '../components/Blocks/Colaboradores/schema';
-import colaboradoresSVG from '@plone/volto/icons/group.svg';
-
-/// Gestor
-import GestorBlockEdit from '../components/Blocks/Gestor/Edit';
-import GestorBlockView from '../components/Blocks/Gestor/View';
-import { gestorSchema } from '../components/Blocks/Gestor/schema';
-import gestorSVG from '@plone/volto/icons/user.svg';
+/// Intranet blocks, each one configured in its own index.ts
+import AreasBlockInfo from '../components/Blocks/Areas';
+import ColaboradoresBlockInfo from '../components/Blocks/Colaboradores';
+import GestorBlockInfo from '../components/Blocks/Gestor';
 
 export default function install(config: ConfigType) {
   // Blocks
@@ -41,50 +28,10 @@ export default function install(config: ConfigType) {
   ];
 
   /// New blocks
-  config.blocks.blocksConfig.areasBlock = {
-    id: 'areasBlock',
-    title: 'Áreas',
-    group: 'intranet',
-    category: 'intranet',
-    icon: areasSVG,
-    blockSchema: areasSchema,
-    view: AreasBlockView,
-    edit: AreasBlockEdit,
-    restricted: ({ contentType }) => contentType !== 'Area',
-    mostUsed: false,
-    sidebarTab: 1,
-    blockHasOwnFocusManagement: false,
-  };
-
-  config.blocks.blocksConfig.colaboradoresBlock = {
-    id: 'colaboradoresBlock',
-    title: 'Equipe',
-    group: 'intranet',
-    category: 'intranet',
-    icon: colaboradoresSVG,
-    blockSchema: colaboradoresSchema,
-    view: ColaboradoresBlockView,
-    edit: ColaboradoresBlockEdit,
-    restricted: ({ contentType }) => contentType !== 'Area',
-    mostUsed: false,
-    sidebarTab: 1,
-    blockHasOwnFocusManagement: false,
-  };
-
-  config.blocks.blocksConfig.gestorBlock = {
-    id: 'gestorBlock',
-    title: 'Gestor',
-    group: 'intranet',
-    category: 'intranet',
-    icon: gestorSVG,
-    blockSchema: gestorSchema,
-    view: GestorBlockView,
-    edit: GestorBlockEdit,
-    restricted: ({ contentType }) => contentType !== 'Area',
-    mostUsed: false,
-    sidebarTab: 1,
-    blockHasOwnFocusManagement: false,
-  };
+  config.blocks.blocksConfig[AreasBlockInfo.id] = AreasBlockInfo;
+  config.blocks.blocksConfig[ColaboradoresBlockInfo.id] =
+    ColaboradoresBlockInfo;
+  config.blocks.blocksConfig[GestorBlockInfo.id] = GestorBlockInfo;
 
   /// Default blocks
   config.blocks.initialBlocks = {

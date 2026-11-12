@@ -7,8 +7,9 @@ const Header = ({ title }: { title?: string }) => {
   return <h2 className={'headline'}>{title}</h2>;
 };
 
-const ColaboradoresView = (props: BlockViewProps & { title?: string }) => {
-  const { className, title = 'Colaboradores', content, isEditMode } = props;
+const ColaboradoresView = (props: BlockViewProps) => {
+  const { className, data, content, isEditMode } = props;
+  const title = (data.title as string) || 'Colaboradores';
   const { colaboradores } = content as Area;
   const items = colaboradores;
   return (
